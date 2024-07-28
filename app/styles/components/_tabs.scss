@@ -1,0 +1,23 @@
+.tabs {
+  &__nav {
+    display: flex;
+    li {
+      transition: all 0.2s ease;
+      &.--active {
+        color: #fff;
+        background-color: #008fd6;
+      }
+      a {
+        padding: rem(10);
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    &.--active {
+      display: block;
+    }
+  }
+}

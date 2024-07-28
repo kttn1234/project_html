@@ -1,0 +1,45 @@
+.footer {
+}
+// scroll top
+.scroll-top {
+  &__icon {
+    width: rem(34);
+    height: rem(34);
+    border-radius: 100%;
+    background-color: #0065a0;
+    color: $white-1;
+    font-size: rem(20);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: translateZ(0);
+    position: fixed;
+    z-index: 2;
+    right: rem(20);
+    bottom: rem(10);
+    transform: translateZ(0);
+    cursor: pointer;
+    @include mq(md, min) {
+      width: rem(43);
+      height: rem(43);
+      right: calc((100% - 120rem) / 2);
+    }
+    &:hover {
+      background-color: #008fd6;
+    }
+  }
+}
+.active-top {
+  .scroll-top {
+    position: relative;
+    &__icon {
+      position: absolute;
+    }
+  }
+}

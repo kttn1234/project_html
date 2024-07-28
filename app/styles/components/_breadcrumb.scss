@@ -1,0 +1,30 @@
+.breadcrumb {
+  margin-top: rem(20);
+  $this: &;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    font-size: rem(11);
+    color: #008fd6;
+    & + & {
+      position: relative;
+      padding-left: rem(20);
+      &::before {
+        content: "";
+        width: rem(1);
+        height: rem(10);
+        display: block;
+        background-color: #000;
+        transform: rotate(18deg);
+        position: absolute;
+        top: rem(2);
+        left: rem(8);
+      }
+    }
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+}

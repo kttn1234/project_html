@@ -1,0 +1,5 @@
+mixin article(data={})
+  .article&attributes(attributes)
+    ul.article__list 
+      each item in data.items
+        li!=item.name

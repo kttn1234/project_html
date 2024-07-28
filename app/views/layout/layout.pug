@@ -1,0 +1,31 @@
+block mixins
+	include ../mixins/mixins
+block vars
+	-title = 'Site'
+	-bodyClass = ''
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title=title
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		//- meta(name="robots", content="index, follow")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+		//- link(rel="icon", href="favicon-16x16.png", type="image/x-icon", sizes="16x16")
+		//- link(rel='stylesheet', href="styles/lib/slick.css")
+		link(rel='stylesheet', href='fontawesome/css/all.min.css')
+		link(rel='stylesheet', href='icomoon/style.css')
+		//- link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+		//- link(rel='stylesheet', href='styles/lib/fontawesome.min.css')
+		link(rel="stylesheet", href="styles/styles.css")
+	body(class=bodyClass)
+		block header
+			include ../blocks/header
+		main
+			block container
+		block footer
+			include ../blocks/footer
+		block layer
+		include ../blocks/scripts

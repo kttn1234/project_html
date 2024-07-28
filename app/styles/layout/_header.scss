@@ -1,0 +1,201 @@
+.header {
+  $this: &;
+  color: #008fd6;
+  box-shadow: 0 rem(1) rem(10) 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #fff;
+  padding: rem(8.43) 0;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
+  @include mq(md, min) {
+    padding: 0;
+  }
+  &__content {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(md, min) {
+    }
+  }
+  &__box {
+    display: none;
+    padding: 0 rem(20);
+    @include mq(md, min) {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 rem(30);
+    }
+    > * + * {
+      @include mq(md, min) {
+        margin-left: rem(30);
+      }
+    }
+  }
+  &__nav {
+    margin-top: rem(8);
+    @include mq(md, min) {
+      margin-top: 0;
+    }
+  }
+  &__menu {
+    @include mq(md, min) {
+      display: flex;
+    }
+    &-item {
+      border-bottom: rem(1) solid #efefef;
+      & + & {
+        @include mq(md, min) {
+          margin-left: rem(30);
+        }
+      }
+      &:hover {
+        #{$this}__menu-link {
+          &::before {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+        @include mq(md, min) {
+        }
+      }
+    }
+    &-link {
+      position: relative;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease;
+      display: block;
+      padding: rem(8) 0;
+      color: #008fd6;
+      @include mq(md, min) {
+        padding: rem(26) 0 rem(26);
+        display: block;
+      }
+      &:hover {
+        text-decoration: none;
+        color: #008fd6;
+      }
+      &::before {
+        @include mq(md, min) {
+          content: "";
+          position: absolute;
+          height: rem(4);
+          background-color: #008fd6;
+          bottom: rem(-1);
+          left: 0;
+          opacity: 0;
+          width: 0;
+          -webkit-transition: width 0.3s ease-out;
+          -o-transition: width 0.3s ease-out;
+          transition: width 0.3s ease-out;
+        }
+      }
+      &.active-nav {
+        &::before {
+          opacity: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: rem(120);
+    @include mq(md, min) {
+      width: rem(200);
+    }
+  }
+
+  &__social {
+    margin-top: rem(24);
+    @include mq(md, min) {
+      margin-top: 0;
+    }
+    &-title {
+      @include mq(md, min) {
+        display: none;
+      }
+    }
+    &-list {
+      display: flex;
+      margin-top: rem(12);
+      @include mq(md, min) {
+        margin-top: 0;
+      }
+    }
+    &-item {
+      & + & {
+        margin-left: rem(16);
+        @include mq(md, min) {
+          margin-left: rem(20);
+        }
+      }
+    }
+    &-link {
+      @include hover {
+        text-decoration: none;
+        i {
+          color: #ea7e4a;
+        }
+      }
+
+      .fa-brands {
+        font-size: rem(20);
+      }
+    }
+  }
+  &__burger {
+    @include mq(md, min) {
+      display: none;
+    }
+    &-line {
+      width: rem(20);
+      height: rem(2);
+      background-color: #008fd6;
+      display: block;
+      margin: rem(4.5) auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.active-header {
+  overflow: hidden;
+  .header__box {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    height: calc(100% - 5.5rem);
+    overflow-y: scroll;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: rem(55);
+    padding-bottom: rem(30);
+    -webkit-animation: fade 0.5s;
+    animation: fade 0.5s;
+  }
+  .header__burger {
+    &-line {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1) {
+        -webkit-transform: translateY(rem(6.5)) rotate(45deg);
+        -ms-transform: translateY(rem(6.5)) rotate(45deg);
+        -o-transform: translateY(rem(6.5)) rotate(45deg);
+        transform: translateY(rem(6.5)) rotate(45deg);
+      }
+      &:nth-child(3) {
+        -webkit-transform: translateY(-(rem(6.5))) rotate(-45deg);
+        -ms-transform: translateY(-(rem(6.5))) rotate(-45deg);
+        -o-transform: translateY(-(rem(6.5))) rotate(-45deg);
+        transform: translateY(-(rem(6.5))) rotate(-45deg);
+      }
+    }
+  }
+}

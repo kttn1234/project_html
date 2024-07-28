@@ -1,0 +1,58 @@
+.container {
+  margin: auto;
+  @include mq(md, min) {
+    max-width: rem($container-width-gutter);
+    padding-left: rem($grid-gutter-width);
+    padding-right: rem($grid-gutter-width);
+  }
+  @include mq(md, max) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+//  layout
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: rem(-10);
+  margin-left: rem(-10);
+  @include mq(md, min) {
+    margin-right: rem(-15);
+    margin-left: rem(-15);
+  }
+  > * {
+    padding-right: rem(10);
+    padding-left: rem(10);
+    @include mq(md, min) {
+      padding-right: rem(15);
+      padding-left: rem(15);
+    }
+  }
+}
+
+$grid__cols: 12;
+@for $i from 1 through $grid__cols {
+  .col-md-#{$i} {
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @include mq(md, min) {
+    .col-md-#{$i} {
+      flex-basis: calc(100 / ($grid--cols / $i)) * 1%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100 / ($grid--cols / $i)) * 1%;
+      flex: 0 0 calc(100 / ($grid--cols / $i)) * 1%;
+      max-width: calc(100 / ($grid--cols / $i)) * 1%;
+    }
+    .offset-md-#{$i} {
+      margin-left: calc(100 / ($grid--cols / $i)) * 1%;
+    }
+  }
+}

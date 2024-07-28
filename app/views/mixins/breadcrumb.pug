@@ -1,0 +1,12 @@
+mixin breadcrumb(levels)
+  .breadcrumb(aria-label="breadcrumb")
+    .container
+      ul.breadcrumb__list
+        each level, index in levels
+          - var count = index+1
+          li.breadcrumb__item
+            if count < levels.length
+              +link(level.url,level.text)
+            else 
+              !=level.text
+

@@ -1,0 +1,268 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap");
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-Light.eot');
+  src: url('./../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-Light.woff2') format('woff2'),
+      url('./../fonts/OpenSans-Light.woff') format('woff'),
+      url('./../fonts/OpenSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-Medium.eot');
+  src: url('./../fonts/OpenSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-Medium.woff2') format('woff2'),
+      url('./../fonts/OpenSans-Medium.woff') format('woff'),
+      url('./../fonts/OpenSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-SemiBold.eot');
+  src: url('./../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+      url('./../fonts/OpenSans-SemiBold.woff') format('woff'),
+      url('./../fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-ExtraBold.eot');
+  src: url('./../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+      url('./../fonts/OpenSans-ExtraBold.woff') format('woff'),
+      url('./../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-Bold.eot');
+  src: url('./../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-Bold.woff2') format('woff2'),
+      url('./../fonts/OpenSans-Bold.woff') format('woff'),
+      url('./../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans-Regular.eot');
+  src: url('./../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/OpenSans-Regular.woff2') format('woff2'),
+      url('./../fonts/OpenSans-Regular.woff') format('woff'),
+      url('./../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  @include mq(md, min) {
+    font-size: $font-size-base-pc;
+  }
+  @include mq(md, max) {
+    font-size: $font-size-base-sp;
+  }
+  @include mq(wg, min) {
+    font-size: $font-size-rem;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: $font-Open-Sans;
+  color: $black-1;
+  font-size: $font-size-default-pc;
+  line-height: 1.214;
+  font-weight: $font-weight-light;
+  background-size: contain;
+  background-color: $white-1;
+  @include mq(md, max) {
+    font-size: $font-size-default-sp;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ol,
+ul,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+a {
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  color: inherit;
+  text-decoration: none;
+
+  @include hover() {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+img {
+  vertical-align: middle;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto; // Remove the default vertical scrollbar in IE.
+  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+  resize: vertical;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px; // 2. Correct the outline style in Safari.
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+img {
+  &.aligncenter {
+    display: block;
+    margin: auto;
+  }
+
+  &.alignright {
+    display: block;
+    margin-left: auto;
+  }
+
+  &.alignleft {
+    display: block;
+    margin-right: auto;
+  }
+}
+.sp {
+  @include mq(md, min) {
+    display: none !important;
+  }
+}
+.pc {
+  @include mq(md, max) {
+    display: none !important;
+  }
+}
+.trans {
+  opacity: 1;
+  transition: opacity 0.26s ease;
+  -webkit-transition: opacity 0.26s ease;
+  -moz-transition: opacity 0.26s ease;
+  -ms-transition: opacity 0.26s ease;
+  -o-transition: opacity 0.26s ease;
+  @include hover() {
+    opacity: 0.7;
+  }
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-size: rem(14);
+  color: $black-1;
+}

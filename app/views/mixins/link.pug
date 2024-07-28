@@ -1,0 +1,6 @@
+mixin link(link,text)
+  a(href=link title=text)&attributes(attributes)
+    if block
+        block
+    else 
+      !=text

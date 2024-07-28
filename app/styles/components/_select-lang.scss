@@ -1,0 +1,114 @@
+.select-lang {
+  position: relative;
+  width: 100%;
+  border: rem(1) solid #000;
+  background: #fff;
+  border-radius: rem(48);
+  padding: rem(10) rem(18);
+  z-index: 0;
+  margin-top: rem(20);
+
+  $this: &;
+  cursor: pointer;
+  @include mq(md, min) {
+    width: rem(250);
+    padding: rem(9) rem(18);
+  }
+  &.--active {
+    border-radius: 0 0 rem(22) rem(22);
+    z-index: 2;
+    #{$this}__list {
+      display: block;
+    }
+    #{$this}__arrow {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: rem(24);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #000;
+    font-size: rem(20);
+    font-weight: 600;
+    @include mq(md, min) {
+      right: rem(22);
+    }
+  }
+  &__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+    color: #014248;
+    img {
+      width: auto;
+      height: rem(24);
+      padding-right: rem(12);
+      @include mq(md, min) {
+        height: rem(30);
+        padding-right: rem(13);
+      }
+    }
+    span {
+      font-size: rem(14);
+      @include mq(md, min) {
+        font-size: rem(16);
+        line-height: 1.8;
+      }
+    }
+  }
+
+  &__bar {
+  }
+  &__current {
+    img {
+      width: auto;
+      height: rem(24);
+      padding-right: rem(12);
+      @include mq(md, min) {
+        height: rem(30);
+        padding-right: rem(13);
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    display: none;
+    width: 100%;
+    bottom: calc(100% - 1px);
+    right: 0;
+    background: #fff;
+    border-radius: rem(22) rem(22) 0 0;
+    border-width: rem(1) rem(1) 0 rem(1);
+    border-color: #000;
+    border-style: solid;
+    @include mq(md, min) {
+      width: 100%;
+    }
+    #{$this}__item {
+      cursor: pointer;
+      padding: rem(6) rem(16);
+    }
+    &:hover {
+      #{$this}__item {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__link {
+    color: #000;
+  }
+  .d-none {
+    display: none !important;
+  }
+}

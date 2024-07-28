@@ -1,0 +1,23 @@
+.btn {
+  font-size: rem(16);
+  font-weight: $font-semi-bold;
+  border-radius: rem(3);
+  padding: rem(8);
+  color: #fff;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2 ease;
+  &.--blue {
+    background-color: #008fd6;
+    &:hover {
+      background-color: #ea7e4a;
+      color: #fff;
+    }
+  }
+  &.--green {
+  }
+  &.--yellow {
+  }
+}

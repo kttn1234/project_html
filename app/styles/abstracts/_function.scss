@@ -1,0 +1,17 @@
+@function px2unit($unit, $pixels, $context) {
+  @if $unit {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+
+    @return calc($pixels / $context) * 1 + #{$unit};
+  }
+}
+
+@function rem($pixels, $context: $font-size-rem) {
+  @return px2unit("rem", $pixels, $context);
+}

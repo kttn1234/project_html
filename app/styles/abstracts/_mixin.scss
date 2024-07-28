@@ -1,0 +1,50 @@
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max != 0, $max - 1, null);
+}
+
+@mixin mq($name, $type: max, $breakpoints: $grid-breakpoints) {
+  @if map_has_key($breakpoints, $name) {
+    $width: map_get($breakpoints, $name);
+    @if $type == max {
+      $width: $width - 1px;
+
+      $max: breakpoint-max($name, $breakpoints);
+      @if $max {
+        @media (max-width: $max) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    } @else {
+      $min: breakpoint-min($name, $breakpoints);
+
+      @if $min {
+        @media (min-width: $min) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
