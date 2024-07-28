@@ -1,5 +1,3 @@
-"use strict";
-
 $(document).ready(function () {
   var $body = $("body");
   var active = "--active";
@@ -31,10 +29,12 @@ $(document).ready(function () {
   var $dropdownItem = $(".dropdown__item");
   var $dropdownName = $(".dropdown__name");
   var isSelect = "--is-select";
+
   $dropdown.click(function (e) {
     e.stopPropagation();
     $(this).toggleClass(active);
   });
+
   $dropdownItem.click(function () {
     $dropdownName.html($(this).text());
     $dropdownItem.removeClass(isSelect);
@@ -46,10 +46,12 @@ $(document).ready(function () {
   var $selectLangItem = $(".select-lang__item");
   var $selectLangCurrent = $(".select-lang__current");
   var dNone = "d-none";
+
   $selectLang.click(function (e) {
     e.stopPropagation();
     $(this).toggleClass(active);
   });
+
   $selectLangItem.click(function () {
     $selectLangItem.removeClass(dNone);
     $(this).addClass(dNone);
@@ -59,9 +61,7 @@ $(document).ready(function () {
   // backtop
   var $scrollTop = $(".scroll-top");
   $scrollTop.click(function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, "slow");
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 
@@ -72,6 +72,7 @@ $(document).ready(function () {
   var $modal = $(".modal");
   var $modalClose = $(".modal__close");
   var $modalHandle = $("[data-toggle='modal']");
+
   $modalHandle.click(function (e) {
     e.preventDefault();
     var modalShow = $(this).data("target");
@@ -79,10 +80,12 @@ $(document).ready(function () {
     $body.addClass(modalOpen);
     $body.append("<div class='modal__backdrop show'></div>");
   });
+
   $modalClose.click(function (e) {
     e.preventDefault();
     closeModal();
   });
+
   function closeModal() {
     var $modalBackdrop = $(".modal__backdrop");
     $modal.removeClass(show);
@@ -97,10 +100,14 @@ $(document).ready(function () {
   var $tabContent = $(".tabs__content");
   if (hash) {
     $tabNavItem.removeClass(active);
-    $('a[href="' + hash + '"]').parents("li").addClass(active);
+    $('a[href="' + hash + '"]')
+      .parents("li")
+      .addClass(active);
+
     $tabContent.removeClass(active);
     $(hash).addClass(active);
   }
+
   $tabNavItem.click(function (e) {
     var itemShow = $(this).find("a").attr("href");
     $tabContent.removeClass(active);
@@ -108,6 +115,7 @@ $(document).ready(function () {
     $tabNavItem.removeClass(active);
     $(this).addClass(active);
   });
+
   $(document).click(function (e) {
     // .dropdown
     if (!$dropdown.is(e.target) && $dropdown.has(e.target).length === 0) {
@@ -125,94 +133,108 @@ $(document).ready(function () {
 
   // $(".has-dropdown").addClass("actitive")
 
+
+
   $('.has-dropdown').next().toggle();
-  $('.has-dropdown').toggleClass("active");
-  $('.has-dropdown').click(function () {
+  $('.has-dropdown').toggleClass("active")
+
+  $('.has-dropdown').click(function() {
     $(this).next().toggle();
-    $(this).toggleClass("active");
-  });
-  $('.sidebar__link').click(function () {
-    $('.sidebar__link').removeClass("active");
-    $(this).addClass("active");
-    $(".profile__content").addClass("active");
+    $(this).toggleClass("active")
+  })
+  $('.sidebar__link').click(function() {
+    $('.sidebar__link').removeClass("active")
+    $(this).addClass("active")
+    $(".profile__content").addClass("active")
     $(".profile__collapse").show();
-  });
-  $(".profile__collapse").click(function () {
-    $(".profile__content").removeClass("active");
+  })
+
+  $(".profile__collapse").click(function() {
+    $(".profile__content").removeClass("active")
     $(this).hide();
-  });
-  $('.fa-play').on('click', function () {
+  })
+
+  $('.fa-play').on('click', function() {
     $(this).hide();
-    $(this).parents(".tbl-profile__media").find("video").get(0).play();
+    $(this).parents(".tbl-profile__media").find("video").get(0).play(); 
   });
-  $(".myvideo").click(function () {
+
+  $(".myvideo").click(function(){
     $(this).parents(".tbl-profile__media").find(".fa-play").show();
-    $(this).get(0).pause();
-  });
-  $('.profile__txt').bind('mouseenter', function () {
+    $(this).get(0).pause(); 
+  })
+
+  $('.profile__txt').bind('mouseenter', function(){
     var $this = $(this);
-    if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
-      $this.attr('title', $this.text());
+
+    if(this.offsetWidth < this.scrollWidth && !$this.attr('title')){
+        $this.attr('title', $this.text());
     }
   });
 
   // accordion
   // $(".accordion-main__head").removeClass("active")
-  $(".accordion-main__head").click(function () {
-    $(this).toggleClass("active");
+  $(".accordion-main__head").click(function() {
+    $(this).toggleClass("active")
     $(this).next().slideToggle(300);
   });
-  var setheightScroll = function setheightScroll() {
-    var heigthScreen = $(window).innerHeight();
+
+  var setheightScroll = function () {
+    var heigthScreen = $(window).innerHeight()
     var heightHeadApp = $(".header-app").innerHeight();
     var heightMenuApp = $(".menu-app").innerHeight();
     var heightFuntion = $(".profile__funtion").innerHeight();
     var heightTblHead = $(".tbl-profile__head").innerHeight();
     var heightPopupHead = $(".popup-detail__head").innerHeight();
     var heightScrollBar = 18;
+    
     var heightTblBody = heigthScreen - heightHeadApp - heightMenuApp - heightFuntion - heightTblHead - heightScrollBar;
-    var heightProfileNav = heigthScreen - heightHeadApp - heightMenuApp;
-    var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead;
-    $(".tbl-profile__body").css("height", heightTblBody + "px");
-    $(".profile__nav").css("height", heightProfileNav + "px");
-    $(".popup-detail__body").css("height", heightPopupBody + "px");
-  };
-  $(window).on("resize", function () {
-    setheightScroll();
+    var heightProfileNav = heigthScreen - heightHeadApp - heightMenuApp ;
+
+    var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
+
+    $(".tbl-profile__body").css("height", heightTblBody+"px");
+    $(".profile__nav").css("height", heightProfileNav+"px");
+
+    $(".popup-detail__body").css("height", heightPopupBody+"px");
+  }
+
+  $( window ).on( "resize", function() {
+    setheightScroll()
   });
-  setheightScroll();
-  $(".popup-close").click(function () {
-    $(this).parents(".profile__popup").removeClass("active");
-    $(".tbl-profile__body input").prop("checked", false);
-    setheightScroll();
+
+  setheightScroll()
+
+  $(".popup-close").click(function() {
+      $(this).parents(".profile__popup").removeClass("active")
+      $(".tbl-profile__body input").prop( "checked", false );
+      setheightScroll()
   });
-  $(".tbl-profile__body .tbl-profile__row").click(function () {
+
+  $(".tbl-profile__body .tbl-profile__row").click(function() {
     $(".tbl-profile__body .tbl-profile__row").removeClass("active");
-    $(".tbl-profile__body input").prop("checked", false);
+    $(".tbl-profile__body input").prop( "checked", false );
+
     $(this).addClass("active");
-    $(this).find("input").prop("checked", true);
-    $(".profile__popup").addClass("active");
+    $(this).find("input").prop( "checked", true );
+    $(".profile__popup").addClass("active")
   });
-  $(".profile__more").click(function () {
+
+  $(".profile__more").click(function() {
     $(".popup-menu").not($(this).next()).removeClass("active-menu");
     $(this).next().toggleClass("active-menu");
-    // $(".popup-menu").removeClass("active-menu")
-    // $(this).next().addClass("active-menu");
-    // if($(this).next().hasClass("active-menu")) {
-    //   $(this).next().removeClass("active-menu");
-    // } else {
-    //   $(this).next().addClass("active-menu");
-
-    // }
+    
+  })
+ 
+  $(".popup-menu, .profile__more").click(function(e) {
+    e.stopPropagation();
+  })
+ 
+  $("body").click(function(){
+    $(".popup-menu").removeClass("active-menu");
   });
 
-  var toggleMore = function toggleMore() {};
+  // add class to hover
+  // $(".popup-menu").parents(".profile__link").addClass("")
 
-  // $(".popup-menu, .profile__more").click(function(e) {
-  //   e.stopPropagation();
-  // })
-
-  // $("body").click(function(){
-  //   $(".popup-menu").removeClass("active-menu");
-  // });
 });

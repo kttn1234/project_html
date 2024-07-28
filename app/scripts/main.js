@@ -223,28 +223,18 @@ $(document).ready(function () {
   $(".profile__more").click(function() {
     $(".popup-menu").not($(this).next()).removeClass("active-menu");
     $(this).next().toggleClass("active-menu");
-    // $(".popup-menu").removeClass("active-menu")
-    // $(this).next().addClass("active-menu");
-    // if($(this).next().hasClass("active-menu")) {
-    //   $(this).next().removeClass("active-menu");
-    // } else {
-    //   $(this).next().addClass("active-menu");
-
-    // }
     
   })
-  
-  var toggleMore = function(){
-
-  }
-
  
-  // $(".popup-menu, .profile__more").click(function(e) {
-  //   e.stopPropagation();
-  // })
+  $(".popup-menu, .profile__more").click(function(e) {
+    e.stopPropagation();
+  })
  
-  // $("body").click(function(){
-  //   $(".popup-menu").removeClass("active-menu");
-  // });
+  $("body").click(function(){
+    $(".popup-menu").removeClass("active-menu");
+  });
+
+  // add class to hover
+  // $(".popup-menu").parents(".profile__link").addClass("")
 
 });

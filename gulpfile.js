@@ -98,7 +98,7 @@ function scripts() {
         this.emit("end");
       })
     )
-    .pipe(babel())
+    // .pipe(babel())
     // .pipe(uglify())
     .pipe(gulp.dest(options.scripts.dest))
     .pipe(
