@@ -1733,16 +1733,16 @@ img.alignleft {
   position: absolute;
   left: 0;
 }
-.profile__link:not(.has-dropdown):hover {
-  background-color: #efefef;
-  color: #8c8c8c;
-}
 .profile__link.active .profile__txt,
 .profile__link.active .profile__icon {
   color: #4277d1;
 }
 .profile__link.active .fa-chevron-right:before {
   content: "\f078";
+}
+.profile__link.has-more:hover {
+  background-color: #efefef;
+  color: #8c8c8c;
 }
 .profile__icon {
   margin-right: 1rem;
@@ -2770,12 +2770,22 @@ img.alignleft {
   position: absolute;
   z-index: 3;
   max-width: 18.5rem;
+  min-width: 18.5rem;
   right: 0;
   top: 3.5rem;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 .popup-menu.active-menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 .popup-menu__item {
   padding: 10px 10px;
@@ -2790,6 +2800,9 @@ img.alignleft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .popup-menu__icon {
   margin-right: 1rem;
@@ -2822,11 +2835,10 @@ img.alignleft {
   height: 0;
   bottom: 0;
   margin: auto;
-  display: block !important;
   border-left: 0.6rem solid transparent;
   border-top: 0.6rem solid #5a636b;
   border-right: 0.6rem solid transparent;
-  bottom: -0.6rem;
+  bottom: -0.5rem;
   left: 0;
   right: 0;
   margin: auto;

@@ -1,25 +1,3 @@
-// html {
-// 	font-size: 62.5%;
-// 	overflow-x:hidden;
-// }
-// body {
-// 	background: #fff;
-// 	color: #323232;
-// 	font-family: "Noto Sans JP", sans-serif;
-// 	font-size: 1.4rem;
-// 	font-weight: 400;
-// 	line-height: 1.7;
-// 	overflow-x:hidden;
-// 	-webkit-text-size-adjust:none;
-// 	-ms-text-size-adjust:none;
-// 	word-wrap:break-word;
-// }
-// @media screen and (min-width: 768px){
-// 	// body { min-width: 1920px; }
-// }
-// @media screen and (max-width: 767px){
-// 	body { font-size: 1.4rem; }
-// }
 .home-page {
     overflow-y: hidden;
 }
@@ -322,10 +300,7 @@
                 left: 0;
             }
         }
-        &:not(.has-dropdown):hover {
-            background-color: #efefef;
-            color: #8c8c8c;
-        }
+       
         &.active {
             .profile__txt,
             .profile__icon {
@@ -335,6 +310,12 @@
                 content: "\f078";
             }
             
+        }
+        &.has-more {
+            &:hover {
+                background-color: #efefef;
+                color: #8c8c8c;
+            }
         }
     }
     &__icon {
@@ -1337,11 +1318,18 @@
     position: absolute;
     z-index: 3;
     max-width: rem(185);
+    min-width: rem(185);
     right: 0;
     top: rem(35);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+    transform: translateY(rem(-10));
     &.active-menu {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        transform: translateY(0);
     }
     &__list {
     }
@@ -1356,6 +1344,7 @@
     }
     &__link {
         display: flex;
+        align-items: center;
     }
     &__icon {
         margin-right: rem(10);
@@ -1363,7 +1352,6 @@
 }
 .tooltip-menu {
     bottom: rem(33);
-
     background-color: #5a636b;
     color: #fff;
     position: relative;
@@ -1373,45 +1361,30 @@
     max-width: rem(150);
     min-width: rem(150);
     position: absolute;
-    // right: -152px;
-    // top: 50%;
-    // transform: translateY(-50%);
     z-index: 1000;
-    // display: block!important;
     right: rem(15);
-
-
     visibility: hidden;
     opacity: 0;
     transform: translate3d(0, -20px, 0);
     transition: all 0.5s ease-out;
-   
-
-    
     &::before {
         content: "";
         position: absolute;
         width: 0;
         height: 0;
-        // border-top: rem(6) solid transparent;
-        // border-bottom: rem(6) solid transparent;
-        // border-right: rem(6) solid #5a636b;
-
-        
-        // top: 0;
         bottom: 0;
-        // left: rem(-6);
         margin: auto;
-        display: block!important;
-
         border-left: rem(6) solid transparent;
         border-top: rem(6) solid #5a636b;
         border-right: rem(6) solid  transparent;
-        bottom: rem(-6);
+        bottom: rem(-5);
         left: 0;
         right: 0;
         margin: auto;
 
+    }
+    &__cont {
+        
     }
     &__date {
         

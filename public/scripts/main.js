@@ -235,6 +235,6 @@ $(document).ready(function () {
   });
 
   // add class to hover
-  // $(".popup-menu").parents(".profile__link").addClass("")
+  $(".tooltip-menu").parents(".profile__link").addClass("has-more")
 
 });
