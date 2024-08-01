@@ -880,10 +880,13 @@ block container
 											.tbl-profile__col 
 												i.icon-telegram
 											.tbl-profile__col
-												.tbl-profile__media
-													i.fa-solid.fa-play
-													video(class="myvideo")
-														source(src='video/video01.mp4', type='video/mp4')
+												.media-list 
+													.media-list__item
+														.tbl-profile__media
+															i.fa-solid.fa-play
+															video(muted='' class="myvideo")
+																source(src='video/video01.mp4', type='video/mp4')
+																source(src='movie.ogg' type='video/ogg')
 											.tbl-profile__col
 												span.tbl-profile__avt
 													+img('images/home/icon_avt.png','PICTURE')
@@ -910,11 +913,26 @@ block container
 											.tbl-profile__col 
 												i.fa-brands.fa-facebook-f
 											.tbl-profile__col
-												.tbl-profile__media
-													i.fa-solid.fa-play
-													video(muted='' class="myvideo")
-														source(src='video/video01.mp4', type='video/mp4')
-														source(src='movie.ogg' type='video/ogg')
+												.media-list 
+													.media-list__item
+														.tbl-profile__media
+															i.fa-solid.fa-play
+															video(muted='' class="myvideo")
+																source(src='video/video01.mp4', type='video/mp4')
+																source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															i.fa-solid.fa-play
+															video(muted='' class="myvideo")
+																source(src='video/video01.mp4', type='video/mp4')
+																source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															i.fa-solid.fa-play
+															video(muted='' class="myvideo")
+																source(src='video/video01.mp4', type='video/mp4')
+																source(src='movie.ogg' type='video/ogg')
+
 											.tbl-profile__col
 												span.tbl-profile__avt
 													+img('images/home/icon_user.png','PICTURE')
@@ -940,8 +958,23 @@ block container
 											.tbl-profile__col 
 												i.fa-brands.fa-facebook-f
 											.tbl-profile__col
-												.tbl-profile__media
-													+img('images/home/img_flower.jpg','PICTURE')
+												.media-list 
+													.media-list__item
+														.tbl-profile__media
+															+img('images/home/img_flower.jpg',
+													'PICTURE')
+													.media-list__item
+														.tbl-profile__media
+															+img('images/home/img_flower.jpg',
+													'PICTURE')
+													.media-list__item
+														.tbl-profile__media
+															+img('images/home/img_flower.jpg',
+													'PICTURE')
+													.media-list__item
+														.tbl-profile__media
+															+img('images/home/img_flower.jpg',
+													'PICTURE')
 											.tbl-profile__col
 												span.tbl-profile__avt
 													+img('images/home/img_flower.jpg','PICTURE')

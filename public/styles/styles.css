@@ -1652,6 +1652,9 @@ body.no-scroll {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.profile__nav.--bdr-none {
+  border-right: none;
+}
 .profile__main {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -2115,7 +2118,7 @@ body.no-scroll {
   cursor: pointer;
 }
 .tbl-profile__media video {
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 .tbl-profile__media .fa-play {
@@ -3136,11 +3139,14 @@ body.no-scroll {
   color: #000000;
 }
 .statistics-overview__icon {
+  margin-bottom: 1rem;
   font-size: 2.4rem;
+  display: block;
 }
 .statistics-overview__number {
   font-weight: bold;
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .chart-date {
   margin-top: 6rem;
@@ -3159,6 +3165,9 @@ body.no-scroll {
 }
 .chart-date__group > .chart-date__cont {
   width: 46%;
+}
+.chart-date canvas {
+  height: 300px !important;
 }
 
 .connect-user {
@@ -3195,7 +3204,7 @@ body.no-scroll {
 }
 .user-top__count {
   background-color: #316bce;
-  border-radius: 1rem;
+  border-radius: 3rem;
   padding: 0.2rem;
   color: #fff;
   text-align: center;
@@ -3243,6 +3252,7 @@ body.no-scroll {
 
 .pagination {
   font-weight: 500;
+  margin-right: 1rem;
 }
 .pagination__list {
   display: -webkit-box;
@@ -3253,6 +3263,9 @@ body.no-scroll {
   opacity: 0.7;
   pointer-events: none;
 }
+.pagination__item.--dot a {
+  cursor: default;
+}
 .pagination__item:hover {
   color: #4277d1;
 }
@@ -3262,4 +3275,17 @@ body.no-scroll {
 }
 .pagination__item a {
   padding: 0.6rem 1.2rem;
+}
+
+.media-list {
+  margin: -0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.media-list__item {
+  padding: 0.3rem;
 }

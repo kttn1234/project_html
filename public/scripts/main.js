@@ -363,7 +363,7 @@ $(document).ready(function () {
   var dataDaily = {
     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
     labels: ["Jul 2024"],
-    labels: ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"],
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     datasets: [
       {
         label: "Postings",
@@ -409,7 +409,7 @@ $(document).ready(function () {
   var dataHourly = {
     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
     // labels: ["Jul 2024"],
-    labels: ["00 - 01", "01 - 02", "02 - 03", "03 - 04", "05 - 06", "06 - 07", "07 - 08", "08 - 09", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19", "20 - 21", "21 - 22", "22 - 23", "23 - 24"],
+    labels: ["00 - 01", "01 - 02", "02 - 03", "03 - 04",  "04 - 05","05 - 06", "06 - 07", "07 - 08", "08 - 09","09 - 10", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19","19 - 20", "20 - 21", "21 - 22", "22 - 23", "23 - 24"],
     datasets: [
       {
         label: "Postings",
@@ -418,7 +418,7 @@ $(document).ready(function () {
         borderWidth: 0,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: Utils.numbers(NUM_CFG_HOURS),
+        // data: Utils.numbers(NUM_CFG_HOURS),
       },
       {
         label: "Sent Comments",
@@ -427,7 +427,7 @@ $(document).ready(function () {
         borderWidth: 0,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: Utils.numbers(NUM_CFG_HOURS),
+        // data: Utils.numbers(NUM_CFG_HOURS),
       },
       {
         label: "Chat Messages",
@@ -436,7 +436,7 @@ $(document).ready(function () {
         borderWidth: 0,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: Utils.numbers(NUM_CFG_HOURS),
+        // data: Utils.numbers(NUM_CFG_HOURS),
       },
       {
         label: "Media Items",
@@ -445,28 +445,37 @@ $(document).ready(function () {
         borderWidth: 0,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: Utils.numbers(NUM_CFG_HOURS),
+        // data: Utils.numbers(NUM_CFG_HOURS),
       },
     ]
   };
+
   
+
   var optionsMonthly = {
+    responsive: true, 
     maintainAspectRatio: false,
     scales: {
       y: {
-        stacked: true,
+        // stacked: true,
         grid: {
           display: true,
-          color: "#f7f7f7"
+          color: "#f7f7f7",
+          // drawOnChartArea: false,
+          drawTicks: false,
         },
-       
+        ticks: {
+          stepSize: 0.2,
+          suggestedMin: 0,  
+          suggestedMax: 10,  
+        },
+             
       },
       x: {
         grid: {
-          display: false
+          display: true,
         }
-      },
-      
+      }
     },
     plugins: {
       title: {
@@ -474,24 +483,27 @@ $(document).ready(function () {
         text: 'Monthly',
         align: 'start'
       }
-     
     }
   };
 
-
   var optionsYearly = {
+    responsive: true, 
     maintainAspectRatio: false,
     scales: {
       y: {
-        stacked: true,
         grid: {
           display: true,
-          color: "#f7f7f7"
-        }
+          color: "#f7f7f7",          
+        },
+        ticks: {
+          stepSize: 0.2,
+          suggestedMin: 0,  
+          suggestedMax: 10,  
+        }        
       },
       x: {
         grid: {
-          display: false
+          display: true
         }
       }
     },
@@ -501,23 +513,31 @@ $(document).ready(function () {
         text: 'Yearly',
         align: 'start'
       }
-     
     }
   };
 
   var optionsDaily = {
+    responsive: true, 
     maintainAspectRatio: false,
     scales: {
       y: {
-        stacked: true,
         grid: {
           display: true,
-          color: "#f7f7f7"
-        }
+          color: "#f7f7f7",
+        },
+        ticks: {
+          stepSize: 0.2,
+          suggestedMin: 0,  
+          suggestedMax: 10,  
+        }        
       },
       x: {
         grid: {
           display: true
+        },
+        ticks: {
+          maxRotation: 30,
+          minRotation: 30,            
         }
       }
     },
@@ -527,23 +547,33 @@ $(document).ready(function () {
         text: 'Daily',
         align: 'start'
       }
-     
     }
   };
 
   var optionsHourly = {
+    responsive: true, 
     maintainAspectRatio: false,
     scales: {
       y: {
-        stacked: true,
         grid: {
           display: true,
-          color: "#f7f7f7"
-        }
+          color: "#f7f7f7",
+          drawTicks: false,
+        },
+        ticks: {
+          stepSize: 0.2,
+          suggestedMin: 0,  
+          suggestedMax: 10,  
+        },
+             
       },
       x: {
         grid: {
-          display: true
+          display: true,
+        },
+        ticks: {
+          maxRotation: 30,
+          minRotation: 30,
         }
       }
     },
@@ -553,9 +583,10 @@ $(document).ready(function () {
         text: 'Hourly',
         align: 'start'
       }
-     
     }
   };
+  
+
   
  
   if($(".chart-date").length) {
@@ -615,4 +646,9 @@ $(document).ready(function () {
     e.stopPropagation();
   })
 
+  // pagination
+  $(".pagination .pagination__item").not(".--next, .--prev,.--dot").click(function(e) {
+    $('.pagination .pagination__item').removeClass("active");
+    $(this).addClass('active')
+  })
 });

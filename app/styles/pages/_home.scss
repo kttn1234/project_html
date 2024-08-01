@@ -215,6 +215,9 @@ body.no-scroll {
         min-width: 300px;
        overflow-y: auto;
        overflow-x: hidden;
+       &.--bdr-none {
+            border-right: none;
+        }
     }
     
     &__main {
@@ -732,7 +735,7 @@ body.no-scroll {
         position: relative;
         cursor: pointer;
         video {
-            width: 100%;
+            width: auto;
             height: 100%;
         }
         .fa-play {
@@ -1695,12 +1698,15 @@ body.no-scroll {
     }
 
     &__icon {
+        margin-bottom: rem(10);
         font-size: rem(24);
+        display: block;
     }
 
     &__number {
         font-weight: bold;
         font-size: rem(30);
+        margin-bottom: rem(10);
     }
     &__txt {
     
@@ -1715,12 +1721,13 @@ body.no-scroll {
     
     }
     &__item {
+        
         & + .chart-date__item {
             margin-top: rem(70);
         }
     }
     &__cont {
-    
+        
     }
     &__group {
         display: flex;
@@ -1728,6 +1735,10 @@ body.no-scroll {
         & > .chart-date__cont {
             width: calc(100%/2 - 4%);
         }
+    }
+
+    canvas {
+        height: 300px!important;
     }
     
 }
@@ -1769,7 +1780,7 @@ body.no-scroll {
     }
     &__count {
         background-color: $blue-3;
-        border-radius: rem(10);
+        border-radius: rem(30);
         padding: rem(2);
         color: $white-1;
         text-align: center;
@@ -1825,6 +1836,7 @@ body.no-scroll {
 
 .pagination {
     font-weight: 500;
+    margin-right: rem(10);
     &__list {
         display: flex;
     }
@@ -1834,6 +1846,12 @@ body.no-scroll {
             opacity: .7;
             pointer-events: none;
         }
+        &.--dot {
+            a {
+                cursor: default;
+            }
+            
+        }
         &:hover {
             color: $blue-1;
         }
@@ -1842,10 +1860,18 @@ body.no-scroll {
                 background-color: $blue-1;
                 color: #fff;
             }
-           
         }
         a {
             padding: rem(6) rem(12);
         }
     }
 }
+.media-list {
+    margin: rem(-3);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &__item {
+        padding: rem(3);
+    }
+} 
