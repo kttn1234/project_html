@@ -1,0 +1,993 @@
+extends layout/layout
+
+block vars
+	-title = 'HS80 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+
+
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile
+				//- span.profile__collapse
+				//- 	+img('images/home/icon_collapse.png','collapse')
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active
+					.profile__nav
+						.targer-profile
+							.targer-profile__ttl Target Profiles 
+							ul.targer-profile__list 
+								li.targer-profile__item
+									+link('#',"").targer-profile__link
+										.targer-profile__avt
+											+img('images/home/img_flower.jpg','PICTURE')
+										.targer-profile__txt.js-hover-full Nhân Duyên
+										.targer-profile__icon 
+											i.fa-brands.fa-facebook-f
+								li.targer-profile__item
+									+link('#',"").targer-profile__link
+										.targer-profile__avt
+											+img('images/home/img_flower.jpg','PICTURE')
+										.targer-profile__txt.js-hover-full Nhân Duyên
+										.targer-profile__icon 
+											i.fa-brands.fa-facebook-f
+							.targer-profile__ttl Account-Linkings
+							ul.targer-profile__list 
+								li.targer-profile__item
+									+link('#',"").targer-profile__link
+										.targer-profile__avt
+											+img('images/home/img_flower.jpg','PICTURE')
+										.targer-profile__txt.js-hover-full  Trần Thị Bé Quyên (Quyên Babie) Trần Thị Bé Quyên (Quyên Babie)
+										.targer-profile__icon 
+											i.fa-brands.fa-facebook-f
+							.targer-profile__ttl Pinned Profiles
+							+link('#',"").targer-profile__pinn
+								.targer-profile__pinn-icon
+									i.fa-solid.fa-magnifying-glass
+								.targer-profile__pinn-txt.js-hover-full Open diffrent profile
+
+									
+					.profile__main
+						.targer-main
+							.targer-main__head.targer-head
+								.targer-head__user 
+									.targer-user 
+										.targer-user__avt
+											.targer-user__avt-img
+												+img('images/home/img_flower.jpg','PICTURE')
+											.targer-user__avt-icon 
+												i.fa-brands.fa-facebook
+										.targer-user__info
+											.targer-user__name
+												span Trần Thị Bé Quyên (Quyên Babie) 
+												span.targer-user__name-icon
+													i.fa-solid.fa-circle-info
+											.user-info
+												ul.user-info__list
+													li.user-info__item 
+														.user-info__name User ID 
+														.user-info__nick babie.quyen.58
+													li.user-info__item 
+														.user-info__name NetWork ID 
+														.user-info__nick 100061192465837
+								.targer-head__export 
+									.dropdown
+										.dropdown__tool
+											.dropdown__bar
+												.dropdown__icon
+													i.fa-solid.fa-file-pdf
+												span.dropdown__txt
+													| PDF EXPORT
+												i.fa-solid.fa-chevron-down
+											ul.dropdown__list
+												li.dropdown__item.--is-select choose01
+												li.dropdown__item choose02
+							.targer-main__body
+								.targer-nav.js-targer-nav
+									ul.targer-nav__menu
+										li.targer-nav__item.active(data-tab="targer-01")
+											.targer-nav__link
+												span.targer-nav__icon
+													i.fa-solid.fa-chart-simple
+												span.targer-nav__txt Statistics
+										li.targer-nav__item.--dropdown
+											.dropdown
+												.dropdown__tool
+													.dropdown__bar
+														.dropdown__icon
+															i.fa-solid.fa-table
+														span.dropdown__txt
+															| Profile Data
+														i.fa-solid.fa-chevron-down
+													.dropdown__list
+														.data-group
+															ul.data-group__list 
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-users
+																		span.data-group__txt Connected Users
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Friends/Fllowers
+																				
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item.--is-select  ALl connected users
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-bars-staggered
+																		span.data-group__txt Posting
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Author Of
+																				
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Quoted In
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-images
+																		span.data-group__txt Media Items
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item All User Media Items
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-comments
+																		span.data-group__txt Comments
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Comments Sent by user
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Comments on user postings
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Comments top user comments
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-location-dot
+																		span.data-group__txt Locations
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Visited by user
+																				
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Is location profile
+																li.data-group__item 
+																	.data-group__link
+																		span.data-group__icon
+																			i.fa-solid.fa-message
+																		span.data-group__txt Chat Messages
+																	ul.data-group__sub
+																		li.data-group__sub-item
+																			+link('#',"").dropdown__item Messages sent by user
+																					
+										li.targer-nav__item(data-tab="targer-03")
+											.targer-nav__link
+												span.targer-nav__icon
+													i.fa-solid.fa-expand
+												span.targer-nav__txt Full Page Capture
+								.targer-content
+									.targer-content__item#targer-01
+										.statistics-overview
+											.statistics-overview__list
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-chart-simple
+														.statistics-overview__number 0
+														.statistics-overview__txt Posting
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-comment
+														.statistics-overview__number 0
+														.statistics-overview__txt Send Commnents
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-comments
+														.statistics-overview__number 0
+														.statistics-overview__txt Commnents
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-message
+														.statistics-overview__number 0
+														.statistics-overview__txt Chat Messages
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-photo-film
+														.statistics-overview__number 0
+														.statistics-overview__txt Media Items
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-images
+														.statistics-overview__number 0
+														.statistics-overview__txt Albums
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-thumbs-up
+														.statistics-overview__number 0
+														.statistics-overview__txt Give Reaction
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-heart
+														.statistics-overview__number 0
+														.statistics-overview__txt Received Reaction
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-user-group
+														.statistics-overview__number 0
+														.statistics-overview__txt Friends
+										.statistics-overview
+											.statistics-overview__list
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-user-group
+														.statistics-overview__number 2
+														.statistics-overview__txt Flollowers
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-user-group
+														.statistics-overview__number 40
+														.statistics-overview__txt Fllowing
+												.statistics-overview__item
+													.statistics-overview__link
+														span.statistics-overview__icon
+															i.fa-solid.fa-users-viewfinder
+														.statistics-overview__number 0
+														.statistics-overview__txt Group
+										
+										.chart-date 	
+											.chart-date__list
+												.chart-date__item
+													.chart-date__cont
+														canvas#chartMonthly
+												.chart-date__item
+													.chart-date__group
+														.chart-date__cont
+															canvas#chartYearly
+														.chart-date__cont
+															canvas#chartDaily
+												.chart-date__item
+													.chart-date__cont
+														canvas#chartHourly
+										.connect-user 
+											.connect-user__list 
+												.connect-user__item 
+													.connect-user__ttl Top Connected Users
+													.connect-user__cont.user-top
+														ul.user-top__list
+															li.user-top__item
+																+link('#',"").user-top__link
+																	.user-top__number 01
+																	.user-top__user
+																		.author-info
+																			.author-info__icon
+																				+img('images/home/img_flower.jpg','PICTURE')
+																			.author-info__detail 
+																				.author-info__id 100041543914915
+																				.author-info__name Thương Ngô
+																			.author-info__icon-info.trans
+																				i.fa-solid.fa-circle-info
+																.user-top__count 1
+															li.user-top__item
+																+link('#',"").user-top__link
+																	.user-top__number 02
+																	.user-top__user
+																		.author-info
+																			.author-info__icon
+																				+img('images/home/img_flower.jpg','PICTURE')
+																			.author-info__detail 
+																				.author-info__id 100041543914915
+																				.author-info__name Kim Tuyền
+																			.author-info__icon-info.trans
+																				i.fa-solid.fa-circle-info
+																.user-top__count 1
+															li.user-top__item
+																+link('#',"").user-top__link
+																	.user-top__number 03
+																	.user-top__user
+																		.author-info
+																			.author-info__icon
+																				+img('images/home/img_flower.jpg','PICTURE')
+																			.author-info__detail 
+																				.author-info__id 100041543914915
+																				.author-info__name Em Mie
+																			.author-info__icon-info.trans
+																				i.fa-solid.fa-circle-info
+																.user-top__count 1
+												.connect-user__item 
+													.connect-user__ttl Top Posts 
+													.connect-user__notes No posting found
+									.targer-content__item#tab-dropdown
+										.profile__main
+											.profile__funtion
+												.profile__group
+													.profile__tools.tools
+														.tools__nav
+															ul.tools__menu
+																li.tools__item
+																	ul.tools__group
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon.active
+																					i.fa-solid.fa-table
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					i.fa-solid.fa-map
+																li.tools__item
+																	ul.tools__group
+																		li.tools__group-item
+																			+link('#',"").tools__link.active
+																				span.tools__icon
+																					i.fa-solid.fa-tag
+																li.tools__item
+																	ul.tools__group
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					i.fa-solid.fa-folder-plus
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon.ico-list-plus
+																					i.fa-solid.fa-list
+																					i.fa-solid.fa-circle-plus
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon.ico-list-minus
+																					i.fa-solid.fa-list
+																					i.fa-solid.fa-circle-minus
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					i.icon.icon-grid
+																
+																li.tools__item
+																	ul.tools__group
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					i.fa-solid.fa-file-csv
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					i.fa-sharp.fa-solid.fa-file-excel
+																		li.tools__group-item
+																			+link('#',"").tools__link
+																				span.tools__icon
+																					+img('images/home/icon_xml.png','file')
+																		li.tools__group-item
+																			.dropdown
+																				.dropdown__tool
+																					.dropdown__bar
+																						span.dropdown__icon
+																							i.fa-solid.fa-file-pdf
+																						i.fa-solid.fa-chevron-down
+																					ul.dropdown__list
+																						li.dropdown__item.--is-select choose01
+																						li.dropdown__item choose02
+																li.tools__item
+																	ul.tools__group
+																		li.tools__group-item
+																			.dropdown
+																				.dropdown__tool
+																					.dropdown__bar
+																						span.dropdown__icon
+																							i.fa-solid.fa-eye-slash
+																						i.fa-solid.fa-chevron-down
+																					ul.dropdown__list
+																						li.dropdown__item.--is-select choose01
+																						li.dropdown__item choose02
+																li.tools__item.--bdr-none
+																	.profile__total 46 items
+													.profile__filter 
+														.profile-filter__nav
+															ul.profile-filter__menu
+																li.profile-filter__item
+																	.profile-filter__search
+																		.form-search.--bdr-none
+																			i.fa-solid.fa-magnifying-glass
+																			input.form-control(name='search' type='text' placeholder='Search...')
+																li.profile-filter__item
+																	ul.profile-filter__group
+																		li.profile-filter__group-item
+																			+link('#',"").profile-filter__link
+																				span.profile-filter__icon
+																					i.fa-solid.fa-eye-slash
+																		li.profile-filter__group-item
+																			+link('#',"").profile-filter__link
+																				span.profile-filter__icon
+																					i.fa-solid.fa-chevron-down
+																		li.profile-filter__group-item
+																			+link('#',"").profile-filter__link
+																				span.profile-filter__icon
+																					i.fa-solid.fa-arrow-up-wide-short
+												
+												.profile__perpage
+													.dropdown
+														.dropdown__tool
+															.dropdown__bar
+																span.dropdown__name 50 per page
+																i.fa-sharp.fa-solid.fa-caret-down
+															ul.dropdown__list
+																li.dropdown__item.--is-select 100 per page
+																li.dropdown__item 200 per page
+											.profile__tbl.tbl-profile
+												.tbl-profile__tbl
+													.tbl-profile__head
+														.tbl-profile__row
+															.tbl-profile__col
+																label.checkbox(for='checkbox01')
+																	input#checkbox01(name='checkbox01' type='checkbox' placeholder='checkbox01')
+																	span.checkbox__checkmark
+															.tbl-profile__col
+																.tbl-profile__topic
+																	span NETWORK
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span TAGS
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col
+																.tbl-profile__topic
+																	span PICTURE
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span NAME
+																	i.fa-solid.fa-arrow-up-wide-short
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col
+																.tbl-profile__topic
+																	span ACCOUNT-LINKING
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span VANITY NAME
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span NETWORK OB JECT ID
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span FRIENDS
+																	i.fa-solid.fa-xmark
+															.tbl-profile__col 
+																.tbl-profile__topic
+																	span Flollower
+																	i.fa-solid.fa-xmark
+													.tbl-profile__body
+														.tbl-profile__scroll
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox03')
+																		input#checkbox03(name='checkbox03' type='checkbox' placeholder='checkbox03')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.icon-telegram
+																.tbl-profile__col
+																	.tbl-profile__media
+																		i.fa-solid.fa-play
+																		video(class="myvideo")
+																			source(src='video/video01.mp4', type='video/mp4')
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info TTrần Thị Bé Quyên TTrần Thị Bé Quyên
+																.tbl-profile__col
+																	.tbl-profile__user
+																		span.tbl-profile__avt
+																			+img('images/home/img_flower.jpg','PICTURE')
+																		.tbl-profile__info Trần Thị Bé Quyên (rần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info babie. quyen.58
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info  0/0
+																.tbl-profile__col 
+																	.tbl-profile__info  2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox04')
+																		input#checkbox04(name='checkbox04' type='checkbox' placeholder='checkbox04')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																	.tbl-profile__media
+																		i.fa-solid.fa-play
+																		video(muted='' class="myvideo")
+																			source(src='video/video01.mp4', type='video/mp4')
+																			source(src='movie.ogg' type='video/ogg')
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_user.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Bạch Tuyết Minh
+																.tbl-profile__col
+																	.tbl-profile__info
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info dau.tran.3956
+																.tbl-profile__col 
+																	.tbl-profile__info 100057069566838
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox05')
+																		input#checkbox05(name='checkbox05' type='checkbox' placeholder='checkbox05')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																	.tbl-profile__media
+																		+img('images/home/img_flower.jpg','PICTURE')
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/img_flower.jpg','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Cafe DJ 777
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info 100004562533275
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox06')
+																		input#checkbox06(name='checkbox06' type='checkbox' placeholder='checkbox06')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.icon-youtube
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt04.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info CH Sữa Thùy Dương
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info 100031335937835
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox07')
+																		input#checkbox07(name='checkbox07' type='checkbox' placeholder='checkbox07')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.icon-tiktok
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt05.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Diễm Diễm
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info julie.duyen
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox08')
+																		input#checkbox08(name='checkbox08' type='checkbox' placeholder='checkbox08')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.icon-zalo
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt06.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Đặng Duyên
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info 100041543914915
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox09')
+																		input#checkbox09(name='checkbox09' type='checkbox' placeholder='checkbox09')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt07.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info  Em Mie
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info 100045394118546
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox10')
+																		input#checkbox10(name='checkbox10' type='checkbox' placeholder='checkbox10')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt08.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info  Ha Nguyễn
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info '100045920285141
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox11')
+																		input#checkbox11(name='checkbox11' type='checkbox' placeholder='checkbox11')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt09.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info  Hằng Miniel
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info '100045920285141
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox12')
+																		input#checkbox12(name='checkbox12' type='checkbox' placeholder='checkbox12')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt10.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Hoài Em
+																.tbl-profile__col 
+																	.tbl-profile__info 
+																		i.fa-solid.fa-user-group
+																		|Trần Thị Bé Quyên (
+																.tbl-profile__col 
+																	.tbl-profile__info 100011781240052
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox13')
+																		input#checkbox13(name='checkbox13' type='checkbox' placeholder='checkbox13')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt11.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Nhân Duyên
+																.tbl-profile__col
+																.tbl-profile__col 100063912613420
+																.tbl-profile__col 
+																	.tbl-profile__info Nhanduyen99
+																.tbl-profile__col 
+																	.tbl-profile__info 1000639
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox14')
+																		input#checkbox14(name='checkbox14' type='checkbox' placeholder='checkbox14')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																.tbl-profile__col 
+																	.tbl-profile__info From Ho Chi Minh City
+																.tbl-profile__col
+																.tbl-profile__col 
+																	.tbl-profile__info 100011781240052
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+															.tbl-profile__row
+																.tbl-profile__col
+																	label.checkbox(for='checkbox15')
+																		input#checkbox15(name='checkbox15' type='checkbox' placeholder='checkbox15')
+																		span.checkbox__checkmark
+																.tbl-profile__col 
+																	i.fa-brands.fa-facebook-f
+																.tbl-profile__col
+																.tbl-profile__col
+																	span.tbl-profile__avt
+																		+img('images/home/icon_avt12.png','PICTURE')
+																.tbl-profile__col 
+																	.tbl-profile__info Hoàng Thị Ngọc
+																.tbl-profile__col
+																.tbl-profile__col 
+																	.tbl-profile__info 100011781240052
+																.tbl-profile__col 
+																	.tbl-profile__info 100061192465837
+																.tbl-profile__col 
+																	.tbl-profile__info 0/0
+																.tbl-profile__col 
+																	.tbl-profile__info 2/69000
+									.targer-content__item#targer-03
+										.targer-nav.--download
+											ul.targer-nav__menu
+												li.targer-nav__item
+													.targer-nav__link
+														span.targer-nav__icon
+															i.fa-solid.fa-download
+														span.targer-nav__txt DOWNLOAD FULL PAGE PDF
+												li.targer-nav__item
+													.targer-nav__link
+														span.targer-nav__icon
+															i.fa-solid.fa-download
+														span.targer-nav__txt DOWNLOAD FULL PAGE PNG
+										.targer-img 
+											+img('images/home/img_fullpage.png','PICTURE')
+
+
+						
+

@@ -209,6 +209,7 @@
         right: rem(15);
       }
     }
+   
     &:hover {
       // color: #ea7e4a;
       opacity: .7;
@@ -248,7 +249,7 @@
       line-height: 1.8;
     }
     &:hover {
-      color: #ea7e4a;
+      color: $blue-1;
     }
     &:first-child {
       padding-top: 0;
@@ -257,7 +258,7 @@
       padding-bottom: 0;
     }
     &.--is-select {
-      color: #895eb2;
+      color: $blue-1;
     }
   }
   &.--active {
