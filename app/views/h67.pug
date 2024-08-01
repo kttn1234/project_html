@@ -1,0 +1,11 @@
+extends layout/layout
+
+block vars
+	-title = 'HS67 page'
+	-bodyClass = 'vis-network'
+block container
+	#mynetwork
+block script
+	script(type="text/javascript" src="scripts/vis-network/vis-main.js")
+	script(type="text/javascript" src="scripts/vis-network/vis-network.min.js")
+	script(type="text/javascript" src="scripts/vis-network/vis-draw.js")
