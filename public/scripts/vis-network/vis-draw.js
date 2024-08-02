@@ -1,6 +1,6 @@
 $(document).ready(function () {
   function draw() {
-    var DIR = './../../images/home/';
+    var DIR = './images/home/';
     // create some nodes
     var nodes = [
       { id: 0, label: "Myriel", group: 1, shape: 'circularImage', image: DIR + 'img_flower.jpg'},
