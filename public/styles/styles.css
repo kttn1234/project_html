@@ -2703,6 +2703,12 @@ body.no-scroll {
   width: 100%;
   height: 100%;
 }
+.post-meida img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 
 .post-user {
   position: relative;
