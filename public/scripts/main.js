@@ -153,14 +153,14 @@ $(document).ready(function () {
     $(this).hide();
   })
 
-  $('.fa-play').on('click', function() {
+  $('.media-list').on('click', '.fa-play', function() {
     $(this).hide();
-    $(this).parents(".tbl-profile__media").find("video").get(0).play(); 
+    $(this).parents(".tbl-profile__media").find("video").get(0).play();
   });
 
-  $(".myvideo").click(function(){
+  $(".media-list").on('click', '.myvideo', function(){
     $(this).parents(".tbl-profile__media").find(".fa-play").show();
-    $(this).get(0).pause(); 
+    $(this).get(0).pause();
   })
 
   $('.profile__txt').bind('mouseenter', function(){
