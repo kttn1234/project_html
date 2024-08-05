@@ -1261,8 +1261,19 @@ body.no-scroll {
     }
 }
 .post-meida {
-    max-width: 160px;
-    video {
+    .media-list {
+        margin: rem(-5);
+    }
+    .media-list__item {
+        width: 42%;
+        padding: rem(5);
+        line-height: 0;
+    }
+    .tbl-profile__media {
+        width: 100%;
+        height: 100%;
+    }
+    .tbl-profile__media video {
         width: 100%;
         height: 100%;
     }
