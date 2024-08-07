@@ -153,15 +153,15 @@ $(document).ready(function () {
     $(this).hide();
   })
 
-  $('.media-list').on('click', '.fa-play', function() {
-    $(this).hide();
-    $(this).parents(".tbl-profile__media").find("video").get(0).play();
-  });
+  // $('.media-list').on('click', '.fa-play', function() {
+  //   $(this).hide();
+  //   $(this).parents(".tbl-profile__media").find("video").get(0).play();
+  // });
 
-  $(".media-list").on('click', '.myvideo', function(){
-    $(this).parents(".tbl-profile__media").find(".fa-play").show();
-    $(this).get(0).pause();
-  })
+  // $(".media-list").on('click', '.myvideo', function(){
+  //   $(this).parents(".tbl-profile__media").find(".fa-play").show();
+  //   $(this).get(0).pause();
+  // })
 
   $('.profile__txt').bind('mouseenter', function(){
     var $this = $(this);
@@ -651,4 +651,188 @@ $(document).ready(function () {
     $('.pagination .pagination__item').removeClass("active");
     $(this).addClass('active')
   })
+
+  // modal
+//   var player = videojs('my-player');
+// var ModalDialog = videojs.getComponent('ModalDialog');
+
+// var modal = new ModalDialog(player, {
+
+//   // We don't want this modal to go away when it closes.
+//   temporary: false
+// });
+
+// player.addChild(modal);
+
+// player.on('pause', function() {
+//   modal.open();
+// });
+
+// player.on('play', function() {
+//   modal.close();
+// });
+
+// modal.addClass('vjs-my-fancy-modal');
+// player.controlBar.el().insertBefore(button.el(), player.controlBar.el().firstChild);
+
+
+
+$('.media-list').magnificPopup({
+ 
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'media-popup',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+    image: {
+      markup: '<div class="mfp-figure">'+
+                '<div class="windown-nav">'+
+                  '<div class="windown-nav__list">'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-window-minimize"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-window-restore"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-xmark"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+                '<div class="media-tools">'+
+                  '<div class="media-tools__list">'+
+                    '<div class="media-tools__item">'+
+                      '<div class="media-tools__icon active">'+
+                        '<i class="fa-solid fa-download"></i>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="media-tools__item">'+
+                      '<div class="media-tools__icon">'+
+                        '<i class="fa-solid fa-file-pdf"></i>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="media-tools__item">'+
+                      '<div class="mfp-close"></div>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+                '<div class="mfp-img"></div>'+
+              // '<div class="mfp-bottom-bar">'+
+              //   '<div class="mfp-title"></div>'+
+              //   '<div class="mfp-counter"></div>'+
+              // '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag,  `.mfp-close` by close button
+    
+      // cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to   null to disable zoom out cursor. 
+    
+      tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+    },
+
+    iframe: {
+      markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="windown-nav">'+
+                  '<div class="windown-nav__list">'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-window-minimize"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-window-restore"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                    '<div class="windown-nav__item">'+
+                      '<a class="windown-nav__link" href="#" title="">'+
+                        '<div class="windown-nav__icon">'+
+                          '<i class="fa-solid fa-xmark"></i>'+
+                        '</div>'+
+                      '</a>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+                '<div class="media-tools">'+
+                  '<div class="media-tools__list">'+
+                    '<div class="media-tools__item">'+
+                      '<div class="media-tools__icon active">'+
+                        '<i class="fa-solid fa-download"></i>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="media-tools__item">'+
+                      '<div class="media-tools__icon">'+
+                        '<i class="fa-solid fa-file-pdf"></i>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="media-tools__item">'+
+                      '<div class="mfp-close"></div>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+              // '<div class="mfp-bottom-bar">'+
+              //   '<div class="mfp-title"></div>'+
+              //   '<div class="mfp-counter"></div>'+
+              // '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag,  `.mfp-close` by close button
+    
+      // cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to   null to disable zoom out cursor. 
+    
+      tError: '<a href="%url%">The iframe</a> could not be loaded.' // Error message
+    },
+    
+    
+      // preloader: true,
+    
+    
+
+    callbacks: {
+
+      elementParse: function(item) {
+
+          if(item.el[0].className == 'video') {
+              item.type = 'iframe';
+          } else {
+              item.type = 'image';
+          }
+      }
+
+    },
+
+	});
+
+  // popup create data pool
+  $(".popup-modal").click(function(){
+    $(this).addClass("active")
+  })
+  $('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		modal: true
+	});
+	$(document).on('click', '.js-popup-close', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+    $(".popup-modal").removeClass("active")
+
+	});
 });

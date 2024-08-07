@@ -28,10 +28,10 @@
   display: block;
   font-size: rem(10);
   line-height: 1;
-  color: #f52725;
   -webkit-margin-before: 0;
   margin-block-start: 0;
   margin-top: rem(8);
+  color: rgba($color: #f52725, $alpha: .5);
   @include mq(md, min) {
     font-size: rem(12);
     font-weight: 500;
@@ -51,12 +51,11 @@
 }
 .form-label {
   display: block;
-  font-size: rem(10);
+  font-size: rem(12);
   line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: rem(8);
+  margin-bottom: rem(15);
   font-weight: 500;
-  color: #008fd6;
+  color: #999aa4;
 }
 .form-control {
   display: block;
