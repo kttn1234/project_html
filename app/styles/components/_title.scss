@@ -1,14 +1,19 @@
-.title-one {
-  font-size: rem(30);
-  line-height: 1.4;
-  text-transform: capitalize;
-  color: #008fd6;
-  @include mq(md, min) {
-    font-size: rem(60);
-    line-height: 1.6;
-  }
+// .title-one {
+//   font-size: rem(30);
+//   line-height: 1.4;
+//   text-transform: capitalize;
+//   color: #008fd6;
+//   @include mq(md, min) {
+//     font-size: rem(60);
+//     line-height: 1.6;
+//   }
 
-  &__light {
-    font-weight: 300;
-  }
+//   &__light {
+//     font-weight: 300;
+//   }
+// }
+.ttl-one  {
+  font-size: rem(20);
+  font-weight: 500;
+  margin-bottom: rem(20);
 }

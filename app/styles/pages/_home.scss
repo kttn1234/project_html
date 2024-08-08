@@ -22,6 +22,9 @@
     
     }
 }
+[data-filter-list] [data-filter-item].hide {
+    display: none;
+}
 .home-page {
     overflow-y: hidden;
 }
@@ -30,6 +33,12 @@ body.no-scroll {
 }
 .fa-facebook-f {
     color: $blue-1;
+}
+.fa-facebook {
+    color: #395a9c;
+}
+.fa-telegram {
+    color: #72c5e7;
 }
 .fa-users-viewfinder {
     font-size: rem(20);
@@ -2081,5 +2090,210 @@ button.mfp-arrow {
     }
     .fa-solid {
         margin-right: 10px;
+    }
+}
+
+// h140
+.icon-bd {
+    &__list {
+        display: flex;
+    }
+    &__item {
+        & + .icon-bd__item {
+            margin-left: rem(20);
+        }
+    }
+    &__link {
+        border: 1px solid;
+        &.--green {
+            color: #8bad30;
+        }
+        &.--blue {
+            color: #2d6bce;
+        }
+    }
+    &__link {
+        border: 1px solid;
+        width: rem(40);
+        height: rem(31);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.crawling-tools {
+    display: flex;
+    justify-content: space-between;
+    &__btn {
+        padding-right: rem(20);
+    }
+    &__export {
+    
+    }
+}
+
+.intro-profile {
+    &__col {
+        &.--w460 {
+            max-width: 460px;
+        }
+    }
+    &__txt {
+        margin-bottom: 20px;
+    }
+}
+.networks-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(40);
+    &__validate {
+        display: flex;
+        align-items: center;
+        margin-left: rem(20);
+    }
+    &__search {
+        margin-left: rem(35);
+        min-width: rem(250)
+    }
+    &__btn {
+        .btn-com.--gray {
+            min-width: rem(180)
+        }
+    }
+}
+.networks-nav {
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding: rem(20) rem(15);
+        font-weight: 600;
+        position: relative;
+        cursor: pointer;
+        &.active {
+            &::before {
+                content: "";
+                height: rem(3);
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                background-color: $blue-1;
+                left: 0;
+            }
+        }
+    }
+    &__txt {
+        color: $blue-1;
+    }
+    &__icon {
+        padding: 0 rem(15);
+        font-size: rem(15);
+    }
+}
+.networks-account {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: rem(-10) rem(-5);
+        
+    }
+
+    &__item {
+        width: calc(100%/3);
+        padding: rem(10) rem(5);
+    }
+
+    &__box {
+        border: 1px solid #e0e0e8;
+        padding: 10px;
+        position: relative;
+        height: 100%;
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: rem(60);
+        margin-bottom: rem(20);
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        padding-right: rem(5);
+        &-icon {
+            min-width: rem(35);
+            margin-right: rem(10);
+            @include mq(ll, max) {
+                display: block;
+             }
+            img {
+                width: 100%;
+            }
+        }
+        &-txt {
+            font-weight: bold;
+            color: #000;
+        }
+
+    }
+    &__tools {
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+        &-item {
+            & + .networks-account__tools-item {
+                margin-left: rem(10);
+            }
+        }
+        &-link {
+        }
+    }
+    &__remove {
+        position: absolute;
+        top: rem(0);
+        right: rem(5);
+        padding: rem(10);
+    }
+    .fa-circle-minus,
+    .fa-circle-question,
+    .fa-circle-check {
+        font-size: rem(25);
+    }
+    .fa-circle-check {
+        color: #8cad29;
+    }
+    .fa-circle-minus {
+        color: #d65273;
+    }
+    .fa-circle-question {
+        color: #ff9429;
+    }
+    .fa-trash-can {
+        color: #d23e64;
+        font-size: rem(15);
+    }
+    .fa-arrows-rotate {
+        color: #000;
+        font-size: rem(15);
+    }
+   
+}
+.crawling-main {
+    &__head {
+        padding: rem(25px) rem(25) rem(25);
+    }
+    &__body {
+        padding: 0 rem(25) 0;
+    }
+}
+.settings-nav {
+    .profile__ttl {
+        margin-bottom: rem(20);
+    }
+    .profile__item + .profile__item {
+        margin-top: rem(10);
     }
 }

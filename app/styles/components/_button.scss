@@ -21,3 +21,39 @@
   &.--yellow {
   }
 }
+
+.btn-com {
+  color: #fff;
+  background-color: #316bce;
+  font-weight: 600;
+  padding: rem(5) rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2 ease;
+  height: rem(30);
+  i {
+    margin-right: rem(5);
+  }
+  &.--w250 {
+    min-width: rem(250);
+  }
+  &.--green {
+    background-color: #8cad29;
+  }
+  &.--gray {
+    background-color: #efefef;
+    color: #000;
+    &:hover {
+      color: #000;
+      opacity: .7;
+    }
+  }
+  &.--small {
+    font-size: rem(12);
+  }
+  &:hover {
+    color: #fff;
+    opacity: .7;
+  }
+}

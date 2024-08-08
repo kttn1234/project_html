@@ -18,6 +18,13 @@
     input {
       border: none;
     }
+  }
+  &.--rds {
+    input {
+      border-radius: 30px;
+      background-color: #efefef;
+      border: none;
+    }
     
   }
   .form-control {

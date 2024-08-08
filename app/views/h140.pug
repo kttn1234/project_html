@@ -1,0 +1,535 @@
+extends layout/layout
+
+block vars
+	-title = 'HS140 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile
+				//- span.profile__collapse
+				//- 	+img('images/home/icon_collapse.png','collapse')
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active
+					.profile__nav.--bdr-none
+						.settings-nav
+							.profile__ttl Settings
+							ul.profile__menu
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-sliders
+										span.profile__txt Preferences
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-earth-europe
+										span.profile__txt Networks
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-user-lock
+										span.profile__txt Crawling Profiles
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-bars-progress
+										span.profile__txt Tasks
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-tags
+										span.profile__txt Tag Schema Templates
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-key
+										span.profile__txt License
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-network-wired
+										span.profile__txt Proxy
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-phone
+										span.profile__txt Info and Support
+								li.profile__item
+									+link('#',"").profile__link
+										span.profile__icon
+											i.fa-solid.fa-puzzle-piece
+										span.profile__txt Third Parties
+
+								
+								
+
+									
+					.profile__main
+						.crawling-main
+							.crawling-main__head
+								.intro-profile
+									.intro-profile__col.--w460
+										+breadcrumb([{text: "Account Settings", url: "#"}, {text: "Crawling Profiles"}])
+										h2.ttl-one Your Crawling Profiles 
+										p.intro-profile__txt here you can create crawlling profile that are used to log into the social networks. Note that crawlling profile can be blocked if they are used to often.
+										.crawling-tools
+											.crawling-tools__btn
+												+link('#',"").btn-com.--green
+													i.fa-solid.fa-user-lock
+													| + CREATE NEW CRAWLING PROFILE
+											.crawling-tools__export 
+												.icon-bd
+													.icon-bd__list 
+														.icon-bd__item
+															+link('#',"").icon-bd__link.trans.--green
+																i.fa-solid.fa-file-export
+														.icon-bd__item 
+															+link('#',"").icon-bd__link.trans.--blue
+																i.fa-solid.fa-file-export
+							.crawling-main__body
+								.networks-tools
+									.networks-tools__filter
+										.networks-nav
+											.networks-nav__list(data-filter-nav)
+												.networks-nav__item.active(data-cat="all" data-filter-btn)
+													span.networks-nav__txt
+														| All networks 
+												.networks-nav__item(data-cat="cat01" data-filter-btn)
+													span.networks-nav__icon
+														i.fa-brands.fa-facebook-f
+												.networks-nav__item(data-cat="cat02" data-filter-btn)
+													span.networks-nav__icon
+														i.fa-brands.fa-telegram
+									.networks-tools__validate
+										.networks-tools__btn
+											+link('#',"").btn-com.--small.--gray
+												i.fa-solid.fa-arrows-rotate
+												| VALIDATE ACCOUNTS
+										.networks-tools__search 
+											.form-search.--rds
+												i.fa-solid.fa-magnifying-glass
+												input.form-control(name='search' type='text' placeholder='Search...')
+								.networks-account
+									ul.networks-account__list(data-filter-list)
+										li.networks-account__item(data-val="cat01" data-filter-item)
+											.networks-account__box 
+												.networks-account__head
+													.networks-account__name 
+														.networks-account__name-icon 
+															+img('images/home/icon_facebook.png','collapse')
+														.networks-account__name-txt 
+															| sproulmadub 
+													.networks-account__tools
+														.networks-account__tools-list 
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-circle-check
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-arrows-rotate
+													.networks-account__remove.trans
+														i.fa-solid.fa-trash-can
+												.networks-account__info
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| User-ID
+																	.post-info__detail
+																		.post-info__txt 
+																			| sproulmaclub@hotmail.com
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Password
+																	.post-info__detail
+																		.post-info__txt 
+																			| ********
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-eye
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Last Login
+																	.post-info__detail
+																		.post-info__txt 
+																			| 20.07.2024·21:42 +07
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Create At
+																	.post-info__detail
+																		.post-info__txt 
+																			| 120.07.2024·19:39 +07
+										li.networks-account__item(data-val="cat02" data-filter-item)
+											.networks-account__box 
+												.networks-account__head
+													.networks-account__name 
+														.networks-account__name-icon 
+															+img('images/home/icon_telegram.png','telegram')
+														.networks-account__name-txt 
+															| TeleLucas 
+													.networks-account__tools
+														.networks-account__tools-list 
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-circle-question
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-arrows-rotate
+													.networks-account__remove.trans
+														i.fa-solid.fa-trash-can
+												.networks-account__info
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Phone Number
+																	.post-info__detail
+																		.post-info__txt 
+																			| +84328629080
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Last Login
+																	.post-info__detail
+																		.post-info__txt
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Create At
+																	.post-info__detail
+																		.post-info__txt 
+																			| 20.07.2024·20:44 +07
+										li.networks-account__item(data-val="cat02" data-filter-item)
+											.networks-account__box 
+												.networks-account__head
+													.networks-account__name 
+														.networks-account__name-icon 
+															+img('images/home/icon_telegram.png','telegram')
+														.networks-account__name-txt 
+															| Tele 
+													.networks-account__tools
+														.networks-account__tools-list 
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-circle-question
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-arrows-rotate
+													.networks-account__remove.trans
+														i.fa-solid.fa-trash-can
+												.networks-account__info
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Phone Number
+																	.post-info__detail
+																		.post-info__txt 
+																			| +84795306199
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Last Login
+																	.post-info__detail
+																		.post-info__txt
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Create At
+																	.post-info__detail
+																		.post-info__txt 
+																			| 20.07.2024·20:44 +07
+										li.networks-account__item(data-val="cat01" data-filter-item)
+											.networks-account__box 
+												.networks-account__head
+													.networks-account__name 
+														.networks-account__name-icon 
+															+img('images/home/icon_facebook.png','collapse')
+														.networks-account__name-txt 
+															| toan 18/17 
+													.networks-account__tools
+														.networks-account__tools-list 
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-circle-minus
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-arrows-rotate
+													.networks-account__remove.trans
+														i.fa-solid.fa-trash-can
+												.networks-account__info
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| User-ID
+																	.post-info__detail
+																		.post-info__txt 
+																			| cepucmaahlo@hotmail.com
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Password
+																	.post-info__detail
+																		.post-info__txt 
+																			| ********
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-eye
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Last Login
+																	.post-info__detail
+																		.post-info__txt 
+																			| 19.07.2024·09:42 +07
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Create At
+																	.post-info__detail
+																		.post-info__txt 
+																			| 18.07.2024·21:39 +07
+										li.networks-account__item(data-val="cat01" data-filter-item)
+											.networks-account__box 
+												.networks-account__head
+													.networks-account__name 
+														.networks-account__name-icon 
+															+img('images/home/icon_facebook.png','collapse')
+														.networks-account__name-txt 
+															| via1
+													.networks-account__tools
+														.networks-account__tools-list 
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-circle-minus
+															.networks-account__tools-item
+																+link('#',"").networks-account__tools-link.trans
+																	i.fa-solid.fa-arrows-rotate
+													.networks-account__remove.trans
+														i.fa-solid.fa-trash-can
+												.networks-account__info
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| User-ID
+																	.post-info__detail
+																		.post-info__txt 
+																			| zaccesuke@hotmail.com
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Password
+																	.post-info__detail
+																		.post-info__txt 
+																			| ********
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-eye
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Last Login
+																	.post-info__detail
+																		.post-info__txt 
+																			| 19.07.2024·09:42 +07
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Create At
+																	.post-info__detail
+																		.post-info__txt 
+																			| 18.07.2024·21:39 +07
+
+
+
+

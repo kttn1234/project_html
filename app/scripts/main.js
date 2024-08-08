@@ -140,6 +140,7 @@ $(document).ready(function () {
   $('.has-dropdown').click(function() {
     $(this).next().toggle();
     $(this).toggleClass("active")
+    // $(this).next().find(".profile__link").not(".has-dropdown").removeClass("active")
   })
   $('.sidebar__link').click(function() {
     $('.sidebar__link').removeClass("active")
@@ -835,4 +836,30 @@ $('.media-list').magnificPopup({
     $(".popup-modal").removeClass("active")
 
 	});
+
+  // hs 140
+  $(".profile__link").not(".has-dropdown").click(function(){
+    $(".profile__link").not(".has-dropdown").removeClass("active")
+    $(this).addClass("active")
+  })
+
+  var catFilter = function() {
+    var $catNav = $("[data-filter-nav]");
+    var $catBtn = $catNav.find("[data-filter-btn]");
+    var $catList = $("[data-filter-list]")
+    var $catItem =  $catList.find("[data-filter-item]");
+    
+    $catBtn.click(function() {
+      $catBtn.removeClass("active");
+      $(this).addClass('active');
+      var catValue = $(this).attr("data-cat");
+      if(catValue == "all") {
+       $catItem.removeClass("hide");
+      } else {
+       $catItem.removeClass("hide").filter(':not([data-val*="' + catValue + '"])' ).addClass( 'hide');
+      }
+    })
+  }
+  catFilter()
+
 });
