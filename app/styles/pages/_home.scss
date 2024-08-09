@@ -1545,7 +1545,7 @@ body.no-scroll {
     &__avt {
         position: relative;
         &-img {
-            max-width: 11rem;
+            width: 11rem;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
             overflow: hidden;
@@ -2295,5 +2295,31 @@ button.mfp-arrow {
     }
     .profile__item + .profile__item {
         margin-top: rem(10);
+    }
+}
+
+
+.license-main {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+
+    }
+
+    &__ttl {
+
+    }
+
+    &__code {
+        
+    }
+
+    &__icon {
+    }
+
+    &__txt {
+    
     }
 }

@@ -3023,7 +3023,7 @@ body.no-scroll {
   position: relative;
 }
 .targer-user__avt-img {
-  max-width: 11rem;
+  width: 11rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
@@ -3807,4 +3807,10 @@ button.mfp-arrow {
 }
 .settings-nav .profile__item + .profile__item {
   margin-top: 1rem;
+}
+
+.license-main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
