@@ -1,7 +1,6 @@
 .form-group {
   $this: &;
   width: 100%;
-  margin-top: rem(20);
   position: relative;
   .dropdown {
     position: relative;
@@ -29,6 +28,9 @@
       }
     }
     
+  }
+  & + .form-group {
+    margin-top: rem(20);
   }
 }
 .form-search {
@@ -88,9 +90,9 @@
 }
 .form-label {
   display: block;
-  font-size: rem(12);
+  font-size: rem(14);
   line-height: 1;
-  margin-bottom: rem(15);
+  margin-bottom: rem(10);
   font-weight: 500;
   color: #000;
 }

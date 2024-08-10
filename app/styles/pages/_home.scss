@@ -180,11 +180,11 @@ body.no-scroll {
             width: 100%;
         }
         .profile__nav {
-           width: 25%;
+           width: 22.5%;
            min-width: rem(300);
         } 
         .profile__main {
-            padding: rem(80) rem(25) rem(25);
+            padding: rem(35) rem(25) rem(25);
         }
         .profile__ttl {
             margin-bottom: rem(20);
@@ -193,12 +193,12 @@ body.no-scroll {
             margin-top: rem(10);
         }
     }
-    &.--crawling {
-        .profile__nav {
-            width: 19.5%;
-            min-width: rem(300);
-        }
-    }
+    // &.--crawling {
+    //     .profile__nav {
+    //         width: 19.5%;
+    //         min-width: rem(300);
+    //     }
+    // }
     &__collapse {
         position: fixed;
         width: rem(30);
@@ -2091,6 +2091,7 @@ button.mfp-arrow {
     }
     .form-label {
         color: #999aa4;
+        font-size: rem(12);
     }
     .error {
         color: rgba(245, 39, 37, 0.5);
@@ -2332,7 +2333,7 @@ button.mfp-arrow {
     }
     &.--account {
         .crawling-main__aside {
-            width: rem(465);
+            width: rem(780);
         }
     }
     &.--license {
@@ -2653,10 +2654,11 @@ button.mfp-arrow {
         margin-top: rem(30);
         .btn-com {
             min-width: rem(245);
+            padding: rem(18) rem(5);
         }
     }
     .alert {
-        margin-top: rem(20);
+        margin-top: rem(15);
     }
 }
 

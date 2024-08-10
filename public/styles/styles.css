@@ -803,7 +803,7 @@ img.alignleft {
 }
 
 .breadcrumb {
-  margin-bottom: 0.7rem;
+  margin-bottom: 2.5rem;
 }
 .breadcrumb__list {
   display: -webkit-box;
@@ -918,7 +918,6 @@ img.alignleft {
 
 .form-group {
   width: 100%;
-  margin-top: 2rem;
   position: relative;
 }
 .form-group .dropdown {
@@ -941,6 +940,9 @@ img.alignleft {
 .form-group .dropdown.--active .dropdown__bar .fa-chevron-up {
   -webkit-transform: translateY(-50%) rotate(0);
   transform: translateY(-50%) rotate(0);
+}
+.form-group + .form-group {
+  margin-top: 2rem;
 }
 
 .form-search {
@@ -1001,9 +1003,9 @@ img.alignleft {
 
 .form-label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   color: #000;
 }
@@ -1687,21 +1689,17 @@ body.no-scroll {
   width: 100%;
 }
 .profile.--setting .profile__nav {
-  width: 25%;
+  width: 22.5%;
   min-width: 30rem;
 }
 .profile.--setting .profile__main {
-  padding: 8rem 2.5rem 2.5rem;
+  padding: 3.5rem 2.5rem 2.5rem;
 }
 .profile.--setting .profile__ttl {
   margin-bottom: 2rem;
 }
 .profile.--setting .profile__item + .profile__item {
   margin-top: 1rem;
-}
-.profile.--crawling .profile__nav {
-  width: 19.5%;
-  min-width: 30rem;
 }
 .profile__collapse {
   position: fixed;
@@ -3612,6 +3610,7 @@ button.mfp-arrow {
 }
 .popup-pool .form-label {
   color: #999aa4;
+  font-size: 1.2rem;
 }
 .popup-pool .error {
   color: rgba(245, 39, 37, 0.5);
@@ -3878,7 +3877,7 @@ button.mfp-arrow {
   width: 46.5rem;
 }
 .crawling-main.--account .crawling-main__aside {
-  width: 46.5rem;
+  width: 78rem;
 }
 .crawling-main.--license .breadcrumb {
   margin-bottom: 3.5rem;
@@ -4194,7 +4193,8 @@ button.mfp-arrow {
 }
 .crawling-form .btn-group .btn-com {
   min-width: 24.5rem;
+  padding: 1.8rem 0.5rem;
 }
 .crawling-form .alert {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
