@@ -1,0 +1,177 @@
+extends layout/layout
+
+block vars
+	-title = 'HS147 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.profile.--setting.--crawling
+				.profile__content.active
+					.profile__nav.--bdr-none
+						.profile__ttl Settings
+						ul.profile__menu
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-sliders
+									span.profile__txt Preferences
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-earth-europe
+									span.profile__txt Networks
+							li.profile__item
+								+link('#',"").profile__link.active
+									span.profile__icon
+										i.fa-solid.fa-user-lock
+									span.profile__txt Crawling Profiles
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-bars-progress
+									span.profile__txt Tasks
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-tags
+									span.profile__txt Tag Schema Templates
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-key
+									span.profile__txt License
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-network-wired
+									span.profile__txt Proxy
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-phone
+									span.profile__txt Info and Support
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-puzzle-piece
+									span.profile__txt Third Parties
+									
+					.profile__main
+						.crawling-main.--account
+							+breadcrumb([{text: "Account Settings", url: "#"},{text: "Crawling Profiles", url: "#"}, {text: "new"}])
+							.crawling-main__wrap
+								.crawling-main__main
+									h2.crawling-main__ttl Account Information 
+									p.crawling-main__txt Please specify your login information here. You can also provide description for the crawling profile.
+									ul.account-info
+										li.account-info__item 
+											strong User Name 
+											| is not used for login, only for display.
+										li.account-info__item 
+											strong User ID
+											| is used for login
+									
+								.crawling-main__aside
+									.crawling-form
+										form(action='')
+											.form-group
+												label.form-label(for='networke') Network
+												.dropdown
+													.dropdown__tool
+														.dropdown__bar
+															span.dropdown__name networke
+															i.fa-solid.fa-chevron-up
+														ul.dropdown__list
+															li.dropdown__item.--is-select choose01
+															li.dropdown__item choose02
+											.form-group
+												label.form-label(for='name') Name (not used for login) *
+												input#name.form-control(name='name' type='text' placeholder=' e.g. Max Mustermann')
+											.form-group
+												label.form-label(for='name') Username / Vanity Name / E-Mail *
+												input#name.form-control(name='name' type='text' placeholder=' e.g. e.g. max mustermann55')
+											.btn-group
+												.btn-group__item
+													+link('#',"").btn-com.disabled
+														| SAVE AND VALIDATE LOGIN
+												.btn-group__item
+													+link('#',"").btn-com.disabled
+														| SAVE
+											.alert.--orange
+												|If your Windows language isn't English or German and you're having trouble logging in, it may be due to special characters like "!" in your password. To fix this, consider changing your password to exclude special characters or switch your system language. We're actively working on resolving this issue.
+								
+
+
+
+
