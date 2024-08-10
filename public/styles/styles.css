@@ -3925,11 +3925,11 @@ button.mfp-arrow {
   top: 0;
   display: block;
 }
-.alert.--danger {
+.alert.--red {
   background-color: #ffdede;
   color: #731818;
 }
-.alert.--danger::before {
+.alert.--red::before {
   background-color: #731818;
 }
 
