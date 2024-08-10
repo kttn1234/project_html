@@ -56,4 +56,15 @@
     color: #fff;
     opacity: .7;
   }
+  &.disabled {
+    opacity: .7;
+  }
+}
+.btn-group {
+  display: flex;
+  &__item {
+    & + .btn-group__item {
+      margin-left: rem(20);
+    }
+  }
 }

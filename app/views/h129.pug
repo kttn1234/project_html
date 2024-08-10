@@ -127,71 +127,71 @@ block container
 									span.profile__txt Third Parties
 
 	
-									
 					.profile__main
-						.license-main
+						.crawling-main.--license
 							+breadcrumb([{text: "Account Settings", url: "#"}, {text: "License Management"}])
-							.license-main__wrap
-								.license-main__main
-									.license-main__info
-										.license-manage
-											.license-manage__ttl Please select a license file to activate the software
-											.license-manage__box.--no-pd
-												+link('#',"").btn-upload.trans
-													span.btn-upload__icon
-														i.fa-solid.fa-upload
-													span.btn-upload__txt CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE
-										.license-manage.--active
-											.license-manage__ttl Active License
-											.license-manage__box
-												.license-manage__head
-													.license-manage__topic 
-														span.license-manage__topic-name License
-														span.license-manage__topic-icon
-															i.fa-solid.fa-trash-can.trans
-													.lable-license.--red
-														span.lable-license__txt 12 days left
-												.progress-bar
-													.progress-bar__bar
-														.progress-bar__precent(style="width:96%")
-													ul.progress-bar__task 
-														li.progress-bar__task-item 
-															.progress-bar__task-cont
-																|23.11.2023 00:00 +07
-														li.progress-bar__task-item
-															.progress-bar__task-cont
-																i.fa-solid.fa-network-wired
-																| max. 3 runners
-														li.progress-bar__task-item
-															.progress-bar__task-cont
-																| 21.08.2024 00:00 +07
-												.license-manage__arrow 
-													i.fa-solid.fa-chevron-down
-												.license-manage__lable-active
-													.lable-license.--green
-														.lable-license__icon
-															i.fa-solid.fa-chevron-down
-														span.lable-license__txt Active
-										.license-manage
-											.license-manage__ttl Other Licenses
-											.license-manage__box
-												.license-manage__head
-													.license-manage__topic 
-														span.license-manage__topic-name orrupted License or missing USB Dongle
-														span.license-manage__topic-icon
-															i.fa-solid.fa-trash-can.trans
-												.alert.--red
-													|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
-											.license-manage__box
-												.license-manage__head
-													.license-manage__topic 
-														span.license-manage__topic-name orrupted License or missing USB Dongle
-														span.license-manage__topic-icon
-															i.fa-solid.fa-trash-can.trans
-												.alert.--red
-													|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+							.crawling-main__wrap
+								.crawling-main__main
+									.license-manage
+										.license-manage__list
+											.license-manage__item
+												.license-manage__ttl Please select a license file to activate the software
+												.license-manage__box.--no-pd
+													+link('#',"").btn-upload.trans
+														span.btn-upload__icon
+															i.fa-solid.fa-upload
+														span.btn-upload__txt CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE
+											.license-manage__item.--active
+												.license-manage__ttl Active License
+												.license-manage__box
+													.license-manage__head
+														.license-manage__topic
+															span.license-manage__topic-name License
+															span.license-manage__topic-icon
+																i.fa-solid.fa-trash-can.trans
+														.lable-license.--red
+															span.lable-license__txt 12 days left
+													.progress-bar
+														.progress-bar__bar
+															.progress-bar__precent(style="width:96%")
+														ul.progress-bar__task 
+															li.progress-bar__task-item 
+																.progress-bar__task-cont
+																	|23.11.2023 00:00 +07
+															li.progress-bar__task-item
+																.progress-bar__task-cont
+																	i.fa-solid.fa-network-wired
+																	| max. 3 runners
+															li.progress-bar__task-item
+																.progress-bar__task-cont
+																	| 21.08.2024 00:00 +07
+													.license-manage__arrow 
+														i.fa-solid.fa-chevron-down
+													.license-manage__lable-active
+														.lable-license.--green
+															.lable-license__icon
+																i.fa-solid.fa-chevron-down
+															span.lable-license__txt Active
+											.license-manage__item
+												.license-manage__ttl Other Licenses
+												.license-manage__box
+													.license-manage__head
+														.license-manage__topic
+															span.license-manage__topic-name orrupted License or missing USB Dongle
+															span.license-manage__topic-icon
+																i.fa-solid.fa-trash-can.trans
+													.alert.--red
+														|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+												.license-manage__box
+													.license-manage__head
+														.license-manage__topic
+															span.license-manage__topic-name orrupted License or missing USB Dongle
+															span.license-manage__topic-icon
+																i.fa-solid.fa-trash-can.trans
+													.alert.--red
+														|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
 
-								.license-main__aside 
+								.crawling-main__aside
 									.license-hardware
 										.license-hardware__ttl Hardware-IDs
 										ul.license-hardware__list

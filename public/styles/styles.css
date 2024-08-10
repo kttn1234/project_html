@@ -903,11 +903,44 @@ img.alignleft {
   color: #fff;
   opacity: 0.7;
 }
+.btn-com.disabled {
+  opacity: 0.7;
+}
+
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.btn-group__item + .btn-group__item {
+  margin-left: 2rem;
+}
 
 .form-group {
   width: 100%;
   margin-top: 2rem;
   position: relative;
+}
+.form-group .dropdown {
+  position: relative;
+}
+.form-group .dropdown .dropdown__bar {
+  border: 1px solid #dedee7;
+  color: #9196a0;
+}
+.form-group .dropdown .dropdown__bar .fa-chevron-up {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+}
+.form-group .dropdown .dropdown__list {
+  border: 1px solid #dedee7;
+}
+.form-group .dropdown.--active .dropdown__bar .fa-chevron-up {
+  -webkit-transform: translateY(-50%) rotate(0);
+  transform: translateY(-50%) rotate(0);
 }
 
 .form-search {
@@ -920,6 +953,9 @@ img.alignleft {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   margin: auto;
+}
+.form-search input {
+  border-color: #000;
 }
 .form-search.--bdr-none input {
   border: none;
@@ -940,7 +976,7 @@ img.alignleft {
   -webkit-margin-before: 0;
   margin-block-start: 0;
   margin-top: 0.8rem;
-  color: rgba(245, 39, 37, 0.5);
+  color: #f52725;
 }
 @media (min-width: 768px) {
   .error {
@@ -969,7 +1005,7 @@ img.alignleft {
   line-height: 1;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  color: #999aa4;
+  color: #000;
 }
 
 .form-control {
@@ -979,7 +1015,7 @@ img.alignleft {
   line-height: 3.5rem;
   color: #414141;
   background: #fff;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #dedee7;
   padding: 0.7rem 1.7rem;
   outline: none;
   height: 3.5rem;
@@ -3545,7 +3581,6 @@ button.mfp-arrow {
   margin: 40px auto;
   position: relative;
 }
-
 .popup-pool .popup-close {
   color: #999aa4;
   font-size: 1.6rem;
@@ -3565,18 +3600,21 @@ button.mfp-arrow {
   justify-content: center;
   position: absolute;
 }
-
 .popup-pool .form-control {
   border: 1px solid #999aa4;
 }
-
 .popup-pool h2 {
   font-size: 1.4rem;
   margin-bottom: 45px;
 }
-
 .popup-pool form {
   margin-bottom: 20px;
+}
+.popup-pool .form-label {
+  color: #999aa4;
+}
+.popup-pool .error {
+  color: rgba(245, 39, 37, 0.5);
 }
 
 .btn-popup__list {
@@ -3839,30 +3877,31 @@ button.mfp-arrow {
 .crawling-main__aside {
   width: 46.5rem;
 }
-
-.license-main__wrap {
+.crawling-main.--account .crawling-main__aside {
+  width: 46.5rem;
+}
+.crawling-main.--license .breadcrumb {
+  margin-bottom: 3.5rem;
+}
+.crawling-main.--license .crawling-main__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.license-main__main {
+.crawling-main.--license .crawling-main__main {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding-right: 6.5rem;
 }
-.license-main__aside {
+.crawling-main.--license .crawling-main__aside {
   width: 37.5rem;
-}
-.license-main .breadcrumb {
-  margin-bottom: 3.5rem;
 }
 
 .license-hardware__item + .license-hardware__item {
   margin-top: 1.5rem;
 }
 .license-hardware__ttl {
-  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -3932,6 +3971,13 @@ button.mfp-arrow {
 .alert.--red::before {
   background-color: #731818;
 }
+.alert.--orange {
+  background-color: #ffefde;
+  color: #5c5c5c;
+}
+.alert.--orange::before {
+  background-color: #ffb563;
+}
 
 .btn-upload {
   display: -webkit-box;
@@ -3979,8 +4025,11 @@ button.mfp-arrow {
   background-color: #e7ffde;
 }
 
-.license-manage + .license-manage {
+.license-manage__item + .license-manage__item {
   margin-top: 2.5rem;
+}
+.license-manage__item.--active {
+  margin-bottom: 4.5rem;
 }
 .license-manage__ttl {
   font-size: 1.4rem;
@@ -4032,9 +4081,6 @@ button.mfp-arrow {
 }
 .license-manage__lable-active .lable-license {
   margin: auto;
-}
-.license-manage.--active {
-  margin-bottom: 4.5rem;
 }
 .license-manage .progress-bar {
   margin-top: 3rem;
@@ -4131,4 +4177,24 @@ button.mfp-arrow {
 .tasks-finished .fa-circle-check {
   color: #18a552;
   font-size: 2.4rem;
+}
+
+.account-info__item + .account-info__item {
+  margin-top: 1rem;
+}
+.account-info__item strong {
+  margin-right: 0.5rem;
+}
+
+.crawling-form .btn-group {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+.crawling-form .btn-group .btn-com {
+  min-width: 24.5rem;
+}
+.crawling-form .alert {
+  margin-top: 2rem;
 }
