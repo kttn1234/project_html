@@ -180,7 +180,7 @@ body.no-scroll {
             width: 100%;
         }
         .profile__nav {
-           width: 22.5%;
+           width: 22%;
            min-width: rem(300);
         } 
         .profile__main {
@@ -2248,13 +2248,18 @@ button.mfp-arrow {
         align-items: center;
         padding-right: rem(5);
         &-icon {
-            min-width: rem(35);
+            width: rem(35);
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
             margin-right: rem(10);
             @include mq(ll, max) {
                 display: block;
              }
             img {
                 width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
             }
         }
         &-txt {
@@ -2333,13 +2338,10 @@ button.mfp-arrow {
     }
     &.--account {
         .crawling-main__aside {
-            width: rem(780);
+            width: 59.5%;
         }
     }
     &.--license {
-        .breadcrumb {
-            margin-bottom: rem(35);
-        }
         .crawling-main__wrap {
             display: flex;
         }

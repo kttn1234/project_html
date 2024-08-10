@@ -63,6 +63,19 @@
     padding: rem(5) rem(5) rem(5) rem(40);
   }
 }
+.form-password {
+  position: relative;
+  .fa-solid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(10)
+  }
+  .form-control {
+    padding-right: rem(35);
+  }
+}
+
 .error {
   display: block;
   font-size: rem(10);

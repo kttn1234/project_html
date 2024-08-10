@@ -157,10 +157,15 @@ block container
 															li.dropdown__item choose02
 											.form-group
 												label.form-label(for='name') Name (not used for login) *
-												input#name.form-control(name='name' type='text' placeholder=' e.g. Max Mustermann')
+												input#name.form-control(name='name' type='text' placeholder='e.g. Max Mustermann')
 											.form-group
 												label.form-label(for='name') Username / Vanity Name / E-Mail *
-												input#name.form-control(name='name' type='text' placeholder=' e.g. e.g. max mustermann55')
+												input#name.form-control(name='name' type='text' placeholder='e.g. max mustermann55')
+											.form-group
+												label.form-label(for='password') Password
+												.form-password
+													input#password.form-control(name='password' type='password' placeholder='')
+													i.fa-solid.fa-eye-slash.trans
 											.btn-group
 												.btn-group__item
 													+link('#',"").btn-com.disabled
