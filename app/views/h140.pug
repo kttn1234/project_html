@@ -76,116 +76,7 @@ block container
 								span.header-app__windown-icon
 									i.fa-solid.fa-xmark
 				
-			.menu-app
-				.menu-app__left
-					.menu-app__ttl Facebook Profile
-					ul.menu-app__list
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-circle-nodes
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-pdf
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-export
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-export
-				.menu-app__center
-					.menu-app__search
-						.form-search
-							i.fa-solid.fa-magnifying-glass
-							input.form-control(name='search' type='text' placeholder='Search...')
-					.menu-app__select 
-						.dropdown
-							.dropdown__tool
-								.dropdown__bar
-									span.dropdown__txt
-										| Select an Alert Instal
-									i.fa-solid.fa-chevron-down
-								ul.dropdown__list
-									li.dropdown__item.--is-select choose01
-									li.dropdown__item choose02
-				.menu-app__right 
-					ul.menu-app__list
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__number 0
-								span.menu-app__icon
-									i.fa-solid.fa-users-viewfinder
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-bars-progress
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-tags
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-screwdriver-wrench
-			.profile
-				//- span.profile__collapse
-				//- 	+img('images/home/icon_collapse.png','collapse')
-				.profile__sidebar.sidebar
-					ul.sidebar__nav
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-house
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-cloud-arrow-down
-						li.sidebar__item
-							+link('#',"").sidebar__link.active
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-user-group
-									span.sidebar__number 46
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-book
-									span.sidebar__number 46
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-photo-film
-									span.sidebar__number 74
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-message
-									span.sidebar__number 0
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-comments
-									span.sidebar__number 0
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-map-location-dot
-									span.sidebar__number 2
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-gauge
+			.profile.--setting
 				.profile__content.active
 					.profile__nav.--bdr-none
 						.settings-nav
@@ -237,32 +128,27 @@ block container
 											i.fa-solid.fa-puzzle-piece
 										span.profile__txt Third Parties
 
-								
-								
-
 									
 					.profile__main
 						.crawling-main
+							+breadcrumb([{text: "Account Settings", url: "#"}, {text: "Crawling Profiles"}])
 							.crawling-main__head
-								.intro-profile
-									.intro-profile__col.--w460
-										+breadcrumb([{text: "Account Settings", url: "#"}, {text: "Crawling Profiles"}])
-										h2.ttl-one Your Crawling Profiles 
-										p.intro-profile__txt here you can create crawlling profile that are used to log into the social networks. Note that crawlling profile can be blocked if they are used to often.
-										.crawling-tools
-											.crawling-tools__btn
-												+link('#',"").btn-com.--green
-													i.fa-solid.fa-user-lock
-													| + CREATE NEW CRAWLING PROFILE
-											.crawling-tools__export 
-												.icon-bd
-													.icon-bd__list 
-														.icon-bd__item
-															+link('#',"").icon-bd__link.trans.--green
-																i.fa-solid.fa-file-export
-														.icon-bd__item 
-															+link('#',"").icon-bd__link.trans.--blue
-																i.fa-solid.fa-file-export
+								h2.crawling-main__ttl Your Crawling Profiles 
+								p.crawling-main__txt here you can create crawlling profile that are used to log into the social networks. Note that crawlling profile can be blocked if they are used to often.
+								.crawling-tools
+									.crawling-tools__btn
+										+link('#',"").btn-com.--green
+											i.fa-solid.fa-user-lock
+											| + CREATE NEW CRAWLING PROFILE
+									.crawling-tools__export 
+										.icon-bd
+											.icon-bd__list 
+												.icon-bd__item
+													+link('#',"").icon-bd__link.trans.--green
+														i.fa-solid.fa-file-export
+												.icon-bd__item 
+													+link('#',"").icon-bd__link.trans.--blue
+														i.fa-solid.fa-file-export
 							.crawling-main__body
 								.networks-tools
 									.networks-tools__filter

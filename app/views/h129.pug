@@ -75,117 +75,7 @@ block container
 							+link('#',"").header-app__windown-link
 								span.header-app__windown-icon
 									i.fa-solid.fa-xmark
-				
-			.menu-app
-				.menu-app__left
-					.menu-app__ttl Facebook Profile
-					ul.menu-app__list
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-circle-nodes
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-pdf
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-export
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-file-export
-				.menu-app__center
-					.menu-app__search
-						.form-search
-							i.fa-solid.fa-magnifying-glass
-							input.form-control(name='search' type='text' placeholder='Search...')
-					.menu-app__select 
-						.dropdown
-							.dropdown__tool
-								.dropdown__bar
-									span.dropdown__txt
-										| Select an Alert Instal
-									i.fa-solid.fa-chevron-down
-								ul.dropdown__list
-									li.dropdown__item.--is-select choose01
-									li.dropdown__item choose02
-				.menu-app__right 
-					ul.menu-app__list
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__number 0
-								span.menu-app__icon
-									i.fa-solid.fa-users-viewfinder
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-bars-progress
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-tags
-						li.menu-app__item
-							+link('#',"").menu-app__link
-								span.menu-app__icon
-									i.fa-solid.fa-screwdriver-wrench
-			.profile
-				//- span.profile__collapse
-				//- 	+img('images/home/icon_collapse.png','collapse')
-				.profile__sidebar.sidebar
-					ul.sidebar__nav
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-house
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-cloud-arrow-down
-						li.sidebar__item
-							+link('#',"").sidebar__link.active
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-user-group
-									span.sidebar__number 46
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-book
-									span.sidebar__number 46
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-photo-film
-									span.sidebar__number 74
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-message
-									span.sidebar__number 0
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-comments
-									span.sidebar__number 0
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-map-location-dot
-									span.sidebar__number 2
-						li.sidebar__item
-							+link('#',"").sidebar__link
-								.sidebar__info
-									span.sidebar__icon
-										i.fa-solid.fa-gauge
+			.profile.--setting
 				.profile__content.active
 					.profile__nav.--bdr-none
 						.settings-nav
@@ -240,115 +130,115 @@ block container
 	
 									
 					.profile__main
+						
 						.license-main
-							.license-main__content
-								+breadcrumb([{text: "Account Settings", url: "#"}, {text: "License Management"}])
-								.license-main__info
-									.license-manage
-										.license-manage__ttl Please select a license file to activate the software
-										.license-manage__box
-											.btn-upload
-												span.btn-upload__icon
-													i.fa-solid.fa-upload
-												span.btn-upload__txt CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE
-									.license-manage
-										.license-manage__ttl Active License
-										.license-manage__box
-											.license-manage__head
-												.license-manage__topic 
-													span.license-manage__topic-name License
-													span.license-manage__topic-icon
-														i.fa-solid.fa-trash-can.trans
-												.license-manage__lable-date
-													.license-manage__lable-active
-														.lable-license.--red
-															span.lable-license__txt 12 days left
-											.progress-bar
-												.progress-bar__bar
-													.progress-bar__precent(style="width:90%")
-												ul.progress-bar__task 
-													li.progress-bar__task-item 
-														.progress-bar__task-cont
-															|23.11.2023 00:00 +07
-													li.progress-bar__task-item
-														.progress-bar__task-cont
-															i.fa-solid.fa-network-wired
-															| max. 3 runners
-													li.progress-bar__task-item
-														.progress-bar__task-cont
-															| 21.08.2024 00:00 +07
-											.license-manage__arrow 
-												i.fa-solid.fa-chevron-down
-											.license-manage__lable-active
-												.lable-license.--green
-													.lable-license__icon
-														i.fa-solid.fa-chevron-down
-													span.lable-license__txt Active
-									.license-manage
-										.license-manage__ttl Other Licenses
-										.license-manage__box
-											.license-manage__head
-												.license-manage__topic 
-													span.license-manage__topic-name orrupted License or missing USB Dongle
-													span.license-manage__topic-icon
-														i.fa-solid.fa-trash-can.trans
-											.alert.--danger
-												|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
-										.license-manage__box
-											.license-manage__head
-												.license-manage__topic 
-													span.license-manage__topic-name orrupted License or missing USB Dongle
-													span.license-manage__topic-icon
-														i.fa-solid.fa-trash-can.trans
-											.alert.--danger
-												|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+							+breadcrumb([{text: "Account Settings", url: "#"}, {text: "License Management"}])
+							.license-main__wrap
+								.license-main__main
+									.license-main__info
+										.license-manage
+											.license-manage__ttl Please select a license file to activate the software
+											.license-manage__box.--no-pd
+												.btn-upload
+													span.btn-upload__icon
+														i.fa-solid.fa-upload
+													span.btn-upload__txt CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE
+										.license-manage.--active
+											.license-manage__ttl Active License
+											.license-manage__box
+												.license-manage__head
+													.license-manage__topic 
+														span.license-manage__topic-name License
+														span.license-manage__topic-icon
+															i.fa-solid.fa-trash-can.trans
+													.lable-license.--red
+														span.lable-license__txt 12 days left
+												.progress-bar
+													.progress-bar__bar
+														.progress-bar__precent(style="width:96%")
+													ul.progress-bar__task 
+														li.progress-bar__task-item 
+															.progress-bar__task-cont
+																|23.11.2023 00:00 +07
+														li.progress-bar__task-item
+															.progress-bar__task-cont
+																i.fa-solid.fa-network-wired
+																| max. 3 runners
+														li.progress-bar__task-item
+															.progress-bar__task-cont
+																| 21.08.2024 00:00 +07
+												.license-manage__arrow 
+													i.fa-solid.fa-chevron-down
+												.license-manage__lable-active
+													.lable-license.--green
+														.lable-license__icon
+															i.fa-solid.fa-chevron-down
+														span.lable-license__txt Active
+										.license-manage
+											.license-manage__ttl Other Licenses
+											.license-manage__box
+												.license-manage__head
+													.license-manage__topic 
+														span.license-manage__topic-name orrupted License or missing USB Dongle
+														span.license-manage__topic-icon
+															i.fa-solid.fa-trash-can.trans
+												.alert.--danger
+													|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+											.license-manage__box
+												.license-manage__head
+													.license-manage__topic 
+														span.license-manage__topic-name orrupted License or missing USB Dongle
+														span.license-manage__topic-icon
+															i.fa-solid.fa-trash-can.trans
+												.alert.--danger
+													|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
 
-							.license-main__aside 
-								.license-hardware
-									.license-hardware__ttl Hardware-IDs
-									ul.license-hardware__list
-										li.license-hardware__item
-											.license-hardware__topic VMware Network Adapter VMnet8
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 00:50:56:c0:00:08
-										li.license-hardware__item
-											.license-hardware__topic Bluetooth Network Connection
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 10:68:38:5b:95:28
-										li.license-hardware__item
-											.license-hardware__topic Ethernet 2
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 00:09:0f:fe:00:01
-										li.license-hardware__item
-											.license-hardware__topic Ethernet
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 08:bf:b8:07:aa:5a
-										li.license-hardware__item
-											.license-hardware__topic Wi-Fi
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 10:68:38:5b:95:29
-										li.license-hardware__item
-											.license-hardware__ttl Ethernet 3
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 00:09:0f:aa:00:01
-										li.license-hardware__item
-											.license-hardware__ttl VMware Network Adapter VMnet1
-											.license-hardware__code 
-												+link('#',"").license-hardware__icon.trans
-													i.fa-solid.fa-copy
-												span.license-hardware__char 00:50:56:C0:00:01
+								.license-main__aside 
+									.license-hardware
+										.license-hardware__ttl Hardware-IDs
+										ul.license-hardware__list
+											li.license-hardware__item
+												.license-hardware__topic VMware Network Adapter VMnet8
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 00:50:56:c0:00:08
+											li.license-hardware__item
+												.license-hardware__topic Bluetooth Network Connection
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 10:68:38:5b:95:28
+											li.license-hardware__item
+												.license-hardware__topic Ethernet 2
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 00:09:0f:fe:00:01
+											li.license-hardware__item
+												.license-hardware__topic Ethernet
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 08:bf:b8:07:aa:5a
+											li.license-hardware__item
+												.license-hardware__topic Wi-Fi
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 10:68:38:5b:95:29
+											li.license-hardware__item
+												.license-hardware__topic Ethernet 3
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 00:09:0f:aa:00:01
+											li.license-hardware__item
+												.license-hardware__topic VMware Network Adapter VMnet1
+												.license-hardware__code 
+													+link('#',"").license-hardware__icon.trans
+														i.fa-solid.fa-copy
+													span.license-hardware__char 00:50:56:C0:00:01
 
 
 

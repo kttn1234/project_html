@@ -1643,6 +1643,13 @@ body.no-scroll {
   display: -ms-flexbox;
   display: flex;
 }
+.profile.--setting .profile__content {
+  width: 100%;
+}
+.profile.--setting .profile__nav {
+  width: 25%;
+  min-width: 30rem;
+}
 .profile__collapse {
   position: fixed;
   width: 3rem;
@@ -2950,7 +2957,7 @@ body.no-scroll {
   margin-bottom: 1.5rem;
 }
 .targer-profile__item + .targer-profile__item {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 .targer-profile__link {
   display: -webkit-box;
@@ -3634,13 +3641,6 @@ button.mfp-arrow {
 .crawling-tools__btn {
   padding-right: 2rem;
 }
-.intro-profile__col.--w460 {
-  max-width: 460px;
-}
-.intro-profile__txt {
-  margin-bottom: 20px;
-}
-
 .networks-tools {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3695,8 +3695,9 @@ button.mfp-arrow {
   color: #4277d1;
 }
 .networks-nav__icon {
-  padding: 0 1.5rem;
   font-size: 1.5rem;
+  width: 4rem;
+  text-align: center;
 }
 
 .networks-account__list {
@@ -3727,8 +3728,8 @@ button.mfp-arrow {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-right: 6rem;
-  margin-bottom: 2rem;
+  padding-right: 7rem;
+  margin-bottom: 1.7rem;
 }
 .networks-account__name {
   display: -webkit-box;
@@ -3764,12 +3765,12 @@ button.mfp-arrow {
   align-items: center;
 }
 .networks-account__tools-item + .networks-account__tools-item {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 .networks-account__remove {
   position: absolute;
   top: 0rem;
-  right: 0.5rem;
+  right: 0.7rem;
   padding: 1rem;
 }
 .networks-account .fa-circle-minus,
@@ -3795,11 +3796,20 @@ button.mfp-arrow {
   font-size: 1.5rem;
 }
 
-.crawling-main__head {
+.crawling-main {
   padding: 2.5rem 2.5rem 2.5rem;
 }
-.crawling-main__body {
-  padding: 0 2.5rem 0;
+.crawling-main__head {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+.crawling-main__txt {
+  margin-bottom: 2rem;
+}
+.crawling-main__ttl {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
 }
 
 .settings-nav .profile__ttl {
@@ -3810,27 +3820,33 @@ button.mfp-arrow {
 }
 
 .license-main {
+  padding: 7.5rem 2.5rem 2.5rem;
+}
+.license-main__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5rem 2.5rem 2.5rem;
 }
-.license-main__content {
+.license-main__main {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding-right: 64px;
+  padding-right: 6.5rem;
 }
 .license-main__aside {
-  width: 37rem;
+  width: 37.5rem;
 }
+.license-main .breadcrumb {
+  margin-bottom: 3.5rem;
+}
+
 .license-hardware__item + .license-hardware__item {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 .license-hardware__ttl {
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .license-hardware__topic {
   font-weight: 600;
@@ -3858,7 +3874,7 @@ button.mfp-arrow {
   background-color: #316bce;
 }
 .progress-bar__task {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3880,7 +3896,7 @@ button.mfp-arrow {
 
 .alert {
   position: relative;
-  padding: 10px 20px;
+  padding: 15px 30px;
 }
 .alert::before {
   content: "";
@@ -3910,6 +3926,7 @@ button.mfp-arrow {
   -ms-flex-pack: center;
   justify-content: center;
   font-weight: 600;
+  padding: 2rem;
 }
 .btn-upload__icon {
   margin-right: 1rem;
@@ -3945,16 +3962,23 @@ button.mfp-arrow {
 }
 
 .license-manage + .license-manage {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 .license-manage__ttl {
   font-size: 1.4rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .license-manage__box {
   border: 1px solid #e1e1e9;
-  padding: 10px 20px;
+  padding: 20px 15px;
+  position: relative;
+}
+.license-manage__box + .license-manage__box {
+  margin-top: 1.5rem;
+}
+.license-manage__box.--no-pd {
+  padding: 0;
 }
 .license-manage__head {
   display: -webkit-box;
@@ -3963,7 +3987,10 @@ button.mfp-arrow {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+.license-manage__head .lable-license {
+  margin-top: -10px;
 }
 .license-manage__topic {
   display: -webkit-box;
@@ -3976,7 +4003,21 @@ button.mfp-arrow {
 }
 .license-manage__arrow {
   text-align: center;
+  margin: 2.5rem 0 0;
+}
+.license-manage__lable-active {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -1.5rem;
 }
 .license-manage__lable-active .lable-license {
   margin: auto;
+}
+.license-manage.--active {
+  margin-bottom: 4.5rem;
+}
+.license-manage .progress-bar {
+  margin-top: 3rem;
 }
