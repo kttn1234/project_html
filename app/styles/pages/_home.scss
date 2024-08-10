@@ -2300,8 +2300,16 @@ button.mfp-arrow {
 
 
 .license-main {
+    display: flex;
+    padding: rem(50) rem(25) rem(25);
+    &__content {
+        flex: 1;
+        padding-right: 64px;
+    }
+    &__aside {
+        width: rem(370);
+    }
     &__list {
-        display: flex;
     }
 
     &__item {
@@ -2322,4 +2330,157 @@ button.mfp-arrow {
     &__txt {
     
     }
+}
+.license-hardware {
+    &__list {
+        
+    }
+
+    &__item {
+        & + .license-hardware__item {
+            margin-top: rem(25);
+        }
+    }
+
+    &__ttl {
+        font-size: rem(16);
+        font-weight: bold;
+        margin-bottom: rem(15)
+    }
+    &__topic {
+        font-weight: 600;
+    }
+
+    &__code {
+        display: flex;
+        align-items: center;
+        padding-left: rem(10);
+    }
+
+    &__icon {
+        padding: rem(5);
+    }
+
+    &__txt {
+        font-weight: bold;
+    }
+    &__char {
+    
+    }
+}
+.progress-bar {
+    &__bar {
+        background-color: #efefef;
+    }
+    &__precent {
+        height: rem(6);
+        background-color: #316bce;
+    }
+    &__task {
+        margin-top: rem(15);
+        display: flex;
+        justify-content: space-between;
+        &-item {
+        
+        }
+        &-cont {
+            display: flex;
+            align-items: center;
+            i {
+                margin-right: rem(5);
+            }
+        }
+       
+    }
+}
+.alert {
+    position: relative;
+    padding: 10px 20px;
+    &::before {
+        content: '';
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+    &.--danger {
+        background-color: #ffdede;
+        color: #731818;
+        &::before {
+            background-color: #731818;
+        }
+    }
+
+}
+
+.btn-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    &__icon {
+        margin-right: rem(10);
+    }
+    &__txt {
+    }
+}
+.lable-license {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: rem(150);
+    padding: rem(5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+        margin-right: rem(5);
+    }
+    &__txt {
+        font-weight: 600;
+    }
+    &.--red {
+        color: #8d4747;
+        background-color: #ffdede;
+    }
+    &.--green {
+        color: #11470a;
+        background-color: #e7ffde;
+    }
+}
+.license-manage {
+    & + .license-manage {
+        margin-top: rem(30);
+    }
+    &__ttl {
+        font-size: rem(14);
+        font-weight: bold;
+        margin-bottom: rem(10);
+    }
+    &__box {
+        border: 1px solid #e1e1e9;
+        padding: 10px 20px;
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(20);
+    }
+    &__topic {
+        display: flex;
+        font-weight: bold;
+        &-icon {
+            margin-left: rem(10);
+        }
+    }
+    &__arrow  {
+        text-align: center;
+    }
+    &__lable-active {
+        .lable-license {
+            margin: auto;
+        }
+    }
+
 }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>HS140 page</title>
+    <title>HS129 page</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -168,31 +168,69 @@
               <div class="profile__main">
                 <div class="license-main">
                   <div class="license-main__content">
-                    <div class="intro-profile">
-                      <div class="intro-profile__col">
-                        <div class="breadcrumb" aria-label="breadcrumb">
-                          <ul class="breadcrumb__list">
-                            <li class="breadcrumb__item"><a href="#" title="Account Settings">Account Settings</a>
-                            </li>
-                            <li class="breadcrumb__item">Crawling Profiles
-                            </li>
-                          </ul>
+                    <div class="breadcrumb" aria-label="breadcrumb">
+                      <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="#" title="Account Settings">Account Settings</a>
+                        </li>
+                        <li class="breadcrumb__item">License Management
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="license-main__info">
+                      <div class="license-manage">
+                        <div class="license-manage__ttl">Please select a license file to activate the software</div>
+                        <div class="license-manage__box">
+                          <div class="btn-upload"><span class="btn-upload__icon"><i class="fa-solid fa-upload"></i></span><span class="btn-upload__txt">CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE</span></div>
                         </div>
-                        <h2 class="ttl-one">Your Crawling Profiles </h2>
-                        <p class="intro-profile__txt">here you can create crawlling profile that are used to log into the social networks. Note that crawlling profile can be blocked if they are used to often.</p>
-                        <div class="crawling-tools">
-                          <div class="crawling-tools__btn"><a class="btn-com --green" href="#" title=""><i class="fa-solid fa-user-lock"></i>+ CREATE NEW CRAWLING PROFILE</a>
-                          </div>
-                          <div class="crawling-tools__export"> 
-                            <div class="icon-bd">
-                              <div class="icon-bd__list"> 
-                                <div class="icon-bd__item"><a class="icon-bd__link trans --green" href="#" title=""><i class="fa-solid fa-file-export"></i></a>
-                                </div>
-                                <div class="icon-bd__item"> <a class="icon-bd__link trans --blue" href="#" title=""><i class="fa-solid fa-file-export"></i></a>
-                                </div>
+                      </div>
+                      <div class="license-manage">
+                        <div class="license-manage__ttl">Active License</div>
+                        <div class="license-manage__box">
+                          <div class="license-manage__head">
+                            <div class="license-manage__topic"> <span class="license-manage__topic-name">License</span><span class="license-manage__topic-icon"><i class="fa-solid fa-trash-can trans"></i></span></div>
+                            <div class="license-manage__lable-date">
+                              <div class="license-manage__lable-active">
+                                <div class="lable-license --red"><span class="lable-license__txt">12 days left</span></div>
                               </div>
                             </div>
                           </div>
+                          <div class="progress-bar">
+                            <div class="progress-bar__bar">
+                              <div class="progress-bar__precent" style="width:90%"></div>
+                            </div>
+                            <ul class="progress-bar__task"> 
+                              <li class="progress-bar__task-item"> 
+                                <div class="progress-bar__task-cont">23.11.2023 00:00 +07</div>
+                              </li>
+                              <li class="progress-bar__task-item">
+                                <div class="progress-bar__task-cont"><i class="fa-solid fa-network-wired"></i>max. 3 runners</div>
+                              </li>
+                              <li class="progress-bar__task-item">
+                                <div class="progress-bar__task-cont">21.08.2024 00:00 +07</div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="license-manage__arrow"> <i class="fa-solid fa-chevron-down"></i></div>
+                          <div class="license-manage__lable-active">
+                            <div class="lable-license --green">
+                              <div class="lable-license__icon"><i class="fa-solid fa-chevron-down"></i></div><span class="lable-license__txt">Active</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="license-manage">
+                        <div class="license-manage__ttl">Other Licenses</div>
+                        <div class="license-manage__box">
+                          <div class="license-manage__head">
+                            <div class="license-manage__topic"> <span class="license-manage__topic-name">orrupted License or missing USB Dongle</span><span class="license-manage__topic-icon"><i class="fa-solid fa-trash-can trans"></i></span></div>
+                          </div>
+                          <div class="alert --danger">There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.</div>
+                        </div>
+                        <div class="license-manage__box">
+                          <div class="license-manage__head">
+                            <div class="license-manage__topic"> <span class="license-manage__topic-name">orrupted License or missing USB Dongle</span><span class="license-manage__topic-icon"><i class="fa-solid fa-trash-can trans"></i></span></div>
+                          </div>
+                          <div class="alert --danger">There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.</div>
                         </div>
                       </div>
                     </div>
@@ -202,38 +240,38 @@
                       <div class="license-hardware__ttl">Hardware-IDs</div>
                       <ul class="license-hardware__list">
                         <li class="license-hardware__item">
-                          <div class="license-hardware__ttl">VMware Network Adapter VMnet8</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">00:50:56:c0:00:08</span>
+                          <div class="license-hardware__topic">VMware Network Adapter VMnet8</div>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">00:50:56:c0:00:08</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
-                          <div class="license-hardware__ttl">Bluetooth Network Connection</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">10:68:38:5b:95:28</span>
+                          <div class="license-hardware__topic">Bluetooth Network Connection</div>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">10:68:38:5b:95:28</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
-                          <div class="license-hardware__ttl">Ethernet 2</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">00:09:0f:fe:00:01</span>
+                          <div class="license-hardware__topic">Ethernet 2</div>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">00:09:0f:fe:00:01</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
-                          <div class="license-hardware__ttl">Ethernet</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">08:bf:b8:07:aa:5a</span>
+                          <div class="license-hardware__topic">Ethernet</div>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">08:bf:b8:07:aa:5a</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
-                          <div class="license-hardware__ttl">Wi-Fi</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">10:68:38:5b:95:29</span>
+                          <div class="license-hardware__topic">Wi-Fi</div>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">10:68:38:5b:95:29</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
                           <div class="license-hardware__ttl">Ethernet 3</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">00:09:0f:aa:00:01</span>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">00:09:0f:aa:00:01</span>
                           </div>
                         </li>
                         <li class="license-hardware__item">
                           <div class="license-hardware__ttl">VMware Network Adapter VMnet1</div>
-                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__txt">00:50:56:C0:00:01</span>
+                          <div class="license-hardware__code"> <a class="license-hardware__icon trans" href="#" title=""><i class="fa-solid fa-copy"></i></a><span class="license-hardware__char">00:50:56:C0:00:01</span>
                           </div>
                         </li>
                       </ul>

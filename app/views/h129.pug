@@ -1,7 +1,7 @@
 extends layout/layout
 
 block vars
-	-title = 'HS140 page'
+	-title = 'HS129 page'
 	-bodyClass = 'target-page'
 
 block container
@@ -237,78 +237,118 @@ block container
 											i.fa-solid.fa-puzzle-piece
 										span.profile__txt Third Parties
 
-								
-								
-
+	
 									
 					.profile__main
 						.license-main
 							.license-main__content
-								.intro-profile
-									.intro-profile__col
-										+breadcrumb([{text: "Account Settings", url: "#"}, {text: "Crawling Profiles"}])
-										h2.ttl-one Your Crawling Profiles 
-										p.intro-profile__txt here you can create crawlling profile that are used to log into the social networks. Note that crawlling profile can be blocked if they are used to often.
-										.crawling-tools
-											.crawling-tools__btn
-												+link('#',"").btn-com.--green
-													i.fa-solid.fa-user-lock
-													| + CREATE NEW CRAWLING PROFILE
-											.crawling-tools__export 
-												.icon-bd
-													.icon-bd__list 
-														.icon-bd__item
-															+link('#',"").icon-bd__link.trans.--green
-																i.fa-solid.fa-file-export
-														.icon-bd__item 
-															+link('#',"").icon-bd__link.trans.--blue
-																i.fa-solid.fa-file-export
+								+breadcrumb([{text: "Account Settings", url: "#"}, {text: "License Management"}])
+								.license-main__info
+									.license-manage
+										.license-manage__ttl Please select a license file to activate the software
+										.license-manage__box
+											.btn-upload
+												span.btn-upload__icon
+													i.fa-solid.fa-upload
+												span.btn-upload__txt CLICK OR DRAG FILE HERE TO UPLOAD NEW LICENSE FILE
+									.license-manage
+										.license-manage__ttl Active License
+										.license-manage__box
+											.license-manage__head
+												.license-manage__topic 
+													span.license-manage__topic-name License
+													span.license-manage__topic-icon
+														i.fa-solid.fa-trash-can.trans
+												.license-manage__lable-date
+													.license-manage__lable-active
+														.lable-license.--red
+															span.lable-license__txt 12 days left
+											.progress-bar
+												.progress-bar__bar
+													.progress-bar__precent(style="width:90%")
+												ul.progress-bar__task 
+													li.progress-bar__task-item 
+														.progress-bar__task-cont
+															|23.11.2023 00:00 +07
+													li.progress-bar__task-item
+														.progress-bar__task-cont
+															i.fa-solid.fa-network-wired
+															| max. 3 runners
+													li.progress-bar__task-item
+														.progress-bar__task-cont
+															| 21.08.2024 00:00 +07
+											.license-manage__arrow 
+												i.fa-solid.fa-chevron-down
+											.license-manage__lable-active
+												.lable-license.--green
+													.lable-license__icon
+														i.fa-solid.fa-chevron-down
+													span.lable-license__txt Active
+									.license-manage
+										.license-manage__ttl Other Licenses
+										.license-manage__box
+											.license-manage__head
+												.license-manage__topic 
+													span.license-manage__topic-name orrupted License or missing USB Dongle
+													span.license-manage__topic-icon
+														i.fa-solid.fa-trash-can.trans
+											.alert.--danger
+												|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+										.license-manage__box
+											.license-manage__head
+												.license-manage__topic 
+													span.license-manage__topic-name orrupted License or missing USB Dongle
+													span.license-manage__topic-icon
+														i.fa-solid.fa-trash-can.trans
+											.alert.--danger
+												|There was an issue decoding your license. This can happen if your USB Dongle is not connected to your PC. If your USB Dongle is connected and you still receive this error please contact our support team at support@freezingdata.de.
+
 							.license-main__aside 
 								.license-hardware
 									.license-hardware__ttl Hardware-IDs
 									ul.license-hardware__list
 										li.license-hardware__item
-											.license-hardware__ttl VMware Network Adapter VMnet8
+											.license-hardware__topic VMware Network Adapter VMnet8
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 00:50:56:c0:00:08
+												span.license-hardware__char 00:50:56:c0:00:08
 										li.license-hardware__item
-											.license-hardware__ttl Bluetooth Network Connection
+											.license-hardware__topic Bluetooth Network Connection
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 10:68:38:5b:95:28
+												span.license-hardware__char 10:68:38:5b:95:28
 										li.license-hardware__item
-											.license-hardware__ttl Ethernet 2
+											.license-hardware__topic Ethernet 2
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 00:09:0f:fe:00:01
+												span.license-hardware__char 00:09:0f:fe:00:01
 										li.license-hardware__item
-											.license-hardware__ttl Ethernet
+											.license-hardware__topic Ethernet
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 08:bf:b8:07:aa:5a
+												span.license-hardware__char 08:bf:b8:07:aa:5a
 										li.license-hardware__item
-											.license-hardware__ttl Wi-Fi
+											.license-hardware__topic Wi-Fi
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 10:68:38:5b:95:29
+												span.license-hardware__char 10:68:38:5b:95:29
 										li.license-hardware__item
 											.license-hardware__ttl Ethernet 3
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 00:09:0f:aa:00:01
+												span.license-hardware__char 00:09:0f:aa:00:01
 										li.license-hardware__item
 											.license-hardware__ttl VMware Network Adapter VMnet1
 											.license-hardware__code 
 												+link('#',"").license-hardware__icon.trans
 													i.fa-solid.fa-copy
-												span.license-hardware__txt 00:50:56:C0:00:01
+												span.license-hardware__char 00:50:56:C0:00:01
 
 
 
