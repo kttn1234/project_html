@@ -50,7 +50,7 @@ body.no-scroll {
     position: relative;
     .fa-circle-plus {
         position: absolute;
-        font-size: 10px;
+        font-size: rem(10);
         bottom: 0;
         right: rem(-1);
         z-index: 2;
@@ -62,7 +62,7 @@ body.no-scroll {
     font-size: rem(20);
     .fa-circle-plus {
         position: absolute;
-        font-size: 10px;
+        font-size: rem(10);
         bottom: 0;
         right: rem(-1);
         z-index: 2;
@@ -74,7 +74,7 @@ body.no-scroll {
     font-size: rem(20);
     .fa-circle-minus {
         position: absolute;
-        font-size: 10px;
+        font-size: rem(10);
         bottom: 0;
         right: rem(-1);
         z-index: 2;
@@ -89,7 +89,7 @@ body.no-scroll {
     // }
     .fa-circle-plus {
         position: absolute;
-        font-size: 10px;
+        font-size: rem(10);
         bottom: rem(1);
         right: rem(-1);
         z-index: 2;
@@ -106,7 +106,7 @@ body.no-scroll {
     
     .fa-file-excel {
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         right: 0;
         z-index: 2;
         background: #fff;
@@ -247,8 +247,8 @@ body.no-scroll {
     &__nav {
         border-right: rem(1) solid #f3f3f7;
         padding: rem(25) rem(15);
-        width: 300px;
-        min-width: 300px;
+        width: rem(300);
+        min-width: rem(300);
        overflow-y: auto;
        overflow-x: hidden;
        &.--bdr-none {
@@ -347,7 +347,7 @@ body.no-scroll {
         transition: all .3s;
         padding: rem(5) rem(15) rem(5) rem(5);
         &.has-dropdown {
-            padding-left: 20px;
+            padding-left: rem(20);
             // margin-left: 0;
             // &::before {
             //     content: "\f078";
@@ -368,7 +368,7 @@ body.no-scroll {
         }
         &.popup-modal.active {
             background-color: #efefef;
-            border-radius: 30px;
+            border-radius: rem(30);
             color: $blue-1;
         }
        
@@ -569,7 +569,7 @@ body.no-scroll {
         display: flex;
         height: 100%;
         align-items: center;
-        max-width: 36px;
+        max-width: rem(36);
         width: 100%;
         justify-content: center;
     }
@@ -607,7 +607,6 @@ body.no-scroll {
     }
     &__body {
         // max-height: 80vh;s
-        // height: calc(100% - 146px);
         // max-height: calc(100vh - ( 10.3rem + 13rem + 4.3rem));
         // max-height: 67.5vh;
         
@@ -738,7 +737,6 @@ body.no-scroll {
         &-checkbox {
             position: relative;
             width: rem(45);
-            // border-right: 1px solid #fff;
             margin-right: rem(15);
             &::before {
                 content: "";
@@ -793,16 +791,7 @@ body.no-scroll {
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        // .icon-play {
-        //     background: url(./../images/home/icon_play.png) no-repeat center center / 16px;
-        //     width: 100%;
-        //     height: 100%;
-        //     display: block;
-            
-            
-        // }
-        
+        }        
     }
     .checkbox__checkmark {
         top: rem(-7);
@@ -1040,7 +1029,7 @@ body.no-scroll {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 rem(10);
     }
     &__accordion {
     }
@@ -1242,7 +1231,7 @@ body.no-scroll {
     }
     &__item {
         &  + .post-info__item {
-            margin-top: 5px;
+            margin-top: rem(5);
         }
     }
     &__cont {
@@ -1412,7 +1401,7 @@ body.no-scroll {
     }
 }
 .popup-menu {
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: rem(2) rem(4) rem(10) rgba(0, 0, 0, 0.5);
     border-radius: rem(5);
     background-color: #fff;
     position: absolute;
@@ -1434,7 +1423,7 @@ body.no-scroll {
     &__list {
     }
     &__item {
-        padding: 10px 10px;
+        padding: rem(10) rem(10);
         cursor: pointer;
         color: $black-3;
         &:hover {
@@ -1725,8 +1714,8 @@ body.no-scroll {
             display: block;
         }
         &#tab-dropdown {
-            border-left: 1px solid;
-            border-right: 1px solid;
+            border-left: rem(1) solid;
+            border-right: rem(1) solid;
         }
     }
 }
@@ -1795,12 +1784,10 @@ body.no-scroll {
     }
 
     canvas {
-        height: 300px!important;
+        height: rem(300)!important;
     }
     
 }
-
-
 
 .connect-user {
     color: $black-4;
@@ -1974,7 +1961,7 @@ body.no-scroll {
     }
     &__item {
         & + .media-tools__item {
-            margin-left: 15px
+            margin-left: rem(15)
         }
     }
     &__icon {
@@ -2052,8 +2039,8 @@ button.mfp-arrow {
 }
 .media-popup .windown-nav {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: rem(10);
+    right: rem(10);
 }
 .media-popup .mfp-content {
     max-width: 80%;
@@ -2061,10 +2048,10 @@ button.mfp-arrow {
 // popup-pool
 .popup-pool {
     background: #fff;
-    padding: 20px 20px;
+    padding: rem(20) rem(20);
     text-align: left;
-    max-width: 740px;
-    margin: 40px auto;
+    max-width: rem(740);
+    margin: rem(40) auto;
     position: relative;
     .popup-close {
         color: #999aa4;
@@ -2080,14 +2067,14 @@ button.mfp-arrow {
         position: absolute;
     }
     .form-control {
-        border: 1px solid #999aa4;
+        border: rem(1) solid #999aa4;
     }
     h2 {
         font-size: rem(14);
-        margin-bottom: 45px;
+        margin-bottom: rem(45);
     }
     form {
-        margin-bottom: 20px;
+        margin-bottom: rem(20);
     }
     .form-label {
         color: #999aa4;
@@ -2124,7 +2111,7 @@ button.mfp-arrow {
         }
     }
     .fa-solid {
-        margin-right: 10px;
+        margin-right: rem(10);
     }
 }
 
@@ -2139,7 +2126,7 @@ button.mfp-arrow {
         }
     }
     &__link {
-        border: 1px solid;
+        border: rem(1) solid;
         &.--green {
             color: #8bad30;
         }
@@ -2148,7 +2135,7 @@ button.mfp-arrow {
         }
     }
     &__link {
-        border: 1px solid;
+        border: rem(1) solid;
         width: rem(40);
         height: rem(31);
         display: flex;
@@ -2231,8 +2218,8 @@ button.mfp-arrow {
     }
 
     &__box {
-        border: 1px solid #e0e0e8;
-        padding: 10px;
+        border: rem(1) solid #e0e0e8;
+        padding: rem(10);
         position: relative;
         height: 100%;
     }
@@ -2431,10 +2418,10 @@ button.mfp-arrow {
 }
 .alert {
     position: relative;
-    padding: 15px 30px;
+    padding: rem(15) rem(30);
     &::before {
         content: '';
-        width: 5px;
+        width: rem(5);
         height: 100%;
         position: absolute;
         left: 0;
@@ -2471,8 +2458,8 @@ button.mfp-arrow {
     }
 }
 .lable-license {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: rem(1) solid;
+    border-bottom: rem(1) solid;
     width: rem(150);
     padding: rem(5);
     display: flex;
@@ -2511,8 +2498,8 @@ button.mfp-arrow {
         margin-bottom: rem(20);
     }
     &__box {
-        border: 1px solid #e1e1e9;
-        padding: 20px 15px;
+        border: rem(1) solid #e1e1e9;
+        padding: rem(20) rem(15);
         position: relative;
         & + .license-manage__box {
             margin-top: rem(15);
@@ -2526,7 +2513,7 @@ button.mfp-arrow {
         justify-content: space-between;
         margin-bottom: rem(15);
         .lable-license {
-            margin-top: -10px;
+            margin-top: rem(-10);
         }
     }
     &__topic {
@@ -2590,7 +2577,7 @@ button.mfp-arrow {
         }
     }
     &__box {
-        border: 1px solid #efefef;
+        border: rem(1) solid #efefef;
         padding: rem(15) rem(15);
     }
     &__cont {

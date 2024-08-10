@@ -6,18 +6,19 @@
     position: relative;
     
     .dropdown__bar {
-      border: 1px solid #dedee7;
+      border: rem(1) solid #dedee7;
       color: #9196a0;
+      padding: 0 rem(10);
       .fa-chevron-up {
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: rem(10);
         -webkit-transform: translateY(-50%) rotate(-180deg);
         transform: translateY(-50%) rotate(-180deg);
       }
     }
     .dropdown__list {
-      border: 1px solid #dedee7;
+      border: rem(1) solid #dedee7;
     }
     &.--active {
       .dropdown__bar {
@@ -53,7 +54,7 @@
   }
   &.--rds {
     input {
-      border-radius: 30px;
+      border-radius: rem(30);
       background-color: #efefef;
       border: none;
     }
@@ -117,13 +118,13 @@
   color: #414141;
   background: #fff;
   border: rem(1) solid #dedee7;
-  padding: rem(7) rem(17);
+  padding: rem(7) rem(10);
   outline: none;
   height: rem(35);
   @include mq(md, min) {
     font-size: rem(14);
     line-height: 1.8;
-    padding: rem(7) rem(21);
+    padding: rem(7) rem(10);
   }
   &::placeholder {
     color: #ccc;
@@ -200,7 +201,7 @@
     height: rem(23);
     width: rem(23);
     border: rem(1) solid #000;
-    border-radius: 2px;
+    border-radius: rem(2);
     display: block;
     &:after {
       content: "";
@@ -241,7 +242,7 @@
     font-size: rem(12);
     line-height: 1.7;
     background: #fff;
-    border: 1px solid #000;
+    border: rem(1) solid #000;
     padding: 0 rem(17);
     width: 100%;
     @include mq(md, min) {
@@ -270,7 +271,7 @@
     }
   }
   &__icon {
-    margin-right: 5px;
+    margin-right: rem(5);
   }
   &__list {
     display: none;
@@ -279,7 +280,7 @@
     top: rem(42);
     left: 0;
     background: #fff;
-    border: 1px solid #000;
+    border: rem(1) solid #000;
     list-style: none;
     padding: rem(15) rem(10);
     z-index: 4;
