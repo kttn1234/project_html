@@ -1,5 +1,5 @@
 .breadcrumb {
-  margin-bottom: rem(20);
+  margin-bottom: rem(7);
   $this: &;
   &__list {
     display: flex;
@@ -9,7 +9,7 @@
     // color: #008fd6;
     & + & {
       position: relative;
-      padding-left: rem(20);
+      padding-left: rem(35);
       &::before {
         content: "";
         display: block;
@@ -19,7 +19,7 @@
         padding: rem(2);
         position: absolute;
         top: rem(6);
-        left: rem(8);
+        left: rem(15);
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
       }

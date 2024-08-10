@@ -76,59 +76,56 @@ block container
 								span.header-app__windown-icon
 									i.fa-solid.fa-xmark
 				
-			.profile.--setting
+			.profile.--setting.--crawling
 				.profile__content.active
 					.profile__nav.--bdr-none
-						.settings-nav
-							.profile__ttl Settings
-							ul.profile__menu
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-sliders
-										span.profile__txt Preferences
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-earth-europe
-										span.profile__txt Networks
-								li.profile__item
-									+link('#',"").profile__link.active
-										span.profile__icon
-											i.fa-solid.fa-user-lock
-										span.profile__txt Crawling Profiles
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-bars-progress
-										span.profile__txt Tasks
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-tags
-										span.profile__txt Tag Schema Templates
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-key
-										span.profile__txt License
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-network-wired
-										span.profile__txt Proxy
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-phone
-										span.profile__txt Info and Support
-								li.profile__item
-									+link('#',"").profile__link
-										span.profile__icon
-											i.fa-solid.fa-puzzle-piece
-										span.profile__txt Third Parties
-
-									
+						.profile__ttl Settings
+						ul.profile__menu
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-sliders
+									span.profile__txt Preferences
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-earth-europe
+									span.profile__txt Networks
+							li.profile__item
+								+link('#',"").profile__link.active
+									span.profile__icon
+										i.fa-solid.fa-user-lock
+									span.profile__txt Crawling Profiles
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-bars-progress
+									span.profile__txt Tasks
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-tags
+									span.profile__txt Tag Schema Templates
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-key
+									span.profile__txt License
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-network-wired
+									span.profile__txt Proxy
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-phone
+									span.profile__txt Info and Support
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-puzzle-piece
+									span.profile__txt Third Parties
 					.profile__main
 						.crawling-main
 							+breadcrumb([{text: "Account Settings", url: "#"}, {text: "Crawling Profiles"}])

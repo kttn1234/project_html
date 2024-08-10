@@ -1,0 +1,313 @@
+extends layout/layout
+
+block vars
+	-title = 'HS7 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.profile.--setting.--crawling
+				.profile__content.active
+					.profile__nav.--bdr-none
+						.profile__ttl Settings
+						ul.profile__menu
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-sliders
+									span.profile__txt Preferences
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-earth-europe
+									span.profile__txt Networks
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-user-lock
+									span.profile__txt Crawling Profiles
+							li.profile__item
+								+link('#',"").profile__link.active
+									span.profile__icon
+										i.fa-solid.fa-bars-progress
+									span.profile__txt Tasks
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-tags
+									span.profile__txt Tag Schema Templates
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-key
+									span.profile__txt License
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-network-wired
+									span.profile__txt Proxy
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-phone
+									span.profile__txt Info and Support
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-puzzle-piece
+									span.profile__txt Third Parties
+									
+					.profile__main
+						.crawling-main
+							+breadcrumb([{text: "Account Settings", url: "#"}, {text: "All Tasks"}])
+							h2.crawling-main__ttl Crawling tasks 
+							.crawling-main__wrap
+								.crawling-main__main
+									.tasks-status
+										ul.tasks-status__list
+											li.tasks-status__item
+												.tasks-status__ttl
+													| PENDING TASKS
+												.tasks-status__cont
+													.tasks-status__txt No pending tasks
+											li.tasks-status__item
+												.tasks-status__ttl
+													| RUNNING TASKS
+												.tasks-status__cont
+													.tasks-status__txt No running tasks
+								.crawling-main__aside
+									.tasks-finished
+										.tasks-finished__ttl Hardware-IDs
+										ul.tasks-finished__list
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-table-list
+																	.tasks-finished__info-name
+																		|...Nhanduyen99
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·21:44 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-circle-check
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-facebook-f
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-user
+																	.tasks-finished__info-name
+																		|...Nhanduyen99
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·21:43 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-circle-check
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-facebook-f
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-name
+																		|Login Check
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·20:44 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-triangle-exclamation
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-telegram
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-name
+																		|Login Check
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·20:43 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-triangle-exclamation
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-telegram
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-name
+																		|Login Check
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·20:43 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-triangle-exclamation
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-telegram
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-name
+																		|Login Check
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·20:43 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-triangle-exclamation
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-telegram
+											li.tasks-finished__item
+												.tasks-finished__box
+													.tasks-finished__cont
+														.tasks-finished__user
+															.tasks-finished__arrow
+																i.fa-solid.fa-chevron-right
+															.tasks-finished__info
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-name
+																		|Login Check
+																.tasks-finished__info-item
+																	.tasks-finished__info-icon
+																		i.fa-solid.fa-arrows-rotate
+																	.tasks-finished__info-date
+																		|20.07.2024·20:43 +07
+														.tasks-finished__icon
+															.tasks-finished__icon-item.trans
+																i.fa-solid.fa-triangle-exclamation
+															.tasks-finished__icon-item.trans
+																i.fa-brands.fa-telegram
+
+
+
+							
+
+
+
+

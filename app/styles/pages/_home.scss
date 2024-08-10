@@ -43,6 +43,9 @@ body.no-scroll {
 .fa-users-viewfinder {
     font-size: rem(20);
 }
+.fa-triangle-exclamation {
+    color: #dd463c;
+}
 .ico-users-viewfinder-plus {
     position: relative;
     .fa-circle-plus {
@@ -179,8 +182,22 @@ body.no-scroll {
         .profile__nav {
            width: 25%;
            min-width: rem(300);
-        }  
-       
+        } 
+        .profile__main {
+            padding: rem(80) rem(25) rem(25);
+        }
+        .profile__ttl {
+            margin-bottom: rem(20);
+        }
+        .profile__item + .profile__item {
+            margin-top: rem(10);
+        }
+    }
+    &.--crawling {
+        .profile__nav {
+            width: 19.5%;
+            min-width: rem(300);
+        }
     }
     &__collapse {
         position: fixed;
@@ -2282,7 +2299,6 @@ button.mfp-arrow {
    
 }
 .crawling-main {
-    padding: rem(25) 2.5rem 2.5rem;
     &__head {
         max-width: rem(460);
         margin-bottom: rem(25);
@@ -2293,25 +2309,26 @@ button.mfp-arrow {
         margin-bottom: rem(20);
     }
     &__ttl {
-        font-size: 2rem;
+        font-size: rem(29);
         font-weight: 500;
         margin-bottom: rem(40);
     }
+    &__wrap {
+        display: flex;
+    }
+    &__main {
+        flex: 1;
+        padding-right: rem(65);
+    }
+    &__aside {
+        width: rem(465);
+    }
     
 }
-.settings-nav {
-    .profile__ttl {
-        margin-bottom: rem(20);
-    }
-    .profile__item + .profile__item {
-        margin-top: rem(10);
-    }
-}
+
 
 
 .license-main {
-   
-    padding: rem(75) rem(25) rem(25);
     &__main {
         
     }
@@ -2525,4 +2542,88 @@ button.mfp-arrow {
         margin-top: rem(30);
     }
    
+}
+.tasks-status {
+    &__list {
+        display: flex;
+    }
+    &__item {
+        flex: 1;
+    }
+    &__ttl {
+        font-size: rem(14);
+        font-weight: 600;
+        margin-bottom: rem(40);
+    }
+    &__cont {
+    
+    }
+    &__txt {
+        text-align: center;
+    }
+}
+.tasks-finished {
+    &__ttl {
+        font-size: rem(14);
+        font-weight: 600;
+        margin-bottom: rem(30);
+    }
+    &__list {
+    
+    }
+    &__item {
+        & + .tasks-finished__item {
+            margin-top: rem(10);
+        }
+    }
+    &__box {
+        border: 1px solid #efefef;
+        padding: rem(15) rem(15);
+    }
+    &__cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+    &__arrow {
+        margin-right: rem(10);
+    }
+    &__info {
+        &-item {
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            margin-right: rem(5);
+           
+        }
+        &-name {
+            padding-left: rem(20);
+        }
+        &-date {
+        
+        }
+    }
+    &__icon {
+        display: flex;
+        &-item {
+            width: rem(24);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & + .tasks-finished__icon-item {
+                margin-left: rem(15);
+            }
+        }
+        
+    }
+    .fa-circle-check {
+        color: #18a552;
+        font-size: rem(24);
+    }
 }

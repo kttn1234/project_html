@@ -215,7 +215,7 @@ $(document).ready(function () {
     var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
 
     $(".tbl-profile__body").css("height", heightTblBody+"px");
-    $(".profile__nav").css("height", heightProfileNav+"px");
+    $(".profile__nav").not(".--bdr-none").css("height", heightProfileNav+"px");
 
     $(".popup-detail__body").css("height", heightPopupBody+"px");
     if ($("body").hasClass("no-scroll")) {
@@ -226,6 +226,7 @@ $(document).ready(function () {
 
         var heightTblBody = heigthScreen - heightHeadApp - heightMenuApp - heightTargerHead - heightTargerNav - heightFuntion - heightTblHead - heightScrollBar;
         $(".tbl-profile__body").css("height", heightTblBody+"px");
+        $(".profile__nav").css("height", heightProfileNav+"px");
     }
   }
 
