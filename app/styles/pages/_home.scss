@@ -602,6 +602,7 @@ body.no-scroll {
         top: 0;
         z-index: 3;
         background-color: $bg_input;
+        border-right: rem(1) solid $border;
         .tbl-profile__col {
             white-space: nowrap;
         }
@@ -732,6 +733,7 @@ body.no-scroll {
         color: $txt_white;
         padding: rem(10) rem(20);
         width: 100%;
+        border-right: rem(1) solid $border;
         &-info {
             display: flex;
         }
@@ -1968,6 +1970,7 @@ body.no-scroll {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: $status_idle;
         &.active {
             background-color: $active;
             color: $txt_white;
