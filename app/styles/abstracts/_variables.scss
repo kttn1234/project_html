@@ -16,7 +16,7 @@ $grid-breakpoints: (
 ) !default;
 
 //font
-$font-Open-Sans: "Open Sans", sans-serif;
+$font-be-vietnam-pro: 'Be Vietnam Pro';
 
 $font-weight-bold: 700;
 $font-semi-bold: 600;
@@ -32,22 +32,41 @@ $font-size-default-sp: 1.4rem;
 $font-size-rem: 10px;
 
 //color
-$white-1: #fff;
+$active: #3d8bff;
+$successfull: #099077;
+$danger: #ea4335; // err
+$wraning: #f5b060;// alert
+$online: #099077;
+$offline: #505050;
+$card_header: #2c3239;  // card header
+$bg_body: #1a1a1a; // Body | BG, Siderbar
+$card_body: #262626; // card body | child element body
+$bg_input: #2c3239; // Input Bg | Button BG | Element that user can interact
+$status_idle: #505050; // idle status | grey Neutral
+$border: #a8a8a8; // border (all)
+$bg_white: #ffffff; // white BG
+$txt_white: #ffffff;// text white
+// back
+// $main_body: #1a1a1a;
+// $card_body: #262626;
+// $card_header: #2c3239;
+// $interact_assets: #2c3239;
+// $status_ide: #505050;
+// light
+// $border: rgba(#fff, 0.15);
+// $bg_white: #fff;
+// $txt: #fff;
 
-$black-1: #5c5c5c;
-$black-2: #e7e7ee;
-$black-3: #94939e;
-$black-4: #000000;
-$black-5: #38394a;
-$black-6: #efefef;
+// $bg_body: #1a1a1a;
+// $bg_head: #1d1d1d;
+// $bg_main: #1e1e1e;
+// light
 
-$ograne-1: #ea7e4a;
-
-$green-1: #77b02f;
-
-$yellow-1: #f6e10d;
+// $bg_white: #fff;
+// $bg_hover: rgba(#fff, 0.15);
 
 
-$blue-1: #4277d1;
-$blue-2: #dee7ef;
-$blue-3: #316bce;
+// $txt_white: #fff;
+// $txt_black: #202230;
+// $txt_blue: #202230;
+

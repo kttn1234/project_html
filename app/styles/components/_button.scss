@@ -23,8 +23,8 @@
 }
 
 .btn-com {
-  color: #fff;
-  background-color: #316bce;
+  color: $txt_white;
+  background-color: $bg_input;
   font-weight: 600;
   padding: rem(5) rem(10);
   display: flex;
@@ -39,13 +39,11 @@
     min-width: rem(250);
   }
   &.--green {
-    background-color: #8cad29;
+    background-color: $successfull;
   }
   &.--gray {
-    background-color: #efefef;
-    color: #000;
+    background-color: $bg_input;
     &:hover {
-      color: #000;
       opacity: .7;
     }
   }
