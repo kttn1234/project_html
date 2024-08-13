@@ -469,3 +469,6 @@ table, div, main, body, canvas {
       opacity: 100%;
   }
 }
+a {
+  @include hover-icon()
+}

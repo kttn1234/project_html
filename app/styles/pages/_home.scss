@@ -311,6 +311,9 @@ body.no-scroll {
         margin-bottom: rem(25);
         .profile__icon {
             margin-right: 0;
+            cursor:pointer;
+            @include hover-icon()
+           
         }
     }
     &__txt {
@@ -410,6 +413,7 @@ body.no-scroll {
         }
         &:hover {
             box-shadow: inset 0 0 rem(24) $border;
+            opacity: 1;
         }
         .has-dropdown {
             padding-left: .75rem;
@@ -733,6 +737,9 @@ body.no-scroll {
             margin-right: rem(10);
         }
     }
+    .fa-arrow-up-wide-short {
+        @include hover-icon()
+    }
     .fa-xmark {
         // position: absolute;
         // right: rem(10);
@@ -743,7 +750,7 @@ body.no-scroll {
         // display: block;
         display: block;
         margin-left: rem(20);
-        
+        @include hover-icon()
     }
     &__topic {
         display: flex;
@@ -752,10 +759,12 @@ body.no-scroll {
     }
     
     .fa-users-viewfinder {
-        margin-right: rem(10);        
+        margin-right: rem(10); 
+        @include hover-icon()
     }
     .fa-pen {
         margin-left: rem(20);
+        @include hover-icon()
 
     }
     .fa-arrow-up-wide-short {
@@ -887,6 +896,7 @@ body.no-scroll {
         &.active,
         &:hover {
             background-color: $bg_white;
+            opacity: 1;
             .fa-solid {
                 color: $active;
             }
@@ -1455,7 +1465,7 @@ body.no-scroll {
 .popup-menu {
     box-shadow: rem(2) rem(4) rem(10) rgba(0, 0, 0, 0.5);
     border-radius: rem(5);
-    background-color: $bg_input;
+    background-color: $bg_nemu;
     position: absolute;
     z-index: 3;
     max-width: rem(185);
@@ -1491,10 +1501,10 @@ body.no-scroll {
 }
 .tooltip-menu {
     bottom: rem(33);
-    background-color: $bg_input;
+    background-color: $bg_nemu;
     position: relative;
     padding: rem(10) rem(15);
-    font-size: rem(12);
+    font-size: rem(11);
     line-height: 1.4;
     max-width: rem(150);
     min-width: rem(150);
@@ -1936,6 +1946,7 @@ body.no-scroll {
             pointer-events: none;
         }
         &.--dot {
+            pointer-events: none;
             a {
                 cursor: default;
             }
