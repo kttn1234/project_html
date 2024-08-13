@@ -176,7 +176,7 @@ block container
 												.networks-account__head
 													.networks-account__name 
 														.networks-account__name-icon 
-															+img('images/home/icon_facebook.png','collapse')
+															i.fa-brands.fa-facebook
 														.networks-account__name-txt 
 															| sproulmadub 
 													.networks-account__tools
@@ -188,7 +188,27 @@ block container
 																+link('#',"").networks-account__tools-link.trans
 																	i.fa-solid.fa-arrows-rotate
 													.networks-account__remove.trans
-														i.fa-solid.fa-trash-can
+														+link('#popup-confirm',"").networks-account__remove-link.popup-modal
+															i.fa-solid.fa-trash-can
+														#popup-confirm.popup-pool.mfp-hide
+															.popup-close.js-popup-close.trans
+																.fa-solid.fa-xmark
+															h2.popup-ttl Confirmation
+															.popup-pool__wraning
+																.popup-pool__wraning-icon 
+																	i.fa-solid.fa-triangle-exclamation
+																| Are you sure you want to remove the crawling profile?
+															.btn-popup
+																.btn-popup__list
+																	.btn-popup__item
+																		+link('#',"").btn-popup__link.js-popup-close
+																			i.fa-solid.fa-xmark
+																			|NO
+																	.btn-popup__item
+																		+link('#',"").btn-popup__link
+																			i.fa-solid.fa-check
+																			|YES
+
 												.networks-account__info
 													.post-info
 														ul.post-info__list
@@ -229,7 +249,7 @@ block container
 												.networks-account__head
 													.networks-account__name 
 														.networks-account__name-icon 
-															+img('images/home/icon_telegram.png','telegram')
+															i.fa-brands.fa-telegram
 														.networks-account__name-txt 
 															| TeleLucas 
 													.networks-account__tools
@@ -241,7 +261,8 @@ block container
 																+link('#',"").networks-account__tools-link.trans
 																	i.fa-solid.fa-arrows-rotate
 													.networks-account__remove.trans
-														i.fa-solid.fa-trash-can
+														+link('#popup-confirm',"").networks-account__remove-link.popup-modal
+															i.fa-solid.fa-trash-can
 												.networks-account__info
 													.post-info
 														ul.post-info__list
@@ -270,7 +291,7 @@ block container
 												.networks-account__head
 													.networks-account__name 
 														.networks-account__name-icon 
-															+img('images/home/icon_telegram.png','telegram')
+															i.fa-brands.fa-telegram
 														.networks-account__name-txt 
 															| Tele 
 													.networks-account__tools
@@ -282,7 +303,8 @@ block container
 																+link('#',"").networks-account__tools-link.trans
 																	i.fa-solid.fa-arrows-rotate
 													.networks-account__remove.trans
-														i.fa-solid.fa-trash-can
+														+link('#popup-confirm',"").networks-account__remove-link.popup-modal
+															i.fa-solid.fa-trash-can
 												.networks-account__info
 													.post-info
 														ul.post-info__list
@@ -311,7 +333,7 @@ block container
 												.networks-account__head
 													.networks-account__name 
 														.networks-account__name-icon 
-															+img('images/home/icon_facebook.png','collapse')
+															i.fa-brands.fa-facebook
 														.networks-account__name-txt 
 															| toan 18/17 
 													.networks-account__tools
@@ -323,7 +345,8 @@ block container
 																+link('#',"").networks-account__tools-link.trans
 																	i.fa-solid.fa-arrows-rotate
 													.networks-account__remove.trans
-														i.fa-solid.fa-trash-can
+														+link('#popup-confirm',"").networks-account__remove-link.popup-modal
+															i.fa-solid.fa-trash-can
 												.networks-account__info
 													.post-info
 														ul.post-info__list
@@ -364,7 +387,7 @@ block container
 												.networks-account__head
 													.networks-account__name 
 														.networks-account__name-icon 
-															+img('images/home/icon_facebook.png','collapse')
+															i.fa-brands.fa-facebook
 														.networks-account__name-txt 
 															| via1
 													.networks-account__tools
@@ -376,7 +399,8 @@ block container
 																+link('#',"").networks-account__tools-link.trans
 																	i.fa-solid.fa-arrows-rotate
 													.networks-account__remove.trans
-														i.fa-solid.fa-trash-can
+														+link('#popup-confirm',"").networks-account__remove-link.popup-modal
+															i.fa-solid.fa-trash-can
 												.networks-account__info
 													.post-info
 														ul.post-info__list

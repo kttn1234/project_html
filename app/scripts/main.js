@@ -228,6 +228,11 @@ $(document).ready(function () {
         $(".tbl-profile__body").css("height", heightTblBody+"px");
         $(".profile__nav").css("height", heightProfileNav+"px");
     }
+    if ($(".profile ").hasClass("--setting")) {
+      var heightProfileNav = heigthScreen - heightHeadApp ;
+      $(".profile__nav").css("height", heightProfileNav+"px");
+
+    }
   }
 
   $( window ).on( "resize", function() {

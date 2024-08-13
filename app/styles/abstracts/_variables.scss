@@ -39,34 +39,15 @@ $wraning: #f5b060;// alert
 $online: #099077;
 $offline: #505050;
 $card_header: #2c3239;  // card header
-$bg_body: #1a1a1a; // Body | BG, Siderbar
+$bg_body: #262626; // Body | BG, Siderbar
 $card_body: #262626; // card body | child element body
-$bg_input: #2c3239; // Input Bg | Button BG | Element that user can interact
+$bg_input: rgba(#fff,.15); // Input Bg | Button BG | Element that user can interact
 $status_idle: #505050; // idle status | grey Neutral
-$border: #a8a8a8; // border (all)
+$border: rgba(#fff,.15); // border (all)
 $bg_white: #ffffff; // white BG
 $txt_white: #ffffff;// text white
-// back
-// $main_body: #1a1a1a;
-// $card_body: #262626;
-// $card_header: #2c3239;
-// $interact_assets: #2c3239;
-// $status_ide: #505050;
-// light
-// $border: rgba(#fff, 0.15);
-// $bg_white: #fff;
-// $txt: #fff;
-
-// $bg_body: #1a1a1a;
-// $bg_head: #1d1d1d;
-// $bg_main: #1e1e1e;
-// light
-
-// $bg_white: #fff;
-// $bg_hover: rgba(#fff, 0.15);
-
-
-// $txt_white: #fff;
-// $txt_black: #202230;
-// $txt_blue: #202230;
-
+$darkest: #161616;
+$darkest_sub1: #262626;
+$bg_nemu: #101010;
+$bg_tbl_head: #232237;
+$bg_tbl_edit: #3b3b49;

@@ -48,12 +48,9 @@
   input {
     // border-color: $border;
   }
-  .form-control {
-    border: none;
-  }
   &.--bdr-none {
     input {
-      border: none;
+      // border: none;
     }
   }
   &.--rds {
@@ -124,6 +121,7 @@
   padding: rem(7) rem(10);
   outline: none;
   height: rem(35);
+  border-radius: rem(4);
   @include mq(md, min) {
     font-size: rem(14);
     line-height: 1.8;
@@ -245,10 +243,10 @@
     font-size: rem(12);
     line-height: 1.7;
     background: $bg_input;
-    // border: rem(1) solid #000;
-    border: none;
+    border: rem(1) solid $border;
     padding: 0 rem(17);
     width: 100%;
+    border-radius: rem(4);
     @include mq(md, min) {
       height: rem(35);
       font-size: rem(12);
@@ -284,13 +282,15 @@
     top: rem(42);
     left: 0;
     background: $bg_input;
-    // border: rem(1) solid #000;
     list-style: none;
-    padding: rem(15) rem(10);
+    padding: rem(5) rem(10);
     z-index: 4;
     max-height: rem(350);
     min-width: rem(90);
     overflow-y: auto;
+    border-radius: rem(5);
+    border: rem(1) solid $border;
+    backdrop-filter:blur(50px);
     @include mq(md, min) {
       top: rem(45);
     }
