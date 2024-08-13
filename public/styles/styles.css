@@ -3029,9 +3029,9 @@ body.no-scroll {
 }
 
 .trans {
-  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .trans:hover {
   opacity: 0.7;
@@ -3905,12 +3905,12 @@ button.mfp-arrow {
   display: flex;
 }
 .networks-nav__item {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   font-weight: 600;
   position: relative;
   cursor: pointer;
 }
-.networks-nav__item.active::before {
+.networks-nav__item::before {
   content: "";
   height: 0.3rem;
   width: 100%;
@@ -3918,7 +3918,20 @@ button.mfp-arrow {
   position: absolute;
   bottom: 0;
   background-color: #3d8bff;
+  opacity: 0;
   left: 0;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+.networks-nav__item + .networks-nav__item {
+  margin-left: 1rem;
+}
+.networks-nav__item:hover::before, .networks-nav__item.active::before {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
 }
 .networks-nav__txt {
   color: #3d8bff;
