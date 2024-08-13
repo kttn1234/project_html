@@ -230,7 +230,7 @@ $(document).ready(function () {
     }
     if ($(".profile ").hasClass("--setting")) {
       var heightProfileNav = heigthScreen - heightHeadApp ;
-      $(".profile__nav").css("height", heightProfileNav+"px");
+      $(".profile__nav").css("height", (heightProfileNav - 2)+"px");
 
     }
   }

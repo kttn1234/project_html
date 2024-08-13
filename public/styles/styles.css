@@ -3983,11 +3983,6 @@ button.mfp-arrow {
 .networks-account .fa-arrows-rotate {
   font-size: 1.5rem;
 }
-.networks-account .fa-facebook,
-.networks-account .fa-telegram {
-  color: #ffffff;
-}
-
 .crawling-main__head {
   max-width: 46rem;
   margin-bottom: 2.5rem;
