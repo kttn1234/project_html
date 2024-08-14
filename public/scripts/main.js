@@ -232,9 +232,10 @@ $(document).ready(function () {
       var heightProfileNav = heigthScreen - heightHeadApp ;
       $(".profile__nav").css("height", (heightProfileNav - 2)+"px");
     }
-    if($(".profile").attr("[data-height-sidebar]")) {
-
-      console.log("co")
+    // profile__sidebar has header-app menu-app
+    if ($(".profile").get(0).hasAttribute("data-heightSidebar")) {
+      var heightProfileNav = heigthScreen - heightHeadApp - heightMenuApp;
+      $(".profile__sidebar").css("height", (heightProfileNav - 2)+"px");
     }
   }
 
