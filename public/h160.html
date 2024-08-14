@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>HS80 page</title>
+    <title>HS160 page</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="icomoon/style.css">
     <link rel="stylesheet" href="scripts/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="scripts/quill/quill.snow.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="target-page">
@@ -139,8 +140,8 @@
                 </li>
               </ul>
             </div>
-            <div class="profile__content active">
-              <div class="project-operate">
+            <div class="profile__content active --project-profile">
+              <div class="project-profile">
                 <div class="breadcrumb" aria-label="breadcrumb">
                   <ul class="breadcrumb__list">
                     <li class="breadcrumb__item"><a href="#" title="Projects">Projects</a>
@@ -151,31 +152,39 @@
                     </li>
                   </ul>
                 </div>
-                <div class="project-operate__wrap">
-                  <div class="project-operate__list">
-                    <div class="project-operate__item">
-                      <div class="project-operate__topic"> 
-                        <div class="project-operate__ttl">Project picture</div>
-                        <p class="project-operate__txt">Here you can upload a picture that represents the project.</p>
+                <div class="project-profile__wrap">
+                  <div class="project-profile__list">
+                    <div class="project-profile__item">
+                      <div class="project-profile__topic"> 
+                        <div class="project-profile__ttl">Project picture</div>
+                        <p class="project-profile__txt">Here you can upload a picture that represents the project.</p>
                       </div>
-                      <div class="project-operate__detail">
+                      <div class="project-profile__detail">
                         <div class="project-picture"> 
                           <div class="project-picture__icon"> <i class="fa-solid fa-folder-closed"></i></div>
                           <div class="project-picture__btn">
-                            <div class="project-picture__btn-item"><a class="project-picture__btn-link --update" href="#" title=""><i class="fa-solid fa-plus"></i><span>UPDATE PROJECT PICTURE</span></a>
-                            </div>
-                            <div class="project-picture__btn-item"><a class="project-picture__btn-link --remove" href="#" title=""><i class="fa-solid fa-xmark"></i><span>REMOVE PROJECT PICTURE</span></a>
+                            <div class="project-tools">
+                              <div class="project-tools__list">
+                                <div class="project-tools__item"> <a class="project-tools__link --update" href="#" title="">
+                                    <div class="project-tools__icon"><i class="fa-solid fa-plus"></i></div>
+                                    <div class="project-tools__txt"><span>UPDATE PROJECT PICTURE</span></div></a>
+                                </div>
+                                <div class="project-tools__item"> <a class="project-tools__link --remove" href="#" title="">
+                                    <div class="project-tools__icon"><i class="fa-solid fa-xmark"></i></div>
+                                    <div class="project-tools__txt"><span>REMOVE PROJECT PICTURE</span></div></a>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="project-operate__item">
-                      <div class="project-operate__topic"> 
-                        <div class="project-operate__ttl">Project Details</div>
-                        <p class="project-operate__txt">Here you can edit the main information about the project.</p>
+                    <div class="project-profile__item">
+                      <div class="project-profile__topic"> 
+                        <div class="project-profile__ttl">Project Details</div>
+                        <p class="project-profile__txt">Here you can edit the main information about the project.</p>
                       </div>
-                      <div class="project-operate__detail">
+                      <div class="project-profile__detail">
                         <div class="project-form">
                           <form action="">
                             <div class="form-group">
@@ -187,19 +196,48 @@
                               <input class="form-control" id="caseName" name="caseName" type="text" placeholder="Facebook">
                             </div>
                             <div class="form-group">
-                              <label class="form-label" for="password">Password</label>
-                              <div class="form-password">
-                                <input class="form-control" id="password" name="password" type="password" placeholder=""><i class="fa-solid fa-eye-slash trans"></i>
+                              <label class="form-label" for="caseName">Description</label>
+                              <div class="editor-area">
+                                <div id="toolbar-container"><span class="ql-formats">
+                                    <select class="ql-font"></select>
+                                    <select class="ql-size"></select></span><span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button></span><span class="ql-formats">
+                                    <select class="ql-color"></select>
+                                    <select class="ql-background"></select></span><span class="ql-formats">
+                                    <button class="ql-list" value="ordered"></button>
+                                    <button class="ql-list" value="bullet"></button>
+                                    <select class="ql-align"></select></span><span class="ql-formats">
+                                    <button class="ql-link"></button>
+                                    <button class="ql-image"></button></span><span class="ql-formats">
+                                    <button class="ql-clean"></button></span></div>
+                                <div id="editor"></div>
                               </div>
                             </div>
-                            <div class="btn-group">
-                              <div class="btn-group__item"><a class="btn-com disabled" href="#" title="">SAVE AND VALIDATE LOGIN</a>
-                              </div>
-                              <div class="btn-group__item"><a class="btn-com disabled" href="#" title="">SAVE</a>
-                              </div>
-                            </div>
-                            <div class="alert --orange">If your Windows language isn't English or German and you're having trouble logging in, it may be due to<strong> special characters like "!" in your password</strong>. To fix this, consider changing your password to exclude special characters or switch your system language. We're actively working on resolving this issue.</div>
                           </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="project-profile__item">
+                      <div class="project-profile__topic"> 
+                        <div class="project-profile__ttl">Project Details</div>
+                        <p class="project-profile__txt">Here you can edit the main information about the project.</p>
+                      </div>
+                      <div class="project-profile__detail">
+                        <div class="project-operate">
+                          <div class="project-tools">
+                            <div class="project-tools__list">
+                              <div class="project-tools__item"> <a class="project-tools__link" href="#" title="">
+                                  <div class="project-tools__icon"><i class="fa-solid fa-inbox"></i></div>
+                                  <div class="project-tools__txt"><span>UPDATE PROJECT PICTURE</span></div></a>
+                              </div>
+                              <div class="project-tools__item"> <a class="project-tools__link --remove" href="#" title="">
+                                  <div class="project-tools__icon"><i class="fa-solid fa-trash-can"></i></div>
+                                  <div class="project-tools__txt"><span>REMOVE PROJECT PICTURE</span></div></a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -215,6 +253,7 @@
     <script type="text/javascript" src="chart/chart-utils.min.js"></script>
     <script type="text/javascript" src="chart/chart.umd.js"></script>
     <script type="text/javascript" src="scripts/magnific-popup/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="scripts/quill/quill.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

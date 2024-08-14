@@ -598,30 +598,30 @@ Chart.defaults.borderColor = 'rgba(255,255,255, 0.15)';
 
   
  
-  if($(".chart-date").length) {
-    new Chart('chartMonthly', {
-      type: 'bar',
-      options: optionsMonthly,
-      data: dataMonthly
-    });
-    new Chart('chartYearly', {
-      type: 'bar',
-      options: optionsYearly,
-      data: dataYearly
-    });
+  // if($(".chart-date").length) {
+  //   new Chart('chartMonthly', {
+  //     type: 'bar',
+  //     options: optionsMonthly,
+  //     data: dataMonthly
+  //   });
+  //   new Chart('chartYearly', {
+  //     type: 'bar',
+  //     options: optionsYearly,
+  //     data: dataYearly
+  //   });
 
-    new Chart('chartDaily', {
-      type: 'bar',
-      options: optionsDaily,
-      data: dataDaily
-    });
+  //   new Chart('chartDaily', {
+  //     type: 'bar',
+  //     options: optionsDaily,
+  //     data: dataDaily
+  //   });
 
-    new Chart('chartHourly', {
-      type: 'bar',
-      options: optionsHourly,
-      data: dataHourly
-    });
-  }
+  //   new Chart('chartHourly', {
+  //     type: 'bar',
+  //     options: optionsHourly,
+  //     data: dataHourly
+  //   });
+  // }
 
   
 
@@ -825,40 +825,22 @@ $('.media-list').magnificPopup({
           }
           
       },
-      // lazyLoad: function(item) {
-      //   console.log("xong rọi"); // Magnific Popup data object that should be loaded
-      //   $(".mfp-iframe").contents().find("video").addClass("hd")
-      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-      //   $("video").attr("style","width:100%;height:100%;object-fit:cover")
-      // },
-      // open: function() {
-      //   $(".mfp-iframe").contents().find("video").addClass("hd")
-      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-      // },
-      // close: function() {
-      // },
-      // afterOpen: function() {
-      //   setTimeout(() => {
-      //           $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-      //         }, 1000);
-      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-      // },
     },
 
 	});
   
 
-  $(document).on('click', '.mfp-arrow', function (e) {
-    setTimeout(() => {
-      $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-    }, 100);
-	});
+  // $(document).on('click', '.mfp-arrow', function (e) {
+  //   setTimeout(() => {
+  //     $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+  //   }, 100);
+	// });
 
-  $(".media-list").click(function(){
-    setTimeout(() => {
-      $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-    },100);
-  })
+  // $(".media-list").click(function(){
+  //   setTimeout(() => {
+  //     $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+  //   },100);
+  // })
   // popup create data pool
   $(".popup-modal").click(function(){
     $(this).addClass("active")
@@ -911,6 +893,22 @@ $('.media-list').magnificPopup({
         passwordInput.attr("type", "password");
         icon.removeClass("fa-eye").addClass("fa-eye-slash");
     }
+  });
+  // h160
+  // var quill = new Quill('#editor', {
+  //   modules: {
+  //     toolbar: '#toolbar'
+  //   },
+  //   theme: 'snow'
+  // });
+
+  const quill = new Quill('#editor', {
+    modules: {
+      syntax: true,
+      toolbar: '#toolbar-container',
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow',
   });
 
 });

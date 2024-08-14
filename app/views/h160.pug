@@ -1,7 +1,7 @@
 extends layout/layout
 
 block vars
-	-title = 'HS80 page'
+	-title = 'HS160 page'
 	-bodyClass = 'target-page'
 
 block container
@@ -131,8 +131,6 @@ block container
 								span.menu-app__icon
 									i.fa-solid.fa-screwdriver-wrench
 			.profile
-				//- span.profile__collapse
-				//- 	+img('images/home/icon_collapse.png','collapse')
 				.profile__sidebar.sidebar
 					ul.sidebar__nav
 						li.sidebar__item
@@ -186,33 +184,39 @@ block container
 								.sidebar__info
 									span.sidebar__icon
 										i.fa-solid.fa-gauge
-				.profile__content.active
-					.project-operate
+				.profile__content.active.--project-profile
+					.project-profile
 						+breadcrumb([{text: "Projects", url: "#"},{text: "Facebook Profiles 18/17", url: "#"}, {text: "Settings"}])
-						.project-operate__wrap
-							.project-operate__list
-								.project-operate__item
-									.project-operate__topic 
-										.project-operate__ttl Project picture
-										p.project-operate__txt Here you can upload a picture that represents the project.
-									.project-operate__detail
+						.project-profile__wrap
+							.project-profile__list
+								.project-profile__item
+									.project-profile__topic 
+										.project-profile__ttl Project picture
+										p.project-profile__txt Here you can upload a picture that represents the project.
+									.project-profile__detail
 										.project-picture 
 											.project-picture__icon 
 												i.fa-solid.fa-folder-closed
 											.project-picture__btn
-												.project-picture__btn-item
-													+link('#',"").project-picture__btn-link.--update
-														i.fa-solid.fa-plus
-														span UPDATE PROJECT PICTURE
-												.project-picture__btn-item
-													+link('#',"").project-picture__btn-link.--remove
-														i.fa-solid.fa-xmark
-														span REMOVE PROJECT PICTURE
-								.project-operate__item
-									.project-operate__topic 
-										.project-operate__ttl Project Details
-										p.project-operate__txt Here you can edit the main information about the project.
-									.project-operate__detail
+												.project-tools
+													.project-tools__list
+														.project-tools__item 
+															+link('#',"").project-tools__link.--update
+																.project-tools__icon
+																	i.fa-solid.fa-plus
+																.project-tools__txt
+																	span UPDATE PROJECT PICTURE
+														.project-tools__item 
+															+link('#',"").project-tools__link.--remove
+																.project-tools__icon
+																	i.fa-solid.fa-xmark
+																.project-tools__txt
+																	span REMOVE PROJECT PICTURE
+								.project-profile__item
+									.project-profile__topic 
+										.project-profile__ttl Project Details
+										p.project-profile__txt Here you can edit the main information about the project.
+									.project-profile__detail
 										.project-form
 											form(action='')
 												.form-group
@@ -223,4 +227,61 @@ block container
 													input#caseName.form-control(name='caseName' type='text' placeholder='Facebook')
 												.form-group
 													label.form-label(for='caseName') Description
-													.
+													.editor-area
+														#toolbar-container
+															span.ql-formats
+																select.ql-font
+																select.ql-size
+															span.ql-formats
+																button.ql-bold
+																button.ql-italic
+																button.ql-underline
+																//- button.ql-strike
+															span.ql-formats
+																select.ql-color
+																select.ql-background
+															//- span.ql-formats
+															//- 	button.ql-script(value='sub')
+															//- 	button.ql-script(value='super')
+															//- span.ql-formats
+															//- 	button.ql-header(value='1')
+															//- 	button.ql-header(value='2')
+															//- 	button.ql-blockquote
+															//- 	button.ql-code-block
+															span.ql-formats
+																button.ql-list(value='ordered')
+																button.ql-list(value='bullet')
+																//- button.ql-indent(value='-1')
+																//- button.ql-indent(value='+1')
+																select.ql-align
+															//- span.ql-formats
+															//- 	button.ql-direction(value='rtl')
+															span.ql-formats
+																button.ql-link
+																button.ql-image
+																//- button.ql-video
+																//- button.ql-formula
+															span.ql-formats
+																button.ql-clean
+														#editor
+
+								.project-profile__item
+									.project-profile__topic 
+										.project-profile__ttl Project Details
+										p.project-profile__txt Here you can edit the main information about the project.
+									.project-profile__detail
+										.project-operate
+											.project-tools
+												.project-tools__list
+													.project-tools__item 
+														+link('#',"").project-tools__link
+															.project-tools__icon
+																i.fa-solid.fa-inbox
+															.project-tools__txt
+																span UPDATE PROJECT PICTURE
+													.project-tools__item 
+														+link('#',"").project-tools__link.--remove
+															.project-tools__icon
+																i.fa-solid.fa-trash-can
+															.project-tools__txt
+																span REMOVE PROJECT PICTURE
