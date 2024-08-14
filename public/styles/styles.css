@@ -1060,6 +1060,7 @@ a:hover {
   -webkit-transition: all 0.2 ease;
   transition: all 0.2 ease;
   height: 3rem;
+  position: relative;
 }
 .btn-com i {
   margin-right: 0.5rem;
@@ -1078,6 +1079,17 @@ a:hover {
 }
 .btn-com.--small {
   font-size: 1.2rem;
+}
+.btn-com.--save {
+  width: 25rem;
+  text-align: center;
+}
+.btn-com.--save i {
+  position: absolute;
+  left: 1.6rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .btn-com:hover {
   color: #fff;
@@ -4452,7 +4464,9 @@ button.mfp-arrow:hover {
 }
 
 .project-profile {
-  padding: 10px 15%;
+  padding: 4.5rem 2.5rem 4.5rem;
+  max-width: 120rem;
+  margin: auto;
 }
 .project-profile__item {
   display: -webkit-box;
@@ -4460,10 +4474,15 @@ button.mfp-arrow:hover {
   display: flex;
 }
 .project-profile__item + .project-profile__item {
-  margin-top: 2rem;
+  margin-top: 8rem;
+}
+.project-profile__item.--center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .project-profile__topic {
-  width: 45%;
+  width: 35.5%;
   padding-right: 7.5rem;
 }
 .project-profile__detail {
@@ -4474,8 +4493,12 @@ button.mfp-arrow:hover {
 .project-profile__ttl {
   font-size: 2.9rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
+.project-profile .breadcrumb {
+  margin-bottom: 5.5rem;
+}
+
 .project-tools__item + .project-tools__item {
   margin-top: 1rem;
 }
@@ -4502,6 +4525,12 @@ button.mfp-arrow:hover {
   -ms-flex-align: center;
   align-items: center;
 }
+.project-picture__icon {
+  font-size: 4.4rem;
+  width: 12rem;
+  margin-right: 3.5rem;
+  text-align: center;
+}
 .editor-area .ql-container.ql-snow,
 .editor-area .ql-toolbar.ql-snow {
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -4520,4 +4549,20 @@ button.mfp-arrow:hover {
 }
 .editor-area .ql-snow .ql-fill, .editor-area .ql-snow .ql-stroke.ql-fill {
   fill: #ffffff;
+}
+.editor-area .ql-container {
+  min-height: 17.8rem;
+}
+.editor-area .ql-editor.ql-blank::before {
+  color: #ffffff;
+}
+
+.project-form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
 }

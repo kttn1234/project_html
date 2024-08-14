@@ -231,7 +231,10 @@ $(document).ready(function () {
     if ($(".profile ").hasClass("--setting")) {
       var heightProfileNav = heigthScreen - heightHeadApp ;
       $(".profile__nav").css("height", (heightProfileNav - 2)+"px");
+    }
+    if($(".profile").attr("[data-height-sidebar]")) {
 
+      console.log("co")
     }
   }
 
@@ -902,13 +905,13 @@ $('.media-list').magnificPopup({
   //   theme: 'snow'
   // });
 
-  const quill = new Quill('#editor', {
-    modules: {
-      syntax: true,
-      toolbar: '#toolbar-container',
-    },
-    placeholder: 'Compose an epic...',
-    theme: 'snow',
-  });
+  // const quill = new Quill('#editor', {
+  //   modules: {
+  //     syntax: true,
+  //     toolbar: '#toolbar-container',
+  //   },
+  //   placeholder: 'Compose an epic...',
+  //   theme: 'snow',
+  // });
 
 });

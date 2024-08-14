@@ -2832,7 +2832,9 @@ button.mfp-arrow {
 }
 // h160
 .project-profile {
-    padding: 10px 15%;
+    padding: rem(45) rem(25) rem(45);
+    max-width: rem(1200);
+    margin: auto;
     &__wrap {
     }
     &__list {
@@ -2840,11 +2842,14 @@ button.mfp-arrow {
     &__item {
         display: flex;
         & + .project-profile__item {
-            margin-top: rem(20);
+            margin-top: rem(80);
+        }
+        &.--center {
+            align-items: center;
         }
     }
     &__topic {
-        width: 45%;
+        width: 35.5%;
         padding-right: rem(75);
     }
     &__detail {
@@ -2853,9 +2858,12 @@ button.mfp-arrow {
     &__ttl {
         font-size: rem(29);
         font-weight: 500;
-        margin-bottom: rem(20);
+        margin-bottom: rem(15);
     }
     &__txt {
+    }
+    .breadcrumb {
+        margin-bottom: rem(55);
     }
 }
 .project-tools {
@@ -2888,6 +2896,10 @@ button.mfp-arrow {
     display: flex;
     align-items: center;
     &__icon {
+        font-size: rem(44);
+        width: rem(120);
+        margin-right: rem(35);
+        text-align: center;
     }
     &__btn {
     
@@ -2915,5 +2927,18 @@ button.mfp-arrow {
     .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
         fill:  $txt_white;
     }
+    .ql-container {
+        min-height: rem(178);
+    }
+    .ql-editor.ql-blank::before {
+        color:  $txt_white;
+    }
     
+}
+.project-form {
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: rem(15);
+    }
 }

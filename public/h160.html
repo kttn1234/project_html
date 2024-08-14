@@ -108,7 +108,7 @@
               </ul>
             </div>
           </div>
-          <div class="profile">
+          <div class="profile" data-height-sidebar>
             <div class="profile__sidebar sidebar">
               <ul class="sidebar__nav">
                 <li class="sidebar__item"><a class="sidebar__link" href="#" title="">
@@ -154,7 +154,7 @@
                 </div>
                 <div class="project-profile__wrap">
                   <div class="project-profile__list">
-                    <div class="project-profile__item">
+                    <div class="project-profile__item --center">
                       <div class="project-profile__topic"> 
                         <div class="project-profile__ttl">Project picture</div>
                         <p class="project-profile__txt">Here you can upload a picture that represents the project.</p>
@@ -186,7 +186,7 @@
                       </div>
                       <div class="project-profile__detail">
                         <div class="project-form">
-                          <form action="">
+                          <form class="project-form__form" action="">
                             <div class="form-group">
                               <label class="form-label" for="projectName">Project name *</label>
                               <input class="form-control" id="projectName" name="projectName" type="text" placeholder="Facebook Profiles 18/7">
@@ -199,8 +199,8 @@
                               <label class="form-label" for="caseName">Description</label>
                               <div class="editor-area">
                                 <div id="toolbar-container"><span class="ql-formats">
-                                    <select class="ql-font"></select>
-                                    <select class="ql-size"></select></span><span class="ql-formats">
+                                    <select class="ql-size"></select>
+                                    <select class="ql-font"></select></span><span class="ql-formats">
                                     <button class="ql-bold"></button>
                                     <button class="ql-italic"></button>
                                     <button class="ql-underline"></button></span><span class="ql-formats">
@@ -210,10 +210,13 @@
                                     <button class="ql-list" value="bullet"></button>
                                     <select class="ql-align"></select></span><span class="ql-formats">
                                     <button class="ql-link"></button>
-                                    <button class="ql-image"></button></span><span class="ql-formats">
+                                    <button class="ql-image"></button>
+                                    <button class="ql-code-block"></button></span><span class="ql-formats">
                                     <button class="ql-clean"></button></span></div>
                                 <div id="editor"></div>
                               </div>
+                            </div>
+                            <div class="project-form__btn"><a class="btn-com --save" href="#" title=""><i class="fa-regular fa-floppy-disk"></i>SAVE</a>
                             </div>
                           </form>
                         </div>
@@ -221,8 +224,8 @@
                     </div>
                     <div class="project-profile__item">
                       <div class="project-profile__topic"> 
-                        <div class="project-profile__ttl">Project Details</div>
-                        <p class="project-profile__txt">Here you can edit the main information about the project.</p>
+                        <div class="project-profile__ttl">Project operations</div>
+                        <p class="project-profile__txt">Here you can archive or delete project</p>
                       </div>
                       <div class="project-profile__detail">
                         <div class="project-operate">
@@ -230,11 +233,11 @@
                             <div class="project-tools__list">
                               <div class="project-tools__item"> <a class="project-tools__link" href="#" title="">
                                   <div class="project-tools__icon"><i class="fa-solid fa-inbox"></i></div>
-                                  <div class="project-tools__txt"><span>UPDATE PROJECT PICTURE</span></div></a>
+                                  <div class="project-tools__txt"><span>ARCHIVE PROJECT</span></div></a>
                               </div>
                               <div class="project-tools__item"> <a class="project-tools__link --remove" href="#" title="">
                                   <div class="project-tools__icon"><i class="fa-solid fa-trash-can"></i></div>
-                                  <div class="project-tools__txt"><span>REMOVE PROJECT PICTURE</span></div></a>
+                                  <div class="project-tools__txt"><span>DELETE PROJECT</span></div></a>
                               </div>
                             </div>
                           </div>
@@ -253,7 +256,18 @@
     <script type="text/javascript" src="chart/chart-utils.min.js"></script>
     <script type="text/javascript" src="chart/chart.umd.js"></script>
     <script type="text/javascript" src="scripts/magnific-popup/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="scripts/quill/highlight.min.js"></script>
     <script type="text/javascript" src="scripts/quill/quill.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+      const quill = new Quill('#editor', {
+      	modules: {
+      	syntax: true,
+      	toolbar: '#toolbar-container',
+      	},
+      	placeholder: '',
+      	theme: 'snow',
+      });
+    </script>
   </body>
 </html>

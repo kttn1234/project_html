@@ -130,7 +130,7 @@ block container
 							+link('#',"").menu-app__link
 								span.menu-app__icon
 									i.fa-solid.fa-screwdriver-wrench
-			.profile
+			.profile(data-height-sidebar)
 				.profile__sidebar.sidebar
 					ul.sidebar__nav
 						li.sidebar__item
@@ -189,7 +189,7 @@ block container
 						+breadcrumb([{text: "Projects", url: "#"},{text: "Facebook Profiles 18/17", url: "#"}, {text: "Settings"}])
 						.project-profile__wrap
 							.project-profile__list
-								.project-profile__item
+								.project-profile__item.--center
 									.project-profile__topic 
 										.project-profile__ttl Project picture
 										p.project-profile__txt Here you can upload a picture that represents the project.
@@ -218,7 +218,7 @@ block container
 										p.project-profile__txt Here you can edit the main information about the project.
 									.project-profile__detail
 										.project-form
-											form(action='')
+											form(action='').project-form__form
 												.form-group
 													label.form-label(for='projectName') Project name *
 													input#projectName.form-control(name='projectName' type='text' placeholder='Facebook Profiles 18/7')
@@ -230,8 +230,8 @@ block container
 													.editor-area
 														#toolbar-container
 															span.ql-formats
-																select.ql-font
 																select.ql-size
+																select.ql-font
 															span.ql-formats
 																button.ql-bold
 																button.ql-italic
@@ -259,16 +259,21 @@ block container
 															span.ql-formats
 																button.ql-link
 																button.ql-image
+																button.ql-code-block
 																//- button.ql-video
 																//- button.ql-formula
 															span.ql-formats
 																button.ql-clean
 														#editor
+												.project-form__btn
+													+link('#',"").btn-com.--save
+														i.fa-regular.fa-floppy-disk
+														| SAVE
 
 								.project-profile__item
 									.project-profile__topic 
-										.project-profile__ttl Project Details
-										p.project-profile__txt Here you can edit the main information about the project.
+										.project-profile__ttl Project operations
+										p.project-profile__txt Here you can archive or delete project
 									.project-profile__detail
 										.project-operate
 											.project-tools
@@ -278,10 +283,20 @@ block container
 															.project-tools__icon
 																i.fa-solid.fa-inbox
 															.project-tools__txt
-																span UPDATE PROJECT PICTURE
+																span ARCHIVE PROJECT
 													.project-tools__item 
 														+link('#',"").project-tools__link.--remove
 															.project-tools__icon
 																i.fa-solid.fa-trash-can
 															.project-tools__txt
-																span REMOVE PROJECT PICTURE
+																span DELETE PROJECT
+block script 
+	script.
+		const quill = new Quill('#editor', {
+			modules: {
+			syntax: true,
+			toolbar: '#toolbar-container',
+			},
+			placeholder: '',
+			theme: 'snow',
+		});
