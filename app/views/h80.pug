@@ -590,6 +590,36 @@ block container
 																					i.fa-solid.fa-arrow-up-wide-short
 												
 												.profile__perpage
+													.pagination
+														ul.pagination__list 
+															li.pagination__item.--prev.--disabled
+																+link('#',"")
+																	i.fa-solid.fa-chevron-left
+															li.pagination__item.active
+																+link('#',"")
+																	| 1
+															li.pagination__item
+																+link('#',"")
+																	| 2
+															li.pagination__item
+																+link('#',"")
+																	| 3
+															li.pagination__item.--dot
+																+link('#',"")
+																	| ...
+															li.pagination__item
+																+link('#',"")
+																	| 9
+															li.pagination__item
+																+link('#',"")
+																	| 8
+															li.pagination__item
+																+link('#',"")
+																	| 10
+															li.pagination__item.--next
+																+link('#',"")
+																	i.fa-solid.fa-chevron-right
+															
 													.dropdown
 														.dropdown__tool
 															.dropdown__bar
