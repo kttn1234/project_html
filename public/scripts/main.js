@@ -262,7 +262,7 @@ $(document).ready(function () {
     
   })
  
-  $(".popup-menu, .profile__more").click(function(e) {
+  $(".popup-menu, .profile__more, .media-list ").click(function(e) {
     e.stopPropagation();
   })
  
@@ -275,7 +275,9 @@ $(document).ready(function () {
 
   // chartjs
   const Utils = ChartUtils.init()
-
+  Chart.defaults.backgroundColor = '#fff';
+Chart.defaults.borderColor = 'rgba(255,255,255, 0.15)';
+  Chart.defaults.color = '#fff';
   var NUM_DATA = 130;
   var NUM_CFG = {count: NUM_DATA, min: 0, max: 0.2};
 
@@ -467,7 +469,7 @@ $(document).ready(function () {
         // stacked: true,
         grid: {
           display: true,
-          color: "#f7f7f7",
+          // color: "#f7f7f7",
           // drawOnChartArea: false,
           drawTicks: false,
         },
@@ -500,7 +502,7 @@ $(document).ready(function () {
       y: {
         grid: {
           display: true,
-          color: "#f7f7f7",          
+          // color: "#f7f7f7",          
         },
         ticks: {
           stepSize: 0.2,
@@ -530,7 +532,7 @@ $(document).ready(function () {
       y: {
         grid: {
           display: true,
-          color: "#f7f7f7",
+          // color: "#f7f7f7",
         },
         ticks: {
           stepSize: 0.2,
@@ -564,7 +566,7 @@ $(document).ready(function () {
       y: {
         grid: {
           display: true,
-          color: "#f7f7f7",
+          // color: "#f7f7f7",
           drawTicks: false,
         },
         ticks: {
@@ -815,18 +817,48 @@ $('.media-list').magnificPopup({
     callbacks: {
 
       elementParse: function(item) {
-
+        console.log("fdsf")
           if(item.el[0].className == 'video') {
               item.type = 'iframe';
           } else {
               item.type = 'image';
           }
-      }
-
+          
+      },
+      // lazyLoad: function(item) {
+      //   console.log("xong rọi"); // Magnific Popup data object that should be loaded
+      //   $(".mfp-iframe").contents().find("video").addClass("hd")
+      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+      //   $("video").attr("style","width:100%;height:100%;object-fit:cover")
+      // },
+      // open: function() {
+      //   $(".mfp-iframe").contents().find("video").addClass("hd")
+      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+      // },
+      // close: function() {
+      // },
+      // afterOpen: function() {
+      //   setTimeout(() => {
+      //           $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+      //         }, 1000);
+      //   $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+      // },
     },
 
 	});
+  
 
+  $(document).on('click', '.mfp-arrow', function (e) {
+    setTimeout(() => {
+      $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+    }, 100);
+	});
+
+  $(".media-list").click(function(){
+    setTimeout(() => {
+      $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
+    },100);
+  })
   // popup create data pool
   $(".popup-modal").click(function(){
     $(this).addClass("active")

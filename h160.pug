@@ -1,0 +1,226 @@
+extends layout/layout
+
+block vars
+	-title = 'HS80 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile
+				//- span.profile__collapse
+				//- 	+img('images/home/icon_collapse.png','collapse')
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active
+					.project-operate
+						+breadcrumb([{text: "Projects", url: "#"},{text: "Facebook Profiles 18/17", url: "#"}, {text: "Settings"}])
+						.project-operate__wrap
+							.project-operate__list
+								.project-operate__item
+									.project-operate__topic 
+										.project-operate__ttl Project picture
+										p.project-operate__txt Here you can upload a picture that represents the project.
+									.project-operate__detail
+										.project-picture 
+											.project-picture__icon 
+												i.fa-solid.fa-folder-closed
+											.project-picture__btn
+												.project-picture__btn-item
+													+link('#',"").project-picture__btn-link.--update
+														i.fa-solid.fa-plus
+														span UPDATE PROJECT PICTURE
+												.project-picture__btn-item
+													+link('#',"").project-picture__btn-link.--remove
+														i.fa-solid.fa-xmark
+														span REMOVE PROJECT PICTURE
+								.project-operate__item
+									.project-operate__topic 
+										.project-operate__ttl Project Details
+										p.project-operate__txt Here you can edit the main information about the project.
+									.project-operate__detail
+										.project-form
+											form(action='')
+												.form-group
+													label.form-label(for='projectName') Project name *
+													input#projectName.form-control(name='projectName' type='text' placeholder='Facebook Profiles 18/7')
+												.form-group
+													label.form-label(for='caseName') Case name *
+													input#caseName.form-control(name='caseName' type='text' placeholder='Facebook')
+												.form-group
+													label.form-label(for='caseName') Description
+													.

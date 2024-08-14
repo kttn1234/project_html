@@ -870,7 +870,21 @@ block container
 											.tbl-profile__col 
 												i.icon-telegram
 											.tbl-profile__col
-												.media-list 
+												.media-list
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
 													.media-list__item
 														.tbl-profile__media
 															a(href='video/video01.mp4' title='The Cleaner')(class="video")
