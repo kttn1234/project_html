@@ -2335,6 +2335,7 @@ button.mfp-arrow {
 .networks-nav {
     &__list {
         display: flex;
+        align-items: center;
     }
     &__item {
         padding: rem(20) rem(10);
