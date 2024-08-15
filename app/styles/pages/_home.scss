@@ -58,7 +58,7 @@ body.no-scroll {
     color: #f70000;
 }
 .fa-triangle-exclamation {
-    color: #fff;
+    color: $danger;
 }
 .ico-users-viewfinder-plus {
     position: relative;
@@ -70,6 +70,9 @@ body.no-scroll {
         z-index: 2;
         // background: $txt_white;
     }
+}
+.fa-trash-can {
+    color: #f70000;
 }
 .ico-list-plus {
     position: relative;
@@ -207,6 +210,7 @@ body.no-scroll {
             margin-top: rem(10);
         }
     }
+    
     // &.--crawling {
     //     .profile__nav {
     //         width: 19.5%;
@@ -258,6 +262,10 @@ body.no-scroll {
             margin-left: 0;
         }
         &.--project-profile {
+            width: 100%;
+            display: block;
+        }
+        &.--full {
             width: 100%;
             display: block;
         }
@@ -2113,17 +2121,27 @@ button.mfp-arrow {
 // .media-popup
 .media-popup .mfp-figure img.mfp-img {
     padding: 0;
-    width: 100%;
 }
 .media-popup .mfp-iframe-holder .mfp-content,
 .media-popup.mfp-gallery .mfp-image-holder .mfp-figure {
+    background-color: $bg_input;
     max-width: rem(1000);
+    min-width: rem(1000);
+    min-height: 50vh;
+    
     @include mq(ll, max) {
         max-width: 800px;
+        min-width: rem(800);
     }
     @include mq(lg, max) {
         max-width: 600px;
+        min-width: rem(800);
     }
+}
+.media-popup.mfp-gallery .mfp-image-holder .mfp-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .media-popup .mfp-iframe-holder {
     padding: 0;
@@ -2934,12 +2952,71 @@ button.mfp-arrow {
     .ql-editor.ql-blank::before {
         color:  $txt_white;
     }
-    
 }
 .project-form {
     &__btn {
         display: flex;
         justify-content: flex-end;
         margin-top: rem(15);
+    }
+}
+.report {
+    &__btn {
+        margin-bottom: rem(40);
+    }
+    .ttl-main {
+        margin-bottom: rem(40);
+    }
+
+}
+.table-com {
+    table {
+        width: 100%;
+    }
+    tr {
+        border-bottom: rem(1) solid $border;
+    }
+    th,
+    td {
+        padding: rem(10) rem(10);
+    }
+    thead {
+        tr {
+            background-color: $bg_tbl_head;
+        }
+    }
+}
+.report-data {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: rem(1) solid $border;
+        padding: rem(10) rem(30);
+
+    }
+    &__body {
+        background-color: $card_header;
+    }
+}
+.report-menu {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        & + .report-menu__item {
+            margin-left: rem(20);
+        }
+    }
+    &__link {
+    }
+    &__icon {
+        width: rem(35);
+        height: rem(35);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }

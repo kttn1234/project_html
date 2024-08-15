@@ -1,0 +1,314 @@
+extends layout/layout
+
+block vars
+	-title = 'HS160 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile(data-heightSidebar)
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active.--full
+					.report-data
+						.report-data__head
+							.report-data__head-left
+								.report-menu
+									ul.report-menu__list
+										li.report-menu__item
+											+link('#',"").report-menu__link
+												span.report-menu__icon
+													i.fa-solid.fa-arrow-left
+										li.report-menu__item
+											+link('#',"").btn-com
+												i.fa-regular.fa-floppy-disk
+												| SAVE REPORT
+										li.report-menu__item
+											.switch
+												label.switch__btn
+													input(type='checkbox' checked)
+													span.switch__slider
+												.switch__txt Auto Save
+							.report-data__head-right
+								.report-menu
+									ul.report-menu__list
+										li.report-menu__item
+											+link('#',"").btn-com.--green
+												i.fa-regular.fa-floppy-disk
+												| GRENRATE PDF
+						.report-data__body
+							.report-data__new
+								.report-new
+									.report-new__img
+										+img('images/home/img_report.jpg','PICTURE')
+									.report-new__info
+										.report-new__ttl 
+											h2.ttl-main 
+												|New Report
+											.report-new__edit 
+												i.fa-solid.fa-pen
+										ul.report-new__list
+											li.report-new__item
+												.report-new__name Case ID
+												.report-new__case
+											li.report-new__item
+												.report-new__name Author
+												.report-new__case 
+											li.report-new__item
+												.report-new__name Agencey
+												.report-new__case 
+											li.report-new__item
+												.report-new__name Date
+												.report-new__case 12.08.2024
+									.report-new__topic Navigation
+							.report-data__main
+								.report-data__btn
+									+link('#',"").btn-com
+										i.fa-regular.fa-floppy-disk
+										| ADD SECION
+							.report-data__widgets
+								.report-widget
+									.ttl-normal Available Widgets
+									.report-widget__form
+										form(action='')
+											.form-group
+												.form-search
+													i.fa-solid.fa-magnifying-glass
+													input.form-control(name='search' type='text' placeholder='Search...')
+											.form-group
+												.report-widget__select
+													.dropdown
+														.dropdown__tool
+															.dropdown__bar
+																span.dropdown__name Network
+																i.fa-solid.fa-chevron-up
+															ul.dropdown__list
+																li.dropdown__item.--is-select choose01
+																li.dropdown__item choose02
+													label.form-label(for='networke') Select Widget Type
+											.btn-group
+												.btn-group__item
+													+link('#',"").btn-com
+														i.fa-regular.fa-circle-check
+														| ENABLE SELECTION
+									.report-state 
+										ul.report-state__list
+											li.report-state__item 
+												.report-state__box 
+													.report-state__ttl 
+														|Analytics Sheet State
+														i.fa-solid.fa-trash-can
+													.report-state__info
+														.report-state__icon 
+															i.fa-solid.fa-diagram-project
+														.report-state__detail
+															.report-state__name New Sheet 
+															.report-state__date 12.08.2024 12:02 GMT+7
+											li.report-state__item 
+												.report-state__box 
+													.report-state__ttl 
+														|Analytics Sheet State
+														i.fa-solid.fa-trash-can
+													.report-state__info
+														.report-state__icon 
+															i.fa-solid.fa-diagram-project
+														.report-state__detail
+															.report-state__name New Sheet 
+															.report-state__date 12.08.2024 12:02 GMT+7
+
+
+
+
+
+
+
+
+
+
+
+						
+block script 
+	//- script.
+	//- 	const quill = new Quill('#editor', {
+	//- 		modules: {
+	//- 		syntax: true,
+	//- 		toolbar: '#toolbar-container',
+	//- 		},
+	//- 		placeholder: '',
+	//- 		theme: 'snow',
+	//- 	});

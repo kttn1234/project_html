@@ -17,3 +17,35 @@
   font-weight: 500;
   margin-bottom: rem(20);
 }
+.ttl-main {
+  font-size: 2.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.inner {
+  padding: rem(50) rem(25);
+}
+.report {
+  max-width: 1380px;
+  margin: auto;
+}
+.report-tools {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    & + .report-tools__item {
+      margin-left: rem(10);
+    }
+  }
+  &__link {
+    width: rem(35);
+    display: block;
+    text-align: center;
+  }
+}
+.ttl-normal {
+  font-size: rem(16);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}

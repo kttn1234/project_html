@@ -1,0 +1,278 @@
+extends layout/layout
+
+block vars
+	-title = 'HS160 page'
+	-bodyClass = 'target-page'
+
+block container
+	.dashboard
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile(data-heightSidebar)
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active.--full
+					.inner
+						.report
+							+breadcrumb([{text: "Projects", url: "#"},{text: "Facebook Profiles 18/17", url: "#"}, {text: "Reports"}])
+							h2.ttl-main Reports
+							.report__btn 
+								+link('#',"").btn-com.--no-bg
+									i.fa-solid.fa-plus
+									| CREATE NEW REPORT
+							.table-com
+								table
+									thead
+										tr 
+											th(width="14%") Name
+											th(width="14%") CASE ID
+											th(width="14%") AUTHOR
+											th(width="14%") AGENCY
+											th(width="14%") DATE
+											th(width="14%") DATE LAST UPDATE
+											th(width="14%")
+									tbody
+										tr
+											th  New report
+											td 
+											td 
+											td 
+											td 12.08.24 00:00
+											td 12.08.24 00:00
+											td 
+												.report-tools
+													ul.report-tools__list
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-pen
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-copy
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-trash-can
+										tr
+											th  New report
+											td 
+											td 
+											td 
+											td 12.08.24 00:00
+											td 12.08.24 00:00
+											td 
+												.report-tools
+													ul.report-tools__list
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-pen
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-copy
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-trash-can
+										tr
+											th  New report
+											td 
+											td 
+											td 
+											td 12.08.24 00:00
+											td 12.08.24 00:00
+											td 
+												.report-tools
+													ul.report-tools__list
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-pen
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-copy
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-trash-can
+
+
+
+						
+block script 
+	//- script.
+	//- 	const quill = new Quill('#editor', {
+	//- 		modules: {
+	//- 		syntax: true,
+	//- 		toolbar: '#toolbar-container',
+	//- 		},
+	//- 		placeholder: '',
+	//- 		theme: 'snow',
+	//- 	});

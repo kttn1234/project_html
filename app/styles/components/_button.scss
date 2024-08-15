@@ -24,15 +24,15 @@
 
 .btn-com {
   color: $txt_white;
-  background-color: $bg_input;
+  background-color: $active;
   font-weight: 600;
   padding: rem(5) rem(10);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2 ease;
   height: rem(30);
   position: relative;
+  @include hover-icon();
   i {
     margin-right: rem(5);
   }
@@ -62,10 +62,11 @@
     }
 
   }
-  &:hover {
-    color: #fff;
-    opacity: .7;
+  &.--no-bg {
+    background-color: transparent;
+    color: $active;
   }
+ 
   &.disabled {
     opacity: .7;
     pointer-events: none;
@@ -77,5 +78,13 @@
     & + .btn-group__item {
       margin-left: rem(20);
     }
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  i {
+    
   }
 }
