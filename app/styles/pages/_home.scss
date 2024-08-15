@@ -2119,9 +2119,12 @@ button.mfp-arrow {
     display: none;
 }
 // .media-popup
-.media-popup .mfp-figure img.mfp-img {
-    padding: 0;
+.media-popup {
+    .mfp-figure img.mfp-img {
+        padding: 0;
+    }
 }
+
 .media-popup .mfp-iframe-holder .mfp-content,
 .media-popup.mfp-gallery .mfp-image-holder .mfp-figure {
     background-color: $bg_input;
@@ -2155,21 +2158,11 @@ button.mfp-arrow {
     right: rem(10);
 }
 .media-popup .mfp-content {
-    // width: 80%;
-    // max-width: 100%;
     border: 10px solid rgba($bg_white, $alpha: 0.8);
-}
-.media-popup .mfp-iframe-scaler {
-    // height: 75vh;
-    // padding: 0; 
 }
 .media-popup .mfp-close {
     color: $txt_white;
     opacity: 1;
-}
-.media-popup .mfp-content {
-    // width: 80%;
-    // height: 80%;
 }
 // popup-pool
 .popup-pool {
