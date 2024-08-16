@@ -215,7 +215,10 @@ block container
 							.report-data__new
 								.report-new
 									.report-new__img
-										+img('images/home/img_report.jpg','PICTURE')
+										.report-new__img-figure 
+											+img('images/home/img_report.jpg','PICTURE')
+										+link('#',"").report-new__img-link.trans
+											i.fa-solid.fa-trash-can
 									.report-new__info
 										.report-new__ttl 
 											h2.ttl-main 
@@ -274,7 +277,7 @@ block container
 														|Analytics Sheet State
 														i.fa-solid.fa-trash-can
 													.report-state__info
-														.report-state__icon 
+														+link('#',"").report-state__link 
 															i.fa-solid.fa-diagram-project
 														.report-state__detail
 															.report-state__name New Sheet 
@@ -285,7 +288,7 @@ block container
 														|Analytics Sheet State
 														i.fa-solid.fa-trash-can
 													.report-state__info
-														.report-state__icon 
+														+link('#',"").report-state__link 
 															i.fa-solid.fa-diagram-project
 														.report-state__detail
 															.report-state__name New Sheet 

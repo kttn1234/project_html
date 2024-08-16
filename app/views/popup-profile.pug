@@ -548,9 +548,23 @@ block container
 													input#checkbox03(name='checkbox03' type='checkbox' placeholder='checkbox03')
 													span.checkbox__checkmark
 											.tbl-profile__col 
-												i.icon-telegram
+												i.fa-brands.fa-telegram
 											.tbl-profile__col
-												.media-list 
+												.media-list
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
 													.media-list__item
 														.tbl-profile__media
 															a(href='video/video01.mp4' title='The Cleaner')(class="video")
@@ -647,7 +661,7 @@ block container
 													input#checkbox06(name='checkbox06' type='checkbox' placeholder='checkbox06')
 													span.checkbox__checkmark
 											.tbl-profile__col 
-												i.icon-youtube
+												i.fa-brands.fa-youtube
 											.tbl-profile__col
 											.tbl-profile__col
 												span.tbl-profile__avt
@@ -672,7 +686,7 @@ block container
 													input#checkbox07(name='checkbox07' type='checkbox' placeholder='checkbox07')
 													span.checkbox__checkmark
 											.tbl-profile__col 
-												i.icon-tiktok
+												i.fa-brands.fa-tiktok
 											.tbl-profile__col
 											.tbl-profile__col
 												span.tbl-profile__avt
