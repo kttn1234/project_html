@@ -1697,7 +1697,7 @@ body.no-scroll {
   overflow-y: hidden;
 }
 
-.fa-facebook, .fa-tiktok, .fa-telegram, .fa-youtube, .fa-facebook-f, .icon-zalo {
+.fa-facebook, .fa-tiktok, .fa-telegram, .fa-youtube, .fa-facebook-f, .ico-zalo {
   width: 3.2rem;
   height: 3.2rem;
   display: -webkit-box;
@@ -1827,7 +1827,7 @@ body.no-scroll {
   height: 1.6rem;
 }
 
-.icon-zalo::before {
+.ico-zalo::before {
   content: "";
   background: url(./../images/home/icon_zalo.svg) no-repeat center center/contain;
   display: inline-block;
