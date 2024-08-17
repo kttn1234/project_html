@@ -217,8 +217,20 @@ block container
 									.report-new__img
 										.report-new__img-figure 
 											+img('images/home/img_report.jpg','PICTURE')
-										+link('#',"").report-new__img-link.trans
+										+link('#popup-upload',"").report-new__img-link.trans.popup-modal
 											i.fa-solid.fa-trash-can
+										#popup-upload.popup-upload.popup-pool.mfp-hide
+											.popup-close.js-popup-close.trans
+												.fa-solid.fa-xmark
+											h2.popup-ttl Select file
+											.popup-upload__cont
+												.upload
+													label.upload__area
+														input(type='file')
+														span.upload__button
+															i.fa-solid.fa-cloud-arrow-up
+													p.upload__txt  
+														| click to upload<br>or<br>Drag file into this window
 									.report-new__info
 										.report-new__ttl 
 											h2.ttl-main 
@@ -289,21 +301,10 @@ block container
 									.report-new__topic Navigation
 							.report-data__main
 								.report-data__btn
-									+link('#popup-upload',"").btn-com.popup-modal
+									+link('#',"").btn-com
 										i.fa-solid.fa-file-circle-plus
 										| ADD SECION
-									#popup-upload.popup-upload.popup-pool.mfp-hide
-										.popup-close.js-popup-close.trans
-											.fa-solid.fa-xmark
-										h2.popup-ttl Select file
-										.popup-upload__cont
-											.upload
-												label.upload__area
-													input(type='file')
-													span.upload__button
-														i.fa-solid.fa-cloud-arrow-up
-												p.upload__txt  
-													| click to upload<br>or<br>Drag file into this window
+									
 							.report-data__widgets
 								.report-widget
 									.ttl-normal Available Widgets

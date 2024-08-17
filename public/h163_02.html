@@ -176,7 +176,22 @@
                     <div class="report-new">
                       <div class="report-new__img">
                         <div class="report-new__img-figure"> <img src="images/home/img_report.jpg" alt="PICTURE"/>
-                        </div><a class="report-new__img-link trans" href="#" title=""><i class="fa-solid fa-trash-can"></i></a>
+                        </div><a class="report-new__img-link trans popup-modal" href="#popup-upload" title=""><i class="fa-solid fa-trash-can"></i></a>
+                        <div class="popup-upload popup-pool mfp-hide" id="popup-upload">
+                          <div class="popup-close js-popup-close trans">
+                            <div class="fa-solid fa-xmark"></div>
+                          </div>
+                          <h2 class="popup-ttl">Select file</h2>
+                          <div class="popup-upload__cont">
+                            <div class="upload">
+                              <label class="upload__area">
+                                <input type="file"><span class="upload__button"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                              </label>
+                              <p class="upload__txt">
+                                 click to upload<br>or<br>Drag file into this window</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="report-new__info">
                         <div class="report-new__ttl"> 
@@ -262,22 +277,7 @@
                     </div>
                   </div>
                   <div class="report-data__main">
-                    <div class="report-data__btn"><a class="btn-com popup-modal" href="#popup-upload" title=""><i class="fa-solid fa-file-circle-plus"></i>ADD SECION</a>
-                      <div class="popup-upload popup-pool mfp-hide" id="popup-upload">
-                        <div class="popup-close js-popup-close trans">
-                          <div class="fa-solid fa-xmark"></div>
-                        </div>
-                        <h2 class="popup-ttl">Select file</h2>
-                        <div class="popup-upload__cont">
-                          <div class="upload">
-                            <label class="upload__area">
-                              <input type="file"><span class="upload__button"><i class="fa-solid fa-cloud-arrow-up"></i></span>
-                            </label>
-                            <p class="upload__txt">
-                               click to upload<br>or<br>Drag file into this window</p>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="report-data__btn"><a class="btn-com" href="#" title=""><i class="fa-solid fa-file-circle-plus"></i>ADD SECION</a>
                     </div>
                   </div>
                   <div class="report-data__widgets">
