@@ -278,326 +278,326 @@ $(document).ready(function () {
   $(".tooltip-menu").parents(".profile__link").addClass("has-more")
 
   // chartjs
-  const Utils = ChartUtils.init()
-  Chart.defaults.backgroundColor = '#fff';
-Chart.defaults.borderColor = 'rgba(255,255,255, 0.15)';
-  Chart.defaults.color = '#fff';
-  var NUM_DATA = 130;
-  var NUM_CFG = {count: NUM_DATA, min: 0, max: 0.2};
+//   const Utils = ChartUtils.init()
+//   Chart.defaults.backgroundColor = '#fff';
+// Chart.defaults.borderColor = 'rgba(255,255,255, 0.15)';
+//   Chart.defaults.color = '#fff';
+//   var NUM_DATA = 130;
+//   var NUM_CFG = {count: NUM_DATA, min: 0, max: 0.2};
 
-  var dataMonthly = {
-    // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    labels: ["Jul 2024"],
-    // labels: Utils.months({count: NUM_DATA}),
-    datasets: [
-      {
-        label: "Postings",
-        backgroundColor: "#de314a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Sent Comments",
-        backgroundColor: "#f78c5a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Chat Messages",
-        backgroundColor: "#ffe76b",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Media Items",
-        backgroundColor: "#319cce",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-    ]
-  };
+//   var dataMonthly = {
+//     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//     labels: ["Jul 2024"],
+//     // labels: Utils.months({count: NUM_DATA}),
+//     datasets: [
+//       {
+//         label: "Postings",
+//         backgroundColor: "#de314a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Sent Comments",
+//         backgroundColor: "#f78c5a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Chat Messages",
+//         backgroundColor: "#ffe76b",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Media Items",
+//         backgroundColor: "#319cce",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//     ]
+//   };
 
-  var dataYearly = {
-    // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    labels: ["2024"],
-    // labels: Utils.months({count: NUM_DATA}),
-    datasets: [
-      {
-        label: "Postings",
-        backgroundColor: "#de314a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Sent Comments",
-        backgroundColor: "#f78c5a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Chat Messages",
-        backgroundColor: "#ffe76b",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Media Items",
-        backgroundColor: "#319cce",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-    ]
-  };
+//   var dataYearly = {
+//     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//     labels: ["2024"],
+//     // labels: Utils.months({count: NUM_DATA}),
+//     datasets: [
+//       {
+//         label: "Postings",
+//         backgroundColor: "#de314a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Sent Comments",
+//         backgroundColor: "#f78c5a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Chat Messages",
+//         backgroundColor: "#ffe76b",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Media Items",
+//         backgroundColor: "#319cce",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//     ]
+//   };
 
-  var dataDaily = {
-    // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    labels: ["Jul 2024"],
-    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    datasets: [
-      {
-        label: "Postings",
-        backgroundColor: "#de314a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Sent Comments",
-        backgroundColor: "#f78c5a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Chat Messages",
-        backgroundColor: "#ffe76b",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-      {
-        label: "Media Items",
-        backgroundColor: "#319cce",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG),
-      },
-    ]
-  };
+//   var dataDaily = {
+//     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//     labels: ["Jul 2024"],
+//     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+//     datasets: [
+//       {
+//         label: "Postings",
+//         backgroundColor: "#de314a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Sent Comments",
+//         backgroundColor: "#f78c5a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Chat Messages",
+//         backgroundColor: "#ffe76b",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//       {
+//         label: "Media Items",
+//         backgroundColor: "#319cce",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG),
+//       },
+//     ]
+//   };
 
-  var NUM_DATA_HOURS = 130;
-  var NUM_CFG_HOURS = {count: NUM_DATA, min: 0, max: 0.2};
-  var dataHourly = {
-    // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    // labels: ["Jul 2024"],
-    labels: ["00 - 01", "01 - 02", "02 - 03", "03 - 04",  "04 - 05","05 - 06", "06 - 07", "07 - 08", "08 - 09","09 - 10", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19","19 - 20", "20 - 21", "21 - 22", "22 - 23", "23 - 24"],
-    datasets: [
-      {
-        label: "Postings",
-        backgroundColor: "#de314a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG_HOURS),
-      },
-      {
-        label: "Sent Comments",
-        backgroundColor: "#f78c5a",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG_HOURS),
-      },
-      {
-        label: "Chat Messages",
-        backgroundColor: "#ffe76b",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG_HOURS),
-      },
-      {
-        label: "Media Items",
-        backgroundColor: "#319cce",
-        borderColor: "#ffffff",
-        borderWidth: 0,
-        hoverBackgroundColor: "rgba(255,99,132,0.4)",
-        hoverBorderColor: "rgba(255,99,132,1)",
-        // data: Utils.numbers(NUM_CFG_HOURS),
-      },
-    ]
-  };
+//   var NUM_DATA_HOURS = 130;
+//   var NUM_CFG_HOURS = {count: NUM_DATA, min: 0, max: 0.2};
+//   var dataHourly = {
+//     // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//     // labels: ["Jul 2024"],
+//     labels: ["00 - 01", "01 - 02", "02 - 03", "03 - 04",  "04 - 05","05 - 06", "06 - 07", "07 - 08", "08 - 09","09 - 10", "10 - 11", "11 - 12", "12 - 13", "13 - 14", "14 - 15", "15 - 16", "16 - 17", "17 - 18", "18 - 19","19 - 20", "20 - 21", "21 - 22", "22 - 23", "23 - 24"],
+//     datasets: [
+//       {
+//         label: "Postings",
+//         backgroundColor: "#de314a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG_HOURS),
+//       },
+//       {
+//         label: "Sent Comments",
+//         backgroundColor: "#f78c5a",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG_HOURS),
+//       },
+//       {
+//         label: "Chat Messages",
+//         backgroundColor: "#ffe76b",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG_HOURS),
+//       },
+//       {
+//         label: "Media Items",
+//         backgroundColor: "#319cce",
+//         borderColor: "#ffffff",
+//         borderWidth: 0,
+//         hoverBackgroundColor: "rgba(255,99,132,0.4)",
+//         hoverBorderColor: "rgba(255,99,132,1)",
+//         // data: Utils.numbers(NUM_CFG_HOURS),
+//       },
+//     ]
+//   };
 
   
 
-  var optionsMonthly = {
-    responsive: true, 
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        // stacked: true,
-        grid: {
-          display: true,
-          // color: "#f7f7f7",
-          // drawOnChartArea: false,
-          drawTicks: false,
-        },
-        ticks: {
-          stepSize: 0.2,
-          suggestedMin: 0,  
-          suggestedMax: 10,  
-        },
+//   var optionsMonthly = {
+//     responsive: true, 
+//     maintainAspectRatio: false,
+//     scales: {
+//       y: {
+//         // stacked: true,
+//         grid: {
+//           display: true,
+//           // color: "#f7f7f7",
+//           // drawOnChartArea: false,
+//           drawTicks: false,
+//         },
+//         ticks: {
+//           stepSize: 0.2,
+//           suggestedMin: 0,  
+//           suggestedMax: 10,  
+//         },
              
-      },
-      x: {
-        grid: {
-          display: true,
-        }
-      }
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: 'Monthly',
-        align: 'start'
-      }
-    }
-  };
+//       },
+//       x: {
+//         grid: {
+//           display: true,
+//         }
+//       }
+//     },
+//     plugins: {
+//       title: {
+//         display: true,
+//         text: 'Monthly',
+//         align: 'start'
+//       }
+//     }
+//   };
 
-  var optionsYearly = {
-    responsive: true, 
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        grid: {
-          display: true,
-          // color: "#f7f7f7",          
-        },
-        ticks: {
-          stepSize: 0.2,
-          suggestedMin: 0,  
-          suggestedMax: 10,  
-        }        
-      },
-      x: {
-        grid: {
-          display: true
-        }
-      }
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: 'Yearly',
-        align: 'start'
-      }
-    }
-  };
+//   var optionsYearly = {
+//     responsive: true, 
+//     maintainAspectRatio: false,
+//     scales: {
+//       y: {
+//         grid: {
+//           display: true,
+//           // color: "#f7f7f7",          
+//         },
+//         ticks: {
+//           stepSize: 0.2,
+//           suggestedMin: 0,  
+//           suggestedMax: 10,  
+//         }        
+//       },
+//       x: {
+//         grid: {
+//           display: true
+//         }
+//       }
+//     },
+//     plugins: {
+//       title: {
+//         display: true,
+//         text: 'Yearly',
+//         align: 'start'
+//       }
+//     }
+//   };
 
-  var optionsDaily = {
-    responsive: true, 
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        grid: {
-          display: true,
-          // color: "#f7f7f7",
-        },
-        ticks: {
-          stepSize: 0.2,
-          suggestedMin: 0,  
-          suggestedMax: 10,  
-        }        
-      },
-      x: {
-        grid: {
-          display: true
-        },
-        ticks: {
-          maxRotation: 30,
-          minRotation: 30,            
-        }
-      }
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: 'Daily',
-        align: 'start'
-      }
-    }
-  };
+//   var optionsDaily = {
+//     responsive: true, 
+//     maintainAspectRatio: false,
+//     scales: {
+//       y: {
+//         grid: {
+//           display: true,
+//           // color: "#f7f7f7",
+//         },
+//         ticks: {
+//           stepSize: 0.2,
+//           suggestedMin: 0,  
+//           suggestedMax: 10,  
+//         }        
+//       },
+//       x: {
+//         grid: {
+//           display: true
+//         },
+//         ticks: {
+//           maxRotation: 30,
+//           minRotation: 30,            
+//         }
+//       }
+//     },
+//     plugins: {
+//       title: {
+//         display: true,
+//         text: 'Daily',
+//         align: 'start'
+//       }
+//     }
+//   };
 
-  var optionsHourly = {
-    responsive: true, 
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        grid: {
-          display: true,
-          // color: "#f7f7f7",
-          drawTicks: false,
-        },
-        ticks: {
-          stepSize: 0.2,
-          suggestedMin: 0,  
-          suggestedMax: 10,  
-        },
+//   var optionsHourly = {
+//     responsive: true, 
+//     maintainAspectRatio: false,
+//     scales: {
+//       y: {
+//         grid: {
+//           display: true,
+//           // color: "#f7f7f7",
+//           drawTicks: false,
+//         },
+//         ticks: {
+//           stepSize: 0.2,
+//           suggestedMin: 0,  
+//           suggestedMax: 10,  
+//         },
              
-      },
-      x: {
-        grid: {
-          display: true,
-        },
-        ticks: {
-          maxRotation: 30,
-          minRotation: 30,
-        }
-      }
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: 'Hourly',
-        align: 'start'
-      }
-    }
-  };
+//       },
+//       x: {
+//         grid: {
+//           display: true,
+//         },
+//         ticks: {
+//           maxRotation: 30,
+//           minRotation: 30,
+//         }
+//       }
+//     },
+//     plugins: {
+//       title: {
+//         display: true,
+//         text: 'Hourly',
+//         align: 'start'
+//       }
+//     }
+//   };
   
 
   
@@ -832,24 +832,7 @@ $('.media-list').each(function() { // the containers for all your galleries
   });
 });
 
-// $('.media-list').magnificPopup({
- 
-		
 
-// 	});
-  
-
-  // $(document).on('click', '.mfp-arrow', function (e) {
-  //   setTimeout(() => {
-  //     $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-  //   }, 100);
-	// });
-
-  // $(".media-list").click(function(){
-  //   setTimeout(() => {
-  //     $(".mfp-iframe").contents().find("video").attr("style","width:100%;height:100%;object-fit:cover")
-  //   },100);
-  // })
   // popup create data pool
   $(".popup-modal").click(function(){
     $(this).addClass("active")
@@ -931,14 +914,6 @@ $('.media-list').each(function() { // the containers for all your galleries
      $(".calendar__datepicker").toggle();
   }); 
   
-  // $(".calendar__datepicker").datepicker({ 
-  //   onSelect: function(value, date) { 
-  //      //chose date
-  //      $(".calendar__datepicker").hide(); 
-  //      var dateAsString = dateText; //the first parameter of this function
-  //      var dateAsObject = $(this).datepicker( 'getDate' ); //the getDate method
-  //   } 
-  // });
   $(".calendar__datepicker").on("change",function(){
     var date = $(this).datepicker('getDate');
 
@@ -953,96 +928,68 @@ $('.media-list').each(function() { // the containers for all your galleries
         $(this).parents(".calendar").find('.calendar__month').html(date.getMonth() + 1);
 
         $(this).parents(".calendar").find('.calendar__year').html(date.getFullYear());
-
-		// 		$parent = $me.parents('.date-picker');
-		// $parent.find('.result').children('span').html($selected);
 	});
-
- 
-
-//   $('.calendar__datepicker').datepicker({
-//     dateFormat: 'yy-m-d',
-//     inline: true,
-//     onSelect: function(dateText, inst) { 
-//         var date = $(this).datepicker('getDate'),
-//             day  = date.getDate(),  
-//             month = date.getMonth() + 1,              
-//             year =  date.getFullYear();
-//         // alert(day + '-' + month + '-' + year);
-//     }
-// }).on("change",function(){
-//   var $me = $(this),
-//       $selected = $me.val();
-
-//       console.log("value",$selected )
-//       $(".calendar__datepicker").hide();
-//       // $(this).parents(".calendar").find('.calendar__day').html()
-//   // 		$parent = $me.parents('.date-picker');
-//   // $parent.find('.result').children('span').html($selected);
-// });
-
-  // var currentDate = $( ".datepicker" ).datepicker( "getDate" );
-  // console.log("currentDate", currentDate)
 
   
   // h163
-  var $imgUpload =  $('.upload-picture__img');
-     
-    function readFile(input) {
-      var path = input.value;
-      var extenstion = path.split('.').pop();
+  var $uploadForm = $('[data-uploadForm]');
+  var $uploadImg = $('[data-uploadImg]');
+  var $uploadDropzone = $('[data-uploadDropzone]');
+  var $uploadInput = $uploadDropzone.find("input");
+  var $uploadReMove =$("[data-uploadRemove]")
+  var imgDefault = "images/home/img_report.jpg"
+  function readFile(input) {
+    var path = input.value;
+    var extenstion = path.split('.').pop();
 
-      if(extenstion == "jpg" || extenstion == "svg" || extenstion == "jpeg" || extenstion == "png"|| extenstion == "gif"){
-        if (input.files && input.files[0]) {
-          var reader = new FileReader();
-      
-          reader.onload = function(e) {
-            var $uploadDropzone = $(".upload-dropzone")
-            $imgUpload.attr('src',e.target.result);
-            $uploadDropzone.removeClass("dragover");
-            $.magnificPopup.close();
-          };
-      
-          reader.readAsDataURL(input.files[0]);
-          
-        }
-      } else {
-        alert("File not supported. Kindly Upload the Image of below given extension ")
-      }      
-    }
+    if(extenstion == "jpg" || extenstion == "svg" || extenstion == "jpeg" || extenstion == "png"|| extenstion == "gif"){
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
     
+        reader.onload = function(e) {
+          var $uploadDropzone = $(".upload-dropzone")
+          $uploadImg.attr('src',e.target.result);
+          $uploadDropzone.removeClass("dragover");
+          $.magnificPopup.close();
+          reset()
+        };
     
-    $(".upload-dropzone__file").change(function() {
-      // $(".upload-dropzone__file").at
-      
-      // tr("value","")
-      readFile(this);
-      // $(".upload-form").reset()
-    });  
-
- 
-    $('.upload-dropzone').on('dragover', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $(this).addClass('dragover');
-    });
-    
-    function reset(e) {
-      $(".upload-form").get(0).reset();
-    }
-
-    $('.upload-dropzone').on('dragleave', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $(this).removeClass('dragover');
-    });
-    
-    $('.upload-picture__remove').on('click', function(e) {
-      e.stopPropagation();
-      $imgUpload.attr('src', "images/home/img_report.jpg");
-      $(".upload-dropzone__file").attr("value","")
-      reset()
-    });
+        reader.readAsDataURL(input.files[0]);
+        
+      }
+    } else {
+      alert("File not supported. Kindly Upload the Image of below given extension ")
+    }      
+  }
   
+  
+  $uploadInput.change(function() {
+    readFile(this);
+  });  
+
+
+  $uploadDropzone.on('dragover', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).addClass('dragover');
+  });
+  
+  function reset(e) {
+    $uploadForm.get(0).reset();
+  }
+
+  $uploadDropzone.on('dragleave', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass('dragover');
+  });
+  
+  $uploadReMove.on('click', function(e) {
+    e.stopPropagation();
+    $uploadImg.attr('src', imgDefault);
+    $uploadInput.attr("value","")
+    reset()
+  });
+ 
 
 });

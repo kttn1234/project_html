@@ -219,13 +219,13 @@ block container
 											.upload-picture
 												.upload-picture__picture
 													+link('#popup-upload',"").popup-modal
-														+img('images/home/img_report.jpg','PICTURE').upload-picture__img
-												.upload-picture__remove.trans
+														+img('images/home/img_report.jpg','PICTURE').upload-picture__img(data-uploadImg)
+												.upload-picture__remove.trans(data-uploadRemove)
 													i.fa-solid.fa-trash-can
 												#popup-upload.popup-upload.popup-pool.mfp-hide
 													h2.popup-ttl Select file
 													.popup-upload__cont
-														.upload-dropzone
+														.upload-dropzone(data-uploadDropzone)
 															.upload-dropzone__wrap
 																label.upload-dropzone__area
 																	input(type='file' class="upload-dropzone__file")
