@@ -1353,7 +1353,40 @@ block container
 												.accordion-main__head
 													i.fa-solid.fa-chevron-down
 													span Comment Data
+													.post-time
+														.post-time__box
+															+link('#',"").post-time__link.active
+																span.post-time__icon
+																	i.fa-solid.fa-clock-rotate-left
+															span.post-time__number 0
 												.accordion-main__body
 													.comment-data
 														.comment-data__icon
-															i.fa-solid.fa-file-circle-plus
+															+link('#',"")
+																i.fa-solid.fa-file-circle-plus
+														.post-deriving
+															.post-deriving__wrap
+																.post-deriving__user 
+																	.author-info
+																		.author-info__icon
+																			+img('images/home/img_flower.jpg','PICTURE')
+																		.author-info__detail 
+																			.author-info__date tdtrdingvn
+																			.author-info__name TD TRADING|Channel
+																		.author-info__social
+																			+img('images/home/icon_telegram.png','PICTURE')
+																.post-deriving__date 
+																	.post-date 
+																		.post-date__img 
+																			+img('images/home/img_post_date.jpg','PICTURE')
+																		.post-date__date 16.07.2024-22:21<br>+07
+																		.post-date__icon 
+																			.post-date__icon-item
+																				+link('#',"").post-date__icon-link
+																					i.fa-solid.fa-arrow-up-right-from-square
+																			.post-date__icon-item
+																				+link('#',"").post-date__icon-link
+																					i.fa-solid.fa-circle-info
+															.post-deriving__action 
+																.post-deriving__txt Out btc
+

@@ -5104,3 +5104,7 @@ button.mfp-arrow:hover {
 .commonent-preview {
   padding: 0 3rem;
 }
+
+.comment-data__icon {
+  margin-bottom: 2rem;
+}

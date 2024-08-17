@@ -3354,3 +3354,8 @@ button.mfp-arrow {
 .commonent-preview {
     padding: 0 rem(30);
 }
+.comment-data {
+    &__icon {
+        margin-bottom: rem(20);
+    }
+}
