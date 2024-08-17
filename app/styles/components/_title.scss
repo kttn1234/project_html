@@ -29,21 +29,6 @@
   max-width: 1380px;
   margin: auto;
 }
-.report-tools {
-  &__list {
-    display: flex;
-  }
-  &__item {
-    & + .report-tools__item {
-      margin-left: rem(10);
-    }
-  }
-  &__link {
-    width: rem(35);
-    display: block;
-    text-align: center;
-  }
-}
 .ttl-normal {
   font-size: rem(16);
   font-weight: 500;

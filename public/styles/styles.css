@@ -1038,20 +1038,6 @@ a:hover {
   margin: auto;
 }
 
-.report-tools__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.report-tools__item + .report-tools__item {
-  margin-left: 1rem;
-}
-.report-tools__link {
-  width: 3.5rem;
-  display: block;
-  text-align: center;
-}
-
 .ttl-normal {
   font-size: 1.6rem;
   font-weight: 500;
@@ -5011,5 +4997,22 @@ button.mfp-arrow:hover {
   justify-content: center;
 }
 .upload-picture__remove .fa-trash-can {
+  color: #ea4335;
+}
+
+.report-tools__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.report-tools__item + .report-tools__item {
+  margin-left: 1rem;
+}
+.report-tools__link {
+  width: 3.5rem;
+  display: block;
+  text-align: center;
+}
+.report-tools .fa-trash-can {
   color: #ea4335;
 }

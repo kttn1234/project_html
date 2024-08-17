@@ -222,7 +222,44 @@ block container
 															+link('#',"").report-tools__link
 																i.fa-solid.fa-copy
 														li.report-tools__item
+															+link('#popup-confirm',"").report-tools__link.popup-modal
+																i.fa-solid.fa-trash-can
+															#popup-confirm.popup-pool.mfp-hide
+																.popup-close.js-popup-close.trans
+																	.fa-solid.fa-xmark
+																h2.popup-ttl Confirmation
+																.popup-pool__wraning
+																	.popup-pool__wraning-icon 
+																		i.fa-solid.fa-triangle-exclamation
+																	| Are you sure you want to remove the crawling profile?
+																.btn-popup
+																	.btn-popup__list
+																		.btn-popup__item
+																			+link('#',"").btn-popup__link.js-popup-close
+																				i.fa-solid.fa-xmark
+																				|NO
+																		.btn-popup__item
+																			+link('#',"").btn-popup__link
+																				i.fa-solid.fa-check
+																				|YES
+										tr
+											th  New report
+											td 
+											td 
+											td 
+											td 12.08.24 00:00
+											td 12.08.24 00:00
+											td 
+												.report-tools
+													ul.report-tools__list
+														li.report-tools__item
 															+link('#',"").report-tools__link
+																i.fa-solid.fa-pen
+														li.report-tools__item
+															+link('#',"").report-tools__link
+																i.fa-solid.fa-copy
+														li.report-tools__item
+															+link('#popup-confirm',"").report-tools__link.popup-modal
 																i.fa-solid.fa-trash-can
 										tr
 											th  New report
@@ -241,38 +278,5 @@ block container
 															+link('#',"").report-tools__link
 																i.fa-solid.fa-copy
 														li.report-tools__item
-															+link('#',"").report-tools__link
+															+link('#popup-confirm',"").report-tools__link.popup-modal
 																i.fa-solid.fa-trash-can
-										tr
-											th  New report
-											td 
-											td 
-											td 
-											td 12.08.24 00:00
-											td 12.08.24 00:00
-											td 
-												.report-tools
-													ul.report-tools__list
-														li.report-tools__item
-															+link('#',"").report-tools__link
-																i.fa-solid.fa-pen
-														li.report-tools__item
-															+link('#',"").report-tools__link
-																i.fa-solid.fa-copy
-														li.report-tools__item
-															+link('#',"").report-tools__link
-																i.fa-solid.fa-trash-can
-
-
-
-						
-block script 
-	//- script.
-	//- 	const quill = new Quill('#editor', {
-	//- 		modules: {
-	//- 		syntax: true,
-	//- 		toolbar: '#toolbar-container',
-	//- 		},
-	//- 		placeholder: '',
-	//- 		theme: 'snow',
-	//- 	});

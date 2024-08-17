@@ -3247,3 +3247,21 @@ button.mfp-arrow {
     
 }
 
+.report-tools {
+    &__list {
+      display: flex;
+    }
+    &__item {
+      & + .report-tools__item {
+        margin-left: rem(10);
+      }
+    }
+    &__link {
+      width: rem(35);
+      display: block;
+      text-align: center;
+    }
+    .fa-trash-can {
+        color: $danger;
+    }
+}
