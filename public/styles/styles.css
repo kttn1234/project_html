@@ -1491,8 +1491,8 @@ a:hover {
 .switch__btn {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 45px;
+  height: 26px;
 }
 .switch__btn + .switch__txt {
   margin-left: 1.5rem;
@@ -1510,8 +1510,8 @@ a:hover {
   box-shadow: 0 0 1px #3d8bff;
 }
 .switch input:checked + .switch__slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(18px);
+  transform: translateX(18px);
 }
 .switch__slider {
   position: absolute;
@@ -1522,22 +1522,33 @@ a:hover {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-transition: 0.4s;
-  border-radius: 0.4rem;
+  border-radius: 1.2rem;
   transition: 0.4s;
 }
 .switch__slider::before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   left: 4px;
-  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   background-color: #ffffff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 }
 
+.upload {
+  text-align: center;
+}
+.upload__area input {
+  display: none;
+}
+.upload__button {
+  font-size: 7.2rem;
+}
 .select-lang {
   position: relative;
   width: 100%;
@@ -1746,10 +1757,6 @@ body.no-scroll {
   z-index: 2;
 }
 
-.fa-trash-can {
-  color: #f70000;
-}
-
 .ico-list-plus {
   position: relative;
   font-size: 2rem;
@@ -1940,6 +1947,8 @@ body.no-scroll {
   width: 0;
   max-width: 0;
   overflow: hidden;
+  top: 0;
+  height: 100%;
 }
 .profile__popup.active {
   display: block;
@@ -4742,13 +4751,13 @@ button.mfp-arrow:hover {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 0 2.5rem;
+  padding: 2.5rem 2.5rem;
 }
 .report-data__widgets {
   padding: 0 2.5rem;
   padding: 2.5rem 2.5rem;
   background-color: #2c3239;
-  width: 33rem;
+  width: 33.5rem;
 }
 .report-data__btn {
   text-align: center;
@@ -4784,15 +4793,18 @@ button.mfp-arrow:hover {
   position: relative;
   max-width: 17rem;
   border: 0.1rem solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .report-new__img-figure img {
   width: 100%;
 }
 .report-new__img-link {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 0.7rem;
+  right: 1rem;
+}
+.report-new__img .fa-trash-can {
+  color: #ea4335;
 }
 .report-new__ttl {
   display: -webkit-box;
@@ -4804,7 +4816,7 @@ button.mfp-arrow:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .report-new__ttl .ttl-main {
   margin-bottom: 0;
@@ -4845,6 +4857,9 @@ button.mfp-arrow:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1rem 1rem;
 }
 .report-state__link {
@@ -4852,5 +4867,114 @@ button.mfp-arrow:hover {
 }
 
 .report-widget__form {
+  margin-bottom: 2.5rem;
+}
+.report-widget__form .btn-group {
+  margin-top: 2rem;
+}
+.report-widget__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.report-widget__select * + .report-widget__select-widget {
+  margin-left: 1rem;
+}
+.report-widget__select-network {
+  width: 12rem;
+}
+.report-widget__select-widget {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.popup-report__form {
+  margin-bottom: 0;
+}
+
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.calendar__date {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 10px;
+}
+.calendar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+.calendar__item {
+  width: calc(33.3333333333% - 6px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 0.1rem solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+.calendar__icon {
+  background-color: #3d8bff;
+  width: 4rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+.calendar__datepicker {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+}
+
+.popup-report .popup-ttl {
   margin-bottom: 4rem;
+}
+.popup-report form {
+  margin-bottom: 0;
+}
+.popup-report .btn-popup {
+  margin-top: 3rem;
+}
+
+.popup-upload.popup-pool {
+  max-width: 46rem;
+}
+.popup-upload .popup-ttl {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+.popup-upload__cont {
+  padding: 18% 1rem 27%;
+}
+.popup-upload__icon {
+  font-size: 7.2rem;
+  text-align: center;
+}
+.popup-upload__txt {
+  font-weight: 500;
+  text-align: center;
 }

@@ -71,9 +71,6 @@ body.no-scroll {
         // background: $txt_white;
     }
 }
-.fa-trash-can {
-    color: #f70000;
-}
 .ico-list-plus {
     position: relative;
     font-size: rem(20);
@@ -308,6 +305,8 @@ body.no-scroll {
         max-width: 0;
         // display: none;
         overflow: hidden;
+        top: 0;
+        height: 100%;
         &.active {
             display: block;
             visibility: visible;
@@ -3003,13 +3002,13 @@ button.mfp-arrow {
     }
     &__main {
         flex: 1;
-        padding: 0 rem(25);
+        padding: rem(25) rem(25);
     }
     &__widgets {
         padding: 0 rem(25);
         padding: rem(25) rem(25);
         background-color: $card_header;
-        width: rem(330);
+        width: rem(335);
     }
     &__btn {
         text-align: center;
@@ -3041,7 +3040,7 @@ button.mfp-arrow {
         position: relative;
         max-width: rem(170);
         border: rem(1) solid $border;
-        margin-bottom: rem(20);
+        margin-bottom: rem(10);
         &-figure {
             img {
                 width: 100%;
@@ -3049,15 +3048,18 @@ button.mfp-arrow {
         }
         &-link {
             position: absolute;
-            top: rem(20);
-            right: rem(20);
+            top: rem(7);
+            right: rem(10);
+        }
+        .fa-trash-can {
+            color: $danger;
         }
     }
     &__ttl {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: rem(20);
+        margin-bottom: rem(15);
         .ttl-main {
             margin-bottom: 0;
         }
@@ -3093,6 +3095,7 @@ button.mfp-arrow {
     }
     &__info {
         display: flex;
+        align-items: center;
         padding: rem(10) rem(10);
     }
     &__link {
@@ -3101,6 +3104,96 @@ button.mfp-arrow {
 }
 .report-widget {
     &__form {
+        margin-bottom: rem(25);
+        .btn-group {
+            margin-top: rem(20);
+        }
+    }
+    &__select {
+        display: flex;
+        align-items: center;
+        * + .report-widget__select-widget {
+            margin-left: rem(10);
+        }
+        &-network {
+            width: rem(120);
+        }
+        &-widget {
+            flex: 1;
+        }
+    }
+}
+.popup-report {
+    &__form {
+        margin-bottom: 0;
+    }
+}
+.calendar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__date {
+        flex: 1;
+        padding-right: 10px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+    &__item {
+        width: calc(100%/3 - 6px);
+        background-color: $bg_input;
+        border: rem(1) solid $border;
+        text-align: center;
+        padding: rem(10);
+        border-radius: rem(4);
+    }
+    &__icon {
+        background-color: $active;
+        width: rem(40);
+        height: rem(30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: rem(4);
+    }
+    &__datepicker {
+        position: absolute;
+        bottom: 45px;
+        right: 0;    
+    }
+}
+.popup-report {
+    .popup-ttl {
         margin-bottom: rem(40);
+    }
+    form {
+        margin-bottom: 0;
+    }
+    .btn-popup {
+        margin-top: rem(30);
+    }
+}
+.popup-upload {
+    &.popup-pool {
+        max-width: rem(460);
+    }
+    .popup-ttl {
+        margin-top: rem(20);
+        font-size: rem(16);
+        margin-bottom: rem(40);
+    }
+    &__cont {
+        padding: 18% rem(10) 27%;
+    }
+    &__icon {
+        font-size: rem(72);
+        text-align: center;
+    }
+    &__txt {
+        font-weight: 500;
+        text-align: center;
     }
 }

@@ -209,7 +209,7 @@ block container
 									ul.report-menu__list
 										li.report-menu__item
 											+link('#',"").btn-com.--green
-												i.fa-regular.fa-floppy-disk
+												i.fa-solid.fa-file-pdf
 												| GRENRATE PDF
 						.report-data__body
 							.report-data__new
@@ -223,8 +223,56 @@ block container
 										.report-new__ttl 
 											h2.ttl-main 
 												|New Report
-											.report-new__edit 
+											+link('#popup-report',"").report-new__edit.popup-modal
 												i.fa-solid.fa-pen
+											#popup-report.popup-pool.popup-report.mfp-hide
+												.popup-close.js-popup-close.trans
+													.fa-solid.fa-xmark
+												h2.popup-ttl Change Report Data
+												form(action='')
+													.form-group
+														.switch
+															label.switch__btn
+																input(type='checkbox' checked)
+																span.switch__slider
+															.switch__txt Print Cover Page*
+													.form-group
+														label.form-label(for='name') Name*
+														input#name.form-control(name='name' type='text' placeholder='New Report')
+													.form-group
+														label.form-label(for='caseId') Case ID *
+														input#caseId.form-control(name='caseId' type='text' placeholder='Case ID')
+													.form-group
+														label.form-label(for='author') Author *
+														input#author.form-control(name='author' type='text' placeholder='Author Name')
+													.form-group
+														label.form-label(for='agency') Agency *
+														input#agency.form-control(name='agency' type='text' placeholder='agency')
+													.form-group
+														label.form-label(for='agency') Date *
+														.calendar
+															.calendar__date
+																.calendar__list
+																	.calendar__item
+																		span.calendar__day 12
+																	.calendar__item
+																		span.calendar__month 08
+																	.calendar__item
+																		span.calendar__year 2024
+															.calendar__btn 
+																.calendar__datepicker
+																.calendar__icon.trans
+																	i.fa-regular.fa-calendar
+													.btn-popup
+														.btn-popup__list
+															.btn-popup__item
+																+link('#',"").btn-com.--no-bg.js-popup-close
+																	| CANCEL
+															.btn-popup__item
+																+link('#',"").btn-com.--green
+																	i.fa-regular.fa-floppy-disk
+																	|YES
+
 										ul.report-new__list
 											li.report-new__item
 												.report-new__name Case ID
@@ -241,9 +289,21 @@ block container
 									.report-new__topic Navigation
 							.report-data__main
 								.report-data__btn
-									+link('#',"").btn-com
-										i.fa-regular.fa-floppy-disk
+									+link('#popup-upload',"").btn-com.popup-modal
+										i.fa-solid.fa-file-circle-plus
 										| ADD SECION
+									#popup-upload.popup-upload.popup-pool.mfp-hide
+										.popup-close.js-popup-close.trans
+											.fa-solid.fa-xmark
+										h2.popup-ttl Select file
+										.popup-upload__cont
+											.upload
+												label.upload__area
+													input(type='file')
+													span.upload__button
+														i.fa-solid.fa-cloud-arrow-up
+												p.upload__txt  
+													| click to upload<br>or<br>Drag file into this window
 							.report-data__widgets
 								.report-widget
 									.ttl-normal Available Widgets
@@ -255,15 +315,23 @@ block container
 													input.form-control(name='search' type='text' placeholder='Search...')
 											.form-group
 												.report-widget__select
-													.dropdown
-														.dropdown__tool
-															.dropdown__bar
-																span.dropdown__name Network
-																i.fa-solid.fa-chevron-up
-															ul.dropdown__list
-																li.dropdown__item.--is-select choose01
-																li.dropdown__item choose02
-													label.form-label(for='networke') Select Widget Type
+													.report-widget__select-network
+														.dropdown
+															.dropdown__tool
+																.dropdown__bar
+																	span.dropdown__name Network
+																	i.fa-solid.fa-chevron-up
+																ul.dropdown__list
+																	li.dropdown__item.--is-select choose01
+																	li.dropdown__item choose02
+													.report-widget__select-widget
+														.dropdown
+															.dropdown__tool
+																.dropdown__bar
+																	span.dropdown__name Select Widget Type
+																ul.dropdown__list
+																	li.dropdown__item.--is-select choose01
+																	li.dropdown__item choose02
 											.btn-group
 												.btn-group__item
 													+link('#',"").btn-com
@@ -275,7 +343,8 @@ block container
 												.report-state__box 
 													.report-state__ttl 
 														|Analytics Sheet State
-														i.fa-solid.fa-trash-can
+														+link('#',"").report-state__delete
+															i.fa-solid.fa-trash-can
 													.report-state__info
 														+link('#',"").report-state__link 
 															i.fa-solid.fa-diagram-project
@@ -286,32 +355,12 @@ block container
 												.report-state__box 
 													.report-state__ttl 
 														|Analytics Sheet State
-														i.fa-solid.fa-trash-can
+														+link('#',"").report-state__delete
+															i.fa-solid.fa-trash-can
 													.report-state__info
 														+link('#',"").report-state__link 
 															i.fa-solid.fa-diagram-project
 														.report-state__detail
 															.report-state__name New Sheet 
 															.report-state__date 12.08.2024 12:02 GMT+7
-
-
-
-
-
-
-
-
-
-
-
-						
-block script 
-	//- script.
-	//- 	const quill = new Quill('#editor', {
-	//- 		modules: {
-	//- 		syntax: true,
-	//- 		toolbar: '#toolbar-container',
-	//- 		},
-	//- 		placeholder: '',
-	//- 		theme: 'snow',
-	//- 	});
+//- block script 

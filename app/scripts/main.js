@@ -689,10 +689,9 @@ Chart.defaults.borderColor = 'rgba(255,255,255, 0.15)';
 // player.controlBar.el().insertBefore(button.el(), player.controlBar.el().firstChild);
 
 
-
-$('.media-list').magnificPopup({
- 
-		delegate: 'a',
+$('.media-list').each(function() { // the containers for all your galleries
+  $(this).magnificPopup({
+    delegate: 'a',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
 		mainClass: 'media-popup',
@@ -830,8 +829,14 @@ $('.media-list').magnificPopup({
           
       },
     },
+  });
+});
 
-	});
+// $('.media-list').magnificPopup({
+ 
+		
+
+// 	});
   
 
   // $(document).on('click', '.mfp-arrow', function (e) {
@@ -915,4 +920,65 @@ $('.media-list').magnificPopup({
   //   theme: 'snow',
   // });
 
+  // h163_02
+  $( ".calendar__datepicker" ).datepicker();
+  $(".calendar__datepicker").hide();
+
+  $(".calendar__icon").click(function(){
+  
+     $(".calendar__datepicker").toggle();
+  }); 
+  
+  // $(".calendar__datepicker").datepicker({ 
+  //   onSelect: function(value, date) { 
+  //      //chose date
+  //      $(".calendar__datepicker").hide(); 
+  //      var dateAsString = dateText; //the first parameter of this function
+  //      var dateAsObject = $(this).datepicker( 'getDate' ); //the getDate method
+  //   } 
+  // });
+  $(".calendar__datepicker").on("change",function(){
+    var date = $(this).datepicker('getDate');
+
+		var $me = $(this),
+    
+				$selected = $me.val();
+
+        console.log("value",date.getDate())
+        $(".calendar__datepicker").hide();
+        $(this).parents(".calendar").find('.calendar__day').html(date.getDate());
+
+        $(this).parents(".calendar").find('.calendar__month').html(date.getMonth() + 1);
+
+        $(this).parents(".calendar").find('.calendar__year').html(date.getFullYear());
+
+		// 		$parent = $me.parents('.date-picker');
+		// $parent.find('.result').children('span').html($selected);
+	});
+
+ 
+
+//   $('.calendar__datepicker').datepicker({
+//     dateFormat: 'yy-m-d',
+//     inline: true,
+//     onSelect: function(dateText, inst) { 
+//         var date = $(this).datepicker('getDate'),
+//             day  = date.getDate(),  
+//             month = date.getMonth() + 1,              
+//             year =  date.getFullYear();
+//         // alert(day + '-' + month + '-' + year);
+//     }
+// }).on("change",function(){
+//   var $me = $(this),
+//       $selected = $me.val();
+
+//       console.log("value",$selected )
+//       $(".calendar__datepicker").hide();
+//       // $(this).parents(".calendar").find('.calendar__day').html()
+//   // 		$parent = $me.parents('.date-picker');
+//   // $parent.find('.result').children('span').html($selected);
+// });
+
+  // var currentDate = $( ".datepicker" ).datepicker( "getDate" );
+  // console.log("currentDate", currentDate)
 });

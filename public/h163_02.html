@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="icomoon/style.css">
     <link rel="stylesheet" href="scripts/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="scripts/quill/quill.snow.css">
+    <link rel="stylesheet" href="scripts/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="target-page">
@@ -164,7 +165,7 @@
                   <div class="report-data__head-right">
                     <div class="report-menu">
                       <ul class="report-menu__list">
-                        <li class="report-menu__item"><a class="btn-com --green" href="#" title=""><i class="fa-regular fa-floppy-disk"></i>GRENRATE PDF</a>
+                        <li class="report-menu__item"><a class="btn-com --green" href="#" title=""><i class="fa-solid fa-file-pdf"></i>GRENRATE PDF</a>
                         </li>
                       </ul>
                     </div>
@@ -180,8 +181,63 @@
                       <div class="report-new__info">
                         <div class="report-new__ttl"> 
                           <h2 class="ttl-main">
-                             New Report</h2>
-                          <div class="report-new__edit"> <i class="fa-solid fa-pen"></i></div>
+                             New Report</h2><a class="report-new__edit popup-modal" href="#popup-report" title=""><i class="fa-solid fa-pen"></i></a>
+                          <div class="popup-pool popup-report mfp-hide" id="popup-report">
+                            <div class="popup-close js-popup-close trans">
+                              <div class="fa-solid fa-xmark"></div>
+                            </div>
+                            <h2 class="popup-ttl">Change Report Data</h2>
+                            <form action="">
+                              <div class="form-group">
+                                <div class="switch">
+                                  <label class="switch__btn">
+                                    <input type="checkbox" checked><span class="switch__slider"></span>
+                                  </label>
+                                  <div class="switch__txt">Print Cover Page*</div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="name">Name*</label>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="New Report">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="caseId">Case ID *</label>
+                                <input class="form-control" id="caseId" name="caseId" type="text" placeholder="Case ID">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="author">Author *</label>
+                                <input class="form-control" id="author" name="author" type="text" placeholder="Author Name">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="agency">Agency *</label>
+                                <input class="form-control" id="agency" name="agency" type="text" placeholder="agency">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="agency">Date *</label>
+                                <div class="calendar">
+                                  <div class="calendar__date">
+                                    <div class="calendar__list">
+                                      <div class="calendar__item"><span class="calendar__day">12</span></div>
+                                      <div class="calendar__item"><span class="calendar__month">08</span></div>
+                                      <div class="calendar__item"><span class="calendar__year">2024</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="calendar__btn"> 
+                                    <div class="calendar__datepicker"></div>
+                                    <div class="calendar__icon trans"><i class="fa-regular fa-calendar"></i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="btn-popup">
+                                <div class="btn-popup__list">
+                                  <div class="btn-popup__item"><a class="btn-com --no-bg js-popup-close" href="#" title="">CANCEL</a>
+                                  </div>
+                                  <div class="btn-popup__item"><a class="btn-com --green" href="#" title=""><i class="fa-regular fa-floppy-disk"></i>YES</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
                         </div>
                         <ul class="report-new__list">
                           <li class="report-new__item">
@@ -206,7 +262,22 @@
                     </div>
                   </div>
                   <div class="report-data__main">
-                    <div class="report-data__btn"><a class="btn-com" href="#" title=""><i class="fa-regular fa-floppy-disk"></i>ADD SECION</a>
+                    <div class="report-data__btn"><a class="btn-com popup-modal" href="#popup-upload" title=""><i class="fa-solid fa-file-circle-plus"></i>ADD SECION</a>
+                      <div class="popup-upload popup-pool mfp-hide" id="popup-upload">
+                        <div class="popup-close js-popup-close trans">
+                          <div class="fa-solid fa-xmark"></div>
+                        </div>
+                        <h2 class="popup-ttl">Select file</h2>
+                        <div class="popup-upload__cont">
+                          <div class="upload">
+                            <label class="upload__area">
+                              <input type="file"><span class="upload__button"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                            </label>
+                            <p class="upload__txt">
+                               click to upload<br>or<br>Drag file into this window</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="report-data__widgets">
@@ -221,16 +292,28 @@
                           </div>
                           <div class="form-group">
                             <div class="report-widget__select">
-                              <div class="dropdown">
-                                <div class="dropdown__tool">
-                                  <div class="dropdown__bar"><span class="dropdown__name">Network</span><i class="fa-solid fa-chevron-up"></i></div>
-                                  <ul class="dropdown__list">
-                                    <li class="dropdown__item --is-select">choose01</li>
-                                    <li class="dropdown__item">choose02</li>
-                                  </ul>
+                              <div class="report-widget__select-network">
+                                <div class="dropdown">
+                                  <div class="dropdown__tool">
+                                    <div class="dropdown__bar"><span class="dropdown__name">Network</span><i class="fa-solid fa-chevron-up"></i></div>
+                                    <ul class="dropdown__list">
+                                      <li class="dropdown__item --is-select">choose01</li>
+                                      <li class="dropdown__item">choose02</li>
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
-                              <label class="form-label" for="networke">Select Widget Type</label>
+                              <div class="report-widget__select-widget">
+                                <div class="dropdown">
+                                  <div class="dropdown__tool">
+                                    <div class="dropdown__bar"><span class="dropdown__name">Select Widget Type</span></div>
+                                    <ul class="dropdown__list">
+                                      <li class="dropdown__item --is-select">choose01</li>
+                                      <li class="dropdown__item">choose02</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="btn-group">
@@ -244,7 +327,8 @@
                           <li class="report-state__item"> 
                             <div class="report-state__box"> 
                               <div class="report-state__ttl">
-                                 Analytics Sheet State<i class="fa-solid fa-trash-can"></i></div>
+                                 Analytics Sheet State<a class="report-state__delete" href="#" title=""><i class="fa-solid fa-trash-can"></i></a>
+                              </div>
                               <div class="report-state__info"><a class="report-state__link" href="#" title=""> <i class="fa-solid fa-diagram-project"></i></a>
                                 <div class="report-state__detail">
                                   <div class="report-state__name">New Sheet </div>
@@ -256,7 +340,8 @@
                           <li class="report-state__item"> 
                             <div class="report-state__box"> 
                               <div class="report-state__ttl">
-                                 Analytics Sheet State<i class="fa-solid fa-trash-can"></i></div>
+                                 Analytics Sheet State<a class="report-state__delete" href="#" title=""><i class="fa-solid fa-trash-can"></i></a>
+                              </div>
                               <div class="report-state__info"><a class="report-state__link" href="#" title=""> <i class="fa-solid fa-diagram-project"></i></a>
                                 <div class="report-state__detail">
                                   <div class="report-state__name">New Sheet </div>
@@ -277,6 +362,7 @@
       </div>
     </main>
     <script type="text/javascript" src="scripts/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui/jquery-ui.js"></script>
     <script type="text/javascript" src="chart/chart-utils.min.js"></script>
     <script type="text/javascript" src="chart/chart.umd.js"></script>
     <script type="text/javascript" src="scripts/magnific-popup/jquery.magnific-popup.js"></script>
