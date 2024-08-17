@@ -1,0 +1,1495 @@
+extends layout/layout
+
+block vars
+	-title = 'home page'
+	-bodyClass = 'home-page'
+
+block container
+	.dashboard.is-popup
+		.dashboard__content
+			.header-app
+				.header-app__left
+					ul.header-app__list
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-left
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-chevron-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-sharp.fa-solid.fa-rotate-right
+						li.header-app__item
+							+link('#',"").header-app__link
+								span.header-app__icon
+									i.fa-solid.fa-list
+					.header-app__dropdown
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Facebook Profile 18/17
+									i.fa-sharp.fa-solid.fa-caret-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.header-app__right
+					.header-app__zoom
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-minus
+						span.header-app__zoom-percent 100%
+						+link('#',"").header-app__zoom-link
+							span.header-app__zoom-icon
+								i.fa-solid.fa-magnifying-glass-plus
+					.header-app__language 
+						| EN
+						span.header-app__language-dot
+						| DE 
+					ul.header-app__notify
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-download
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-bell
+						li.header-app__notify-item
+							+link('#',"").header-app__notify-link
+								span.header-app__notify-icon
+									i.fa-solid.fa-gear
+					ul.header-app__windown
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-minimize
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-window-restore
+						li.header-app__windown-item
+							+link('#',"").header-app__windown-link
+								span.header-app__windown-icon
+									i.fa-solid.fa-xmark
+
+
+				
+			.menu-app
+				.menu-app__left
+					.menu-app__ttl Facebook Profile
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-circle-nodes
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-pdf
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-file-export
+				.menu-app__center
+					.menu-app__search
+						.form-search
+							i.fa-solid.fa-magnifying-glass
+							input.form-control(name='search' type='text' placeholder='Search...')
+					.menu-app__select 
+						.dropdown
+							.dropdown__tool
+								.dropdown__bar
+									span.dropdown__txt
+										| Select an Alert Instal
+									i.fa-solid.fa-chevron-down
+								ul.dropdown__list
+									li.dropdown__item.--is-select choose01
+									li.dropdown__item choose02
+				.menu-app__right 
+					ul.menu-app__list
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__number 0
+								span.menu-app__icon
+									i.fa-solid.fa-users-viewfinder
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-bars-progress
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-tags
+						li.menu-app__item
+							+link('#',"").menu-app__link
+								span.menu-app__icon
+									i.fa-solid.fa-screwdriver-wrench
+			.profile
+				//- span.profile__collapse
+				//- 	+img('images/home/icon_collapse.png','collapse')
+				.profile__sidebar.sidebar
+					ul.sidebar__nav
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-house
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-cloud-arrow-down
+						li.sidebar__item
+							+link('#',"").sidebar__link.active
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-user-group
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-book
+									span.sidebar__number 46
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-photo-film
+									span.sidebar__number 74
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-message
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-comments
+									span.sidebar__number 0
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-map-location-dot
+									span.sidebar__number 2
+						li.sidebar__item
+							+link('#',"").sidebar__link
+								.sidebar__info
+									span.sidebar__icon
+										i.fa-solid.fa-gauge
+				.profile__content.active
+					.profile__nav
+						.profile__ttl Profile Explorer 
+							span.profile__icon
+								i.fa-solid.fa-arrows-rotate
+						ul.profile__menu
+							li.profile__item
+								+link('#',"").profile__link
+									span.profile__icon
+										i.fa-solid.fa-bookmark
+									span.profile__txt All Target Profiles all Target Profilesll Target Profilesll Target Profilesll Target Profiles
+							li.profile__item
+								+link('#',"").profile__link.has-dropdown
+									i.fa-solid.fa-chevron-right
+									span.profile__icon
+										i.fa-solid.fa-globe
+									span.profile__txt Cross NetWork
+								ul.profile__menu.--sub01
+									li.profile__item
+										+link('#',"").profile__link
+											span.profile__icon
+												i.fa-solid.fa-globe
+											span.profile__txt All Profile
+											span.profile__more
+												i.fa-solid.fa-ellipsis-vertical
+											.popup-menu
+												ul.popup-menu__list
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-file-circle-plus
+															span.popup-menu__txt Add to Preport Builder 
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-pen
+															span.popup-menu__txt Rename
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-trash-can
+															span.popup-menu__txt Delete Data Pool
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-table-list
+															span.popup-menu__txt Download XLSX
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-table-list
+															span.popup-menu__txt Download XLSX
+											.tooltip-menu
+												.tooltip-menu__cont
+													.tooltip-menu__date 
+														| Dt.created:
+														span.d-inline-block 20.07.2024.21:42 +07
+													.tooltip-menu__code
+														| Code:
+														span.d-inline-block G-TASK-24-3
+									li.profile__item
+										+link('#',"").profile__link.has-dropdown
+											i.fa-solid.fa-chevron-right
+											span.profile__icon
+												i.fa-solid.fa-bars-progress
+											span.profile__txt Task Groups
+										ul.profile__menu.--sub02
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														i.fa-solid.fa-bars-progress
+													span.profile__txt Nhanduyen99+1
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-cloud-arrow-down
+																	span.popup-menu__txt Download All Media
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-map
+																	span.popup-menu__txt Download KML
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														i.fa-solid.fa-bars-progress
+													span.profile__txt babie.quyen.58+2
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-pen
+																	span.popup-menu__txt Rename
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+									li.profile__item
+										+link('#',"").profile__link.has-dropdown
+											i.fa-solid.fa-chevron-right
+											span.profile__icon
+												i.fa-solid.fa-database
+											span.profile__txt Data Pools
+										ul.profile__menu.--sub02
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														+img('images/home/icon_pool.png','aaaa')
+													span.profile__txt aaaa
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-cloud-arrow-down
+																	span.popup-menu__txt Download All Media
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-map
+																	span.popup-menu__txt Download KML
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														+img('images/home/icon_pool.png','testing data pool')
+													span.profile__txt testing data pool
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-cloud-arrow-down
+																	span.popup-menu__txt Download All Media
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-map
+																	span.popup-menu__txt Download KML
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+											li.profile__item
+												+link('#popup-pool',"").profile__link.popup-modal
+													span.profile__icon
+														i.fa-solid.fa-plus
+													span.profile__txt add data pool
+												#popup-pool.popup-pool.mfp-hide
+													.popup-close.js-popup-close.trans
+														.fa-solid.fa-xmark
+													h2 Create Data Pool
+													form(action='')
+														.form-group
+															label.form-label(for='newTitle') Please provide a title for the new data pool
+															input#newTitle.form-control(name='newTitle' type='text' placeholder='New Tile')
+															p.error Title must be at lest 4 characters long
+													.btn-popup
+														.btn-popup__list
+															.btn-popup__item
+																+link('#',"").btn-popup__link.js-popup-close
+																	i.fa-solid.fa-xmark
+																	|NO
+															.btn-popup__item
+																+link('#',"").btn-popup__link.--disabled
+																	i.fa-solid.fa-check
+																	|YES
+
+							li.profile__item
+								+link('#',"").profile__link.has-dropdown
+									i.fa-solid.fa-chevron-right
+									span.profile__icon
+										i.fa-brands.fa-facebook-f
+									span.profile__txt Facebook
+								ul.profile__menu.--sub01
+									li.profile__item
+										+link('#',"").profile__link
+											span.profile__icon
+												+img('images/home/icon_earth.png','All Facebook Profiles')
+											span.profile__txt All Facebook Profiles
+											span.profile__more
+												i.fa-solid.fa-ellipsis-vertical
+											.popup-menu
+												ul.popup-menu__list
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-table-list
+															span.popup-menu__txt Download CSV
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-table-list
+															span.popup-menu__txt Download XLSX
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-cloud-arrow-down
+															span.popup-menu__txt Download All Media
+													li.popup-menu__item 
+														.popup-menu__link
+															span.popup-menu__icon
+																i.fa-solid.fa-map
+															span.popup-menu__txt Download KML
+											.tooltip-menu
+												.tooltip-menu__cont
+													.tooltip-menu__date 
+														| Dt.created:
+														span.d-inline-block 20.07.2024.21:42 +07
+													.tooltip-menu__code
+														| Code:
+														span.d-inline-block G-TASK-24-3
+									li.profile__item
+										+link('#',"").profile__link.has-dropdown
+											i.fa-solid.fa-chevron-right
+											span.profile__icon
+												i.fa-solid.fa-bars-progress
+											span.profile__txt Facebook Task Group
+										ul.profile__menu.--sub02
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														i.fa-solid.fa-bars-progress
+													span.profile__txt Nhanduyen99+1
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-cloud-arrow-down
+																	span.popup-menu__txt Download All Media
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-map
+																	span.popup-menu__txt Download KML
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														i.fa-solid.fa-bars-progress
+													span.profile__txt babie.quyen.58+2
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+													.popup-menu
+														ul.popup-menu__list
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download CSV
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-table-list
+																	span.popup-menu__txt Download XLSX
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-cloud-arrow-down
+																	span.popup-menu__txt Download All Media
+															li.popup-menu__item 
+																.popup-menu__link
+																	span.popup-menu__icon
+																		i.fa-solid.fa-map
+																	span.popup-menu__txt Download KML
+													.tooltip-menu
+														.tooltip-menu__cont
+															.tooltip-menu__date 
+																| Dt.created:
+																span.d-inline-block 20.07.2024.21:42 +07
+															.tooltip-menu__code
+																| Code:
+																span.d-inline-block G-TASK-24-3
+									li.profile__item
+										+link('#',"").profile__link.has-dropdown
+											i.fa-solid.fa-chevron-right
+											span.profile__icon
+												.i.fa-solid.fa-database
+											span.profile__txt Facebook Data Pools
+										ul.profile__menu.--sub02
+											li.profile__item
+												+link('#',"").profile__link
+													span.profile__icon
+														i.fa-solid.fa-plus
+													span.profile__txt add data pool
+									li.profile__item
+										+link('#',"").profile__link.has-dropdown
+											i.fa-solid.fa-chevron-right
+											span.profile__icon
+												i.fa-solid.fa-database
+											span.profile__txt Facebook Target Profiles
+										ul.profile__menu.--sub02
+											li.profile__item
+												+link('#',"").profile__link.has-dropdown
+													i.fa-solid.fa-chevron-right
+													span.profile__icon
+														i.fa-solid.fa-user
+													span.profile__txt Nhân Duyên
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+												ul.profile__menu.--sub03
+													li.profile__item
+														+link('#',"").profile__link
+															span.profile__icon
+																i.fa-solid.fa-user
+															span.profile__txt Nhân Duyên
+															span.profile__more
+																i.fa-solid.fa-ellipsis-vertical
+															.popup-menu
+																ul.popup-menu__list
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-table-list
+																			span.popup-menu__txt Download CSV
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-table-list
+																			span.popup-menu__txt Download XLSX
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-cloud-arrow-down
+																			span.popup-menu__txt Download All Media
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-map
+																			span.popup-menu__txt Download KML
+															.tooltip-menu
+																.tooltip-menu__cont
+																	.tooltip-menu__date 
+																		| Dt.created:
+																		span.d-inline-block 20.07.2024.21:42 +07
+																	.tooltip-menu__code
+																		| Code:
+																		span.d-inline-block G-TASK-24-3
+											li.profile__item
+												+link('#',"").profile__link.has-dropdown
+													i.fa-solid.fa-chevron-right
+													span.profile__icon
+														i.fa-solid.fa-user
+													span.profile__txt Trần Thị Bé Quyên (quyen)
+													span.profile__more
+														i.fa-solid.fa-ellipsis-vertical
+												ul.profile__menu.--sub03
+													li.profile__item
+														+link('#',"").profile__link
+															span.profile__icon
+																i.fa-solid.fa-user
+															span.profile__txt Nhân Duyên
+															span.profile__more
+																i.fa-solid.fa-ellipsis-vertical
+															.popup-menu
+																ul.popup-menu__list
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-table-list
+																			span.popup-menu__txt Download CSV
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-table-list
+																			span.popup-menu__txt Download XLSX
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-cloud-arrow-down
+																			span.popup-menu__txt Download All Media
+																	li.popup-menu__item 
+																		.popup-menu__link
+																			span.popup-menu__icon
+																				i.fa-solid.fa-map
+																			span.popup-menu__txt Download KML
+															.tooltip-menu
+																.tooltip-menu__cont
+																	.tooltip-menu__date 
+																		| Dt.created:
+																		span.d-inline-block 20.07.2024.21:42 +07
+																	.tooltip-menu__code
+																		| Code:
+																		span.d-inline-block G-TASK-24-3
+					.profile__main
+						.profile__funtion
+							.profile__group
+								.profile__tools.tools
+									.tools__nav
+										ul.tools__menu
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link.active
+															span.tools__icon
+																i.fa-solid.fa-tag
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-folder-plus
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon.ico-list-plus
+																i.fa-solid.fa-list
+																i.fa-solid.fa-circle-plus
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon.ico-list-minus
+																i.fa-solid.fa-list
+																i.fa-solid.fa-circle-minus
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																+img('images/home/icon_circle.png','file')
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-cloud-arrow-down
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-users-viewfinder
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon.ico-users-viewfinder-plus
+																i.fa-solid.fa-users-viewfinder
+																i.fa-solid.fa-circle-plus
+
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon.ico-diagram-project-plus
+																i.fa-solid.fa-diagram-project
+																i.fa-solid.fa-circle-plus
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.icon.icon-grid
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-file-csv
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-sharp.fa-solid.fa-file-excel
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon.ico-file-excel-list
+																i.icon.icon-line
+																i.fa-sharp.fa-solid.fa-file-excel
+													li.tools__group-item
+														.dropdown
+															.dropdown__tool
+																.dropdown__bar
+																	span.dropdown__icon
+																		i.fa-solid.fa-file-pdf
+																	i.fa-solid.fa-chevron-down
+																ul.dropdown__list
+																	li.dropdown__item.--is-select choose01
+																	li.dropdown__item choose02
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-download
+											li.tools__item
+												ul.tools__group
+													li.tools__group-item
+														.dropdown
+															.dropdown__tool
+																.dropdown__bar
+																	span.dropdown__icon
+																		i.fa-solid.fa-eye-slash
+																	i.fa-solid.fa-chevron-down
+																ul.dropdown__list
+																	li.dropdown__item.--is-select choose01
+																	li.dropdown__item choose02
+													li.tools__group-item
+														+link('#',"").tools__link
+															span.tools__icon
+																i.fa-solid.fa-trash-can
+								.profile__filter 
+									.profile-filter__nav
+										ul.profile-filter__menu
+											li.profile-filter__item
+												.profile-filter__search
+													.form-search.--bdr-none
+														i.fa-solid.fa-magnifying-glass
+														input.form-control(name='search' type='text' placeholder='Search...')
+											li.profile-filter__item
+												ul.profile-filter__group
+													li.profile-filter__group-item
+														+link('#',"").profile-filter__link
+															span.profile-filter__icon
+																i.fa-solid.fa-eye-slash
+													li.profile-filter__group-item
+														+link('#',"").profile-filter__link
+															span.profile-filter__icon
+																i.fa-solid.fa-chevron-down
+													li.profile-filter__group-item
+														+link('#',"").profile-filter__link
+															span.profile-filter__icon
+																i.fa-solid.fa-arrow-up-wide-short
+							.profile__total 46 items
+							.profile__perpage
+								.dropdown
+									.dropdown__tool
+										.dropdown__bar
+											span.dropdown__name 50 per page
+											i.fa-sharp.fa-solid.fa-caret-down
+										ul.dropdown__list
+											li.dropdown__item.--is-select 100 per page
+											li.dropdown__item 200 per page
+						.profile__tbl.tbl-profile
+							.tbl-profile__tbl
+								.tbl-profile__head
+									.tbl-profile__row
+										.tbl-profile__col
+											label.checkbox(for='checkbox01')
+												input#checkbox01(name='checkbox01' type='checkbox' placeholder='checkbox01')
+												span.checkbox__checkmark
+										.tbl-profile__col
+											.tbl-profile__topic
+												span NETWORK
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span TAGS
+												i.fa-solid.fa-xmark
+										.tbl-profile__col
+											.tbl-profile__topic
+												span PICTURE
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span NAME
+												i.fa-solid.fa-arrow-up-wide-short
+												i.fa-solid.fa-xmark
+										.tbl-profile__col
+											.tbl-profile__topic
+												span ACCOUNT-LINKING
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span VANITY NAME
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span NETWORK OB JECT ID
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span FRIENDS
+												i.fa-solid.fa-xmark
+										.tbl-profile__col 
+											.tbl-profile__topic
+												span Flollower
+												i.fa-solid.fa-xmark
+								.tbl-profile__body
+									.tbl-profile__scroll
+										.tbl-profile__row.active
+											.tbl-profile__edit 
+												.tbl-profile__edit-checkbox 
+													label.checkbox(for='checkbox02')
+														input#checkbox02(name='checkbox02' type='checkbox' placeholder='checkbox02')
+														span.checkbox__checkmark
+												.tbl-profile__edit-info
+													i.fa-solid.fa-users-viewfinder
+													.tbl-profile__edit-name
+														| Trần Thị Bé Quyên 
+													i.fa-solid.fa-pen
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox03')
+													input#checkbox03(name='checkbox03' type='checkbox' placeholder='checkbox03')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-telegram
+											.tbl-profile__col
+												.media-list
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media 
+															a(href='images/home/img_flower.jpg' title='The Cleaner')
+																+img('images/home/img_flower.jpg','PICTURE')
+													.media-list__item
+														.tbl-profile__media
+															a(href='video/video01.mp4' title='The Cleaner')(class="video")
+																i.fa-solid.fa-play
+																video(muted='' class="myvideo")
+																	source(src='video/video01.mp4', type='video/mp4')
+																	source(src='movie.ogg' type='video/ogg')
+													.media-list__item
+														.tbl-profile__media 
+															a(href='images/home/img_flower02.jpg' title='The Cleaner')
+																+img('images/home/img_flower02.jpg','PICTURE')
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info TTrần Thị Bé Quyên TTrần Thị Bé Quyên
+											.tbl-profile__col
+												.tbl-profile__user
+													span.tbl-profile__avt
+														+img('images/home/img_flower.jpg','PICTURE')
+													.tbl-profile__info Trần Thị Bé Quyên (rần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info babie. quyen.58
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info  0/0
+											.tbl-profile__col 
+												.tbl-profile__info  2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox04')
+													input#checkbox04(name='checkbox04' type='checkbox' placeholder='checkbox04')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_user.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Bạch Tuyết Minh
+											.tbl-profile__col
+												.tbl-profile__info
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info dau.tran.3956
+											.tbl-profile__col 
+												.tbl-profile__info 100057069566838
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox05')
+													input#checkbox05(name='checkbox05' type='checkbox' placeholder='checkbox05')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/img_flower.jpg','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Cafe DJ 777
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info 100004562533275
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox06')
+													input#checkbox06(name='checkbox06' type='checkbox' placeholder='checkbox06')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-youtube
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt04.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info CH Sữa Thùy Dương
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info 100031335937835
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox07')
+													input#checkbox07(name='checkbox07' type='checkbox' placeholder='checkbox07')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-tiktok
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt05.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Diễm Diễm
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info julie.duyen
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox08')
+													input#checkbox08(name='checkbox08' type='checkbox' placeholder='checkbox08')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.ico-zalo
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt06.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Đặng Duyên
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info 100041543914915
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox09')
+													input#checkbox09(name='checkbox09' type='checkbox' placeholder='checkbox09')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt07.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info  Em Mie
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info 100045394118546
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox10')
+													input#checkbox10(name='checkbox10' type='checkbox' placeholder='checkbox10')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt08.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info  Ha Nguyễn
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info '100045920285141
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox11')
+													input#checkbox11(name='checkbox11' type='checkbox' placeholder='checkbox11')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt09.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info  Hằng Miniel
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info '100045920285141
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox12')
+													input#checkbox12(name='checkbox12' type='checkbox' placeholder='checkbox12')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt10.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Hoài Em
+											.tbl-profile__col 
+												.tbl-profile__info 
+													i.fa-solid.fa-user-group
+													|Trần Thị Bé Quyên (
+											.tbl-profile__col 
+												.tbl-profile__info 100011781240052
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox13')
+													input#checkbox13(name='checkbox13' type='checkbox' placeholder='checkbox13')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt11.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Nhân Duyên
+											.tbl-profile__col
+											.tbl-profile__col 100063912613420
+											.tbl-profile__col 
+												.tbl-profile__info Nhanduyen99
+											.tbl-profile__col 
+												.tbl-profile__info 1000639
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox14')
+													input#checkbox14(name='checkbox14' type='checkbox' placeholder='checkbox14')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+											.tbl-profile__col 
+												.tbl-profile__info From Ho Chi Minh City
+											.tbl-profile__col
+											.tbl-profile__col 
+												.tbl-profile__info 100011781240052
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+										.tbl-profile__row
+											.tbl-profile__col
+												label.checkbox(for='checkbox15')
+													input#checkbox15(name='checkbox15' type='checkbox' placeholder='checkbox15')
+													span.checkbox__checkmark
+											.tbl-profile__col 
+												i.fa-brands.fa-facebook-f
+											.tbl-profile__col
+											.tbl-profile__col
+												span.tbl-profile__avt
+													+img('images/home/icon_avt12.png','PICTURE')
+											.tbl-profile__col 
+												.tbl-profile__info Hoàng Thị Ngọc
+											.tbl-profile__col
+											.tbl-profile__col 
+												.tbl-profile__info 100011781240052
+											.tbl-profile__col 
+												.tbl-profile__info 100061192465837
+											.tbl-profile__col 
+												.tbl-profile__info 0/0
+											.tbl-profile__col 
+												.tbl-profile__info 2/69000
+					.profile__popup.active
+						.popup-detail
+							.popup-detail__head
+								.popup-detail__tools
+									.tools-icon
+										ul.tools-icon__list
+											li.tools-icon__item
+												+link('#',"").tools-icon__link
+													span.tools-icon__icon
+														i.fa-solid.fa-file-circle-plus
+											li.tools-icon__item
+												+link('#',"").tools-icon__link.active
+													span.tools-icon__icon
+														i.fa-solid.fa-diagram-project
+											li.tools-icon__item.--dropdown
+												.dropdown
+													.dropdown__tool
+														.dropdown__bar
+															.dropdown__icon
+																i.fa-solid.fa-file-pdf
+															span.dropdown__txt
+																| PDF EXPORT
+															i.fa-solid.fa-chevron-down
+														ul.dropdown__list
+															li.dropdown__item.--is-select choose01
+															li.dropdown__item choose02
+										
+									.tools-icon
+										ul.tools-icon__list
+											li.tools-icon__item
+												+link('#',"").tools-icon__link
+													span.tools-icon__icon
+														i.icon.icon-play-prev
+											li.tools-icon__item
+												+link('#',"").tools-icon__link
+													span.tools-icon__icon
+														i.icon.icon-play-next
+
+									.popup-close 
+										i.fa-solid.fa-xmark.trans
+								.popup-detail__tag
+									.tag-post
+										ul.tag-post__list
+											li.tag-post__item
+												+link('#',"").tag-post__link.active
+													.tag-post__info
+														span.tag-post__icon
+															i.fa-solid.fa-table
+														span.tag-post__txt Posting
+											li.tag-post__item
+												+link('#',"").tag-post__link
+													.tag-post__info
+														span.tag-post__icon
+															i.fa-solid.fa-comments
+														span.tag-post__txt Comments (0 / ?)
+											li.tag-post__item
+												+link('#',"").tag-post__link
+													.tag-post__info
+														span.tag-post__icon
+															i.fa-solid.fa-thumbs-up
+														span.tag-post__txt Received Reeactions (0 / ?)
+							.popup-detail__body
+								.popup-detail__accordion
+									.accordion-main
+										ul.accordion-main__list
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Author Infomation
+												.accordion-main__body
+													.author-info
+														.author-info__icon
+															+img('images/home/img_flower.jpg','PICTURE')
+														.author-info__detail 
+															.author-info__name Nhân Duyên
+															.author-info__date 19.17.2024-13:11
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Media Items
+												.accordion-main__body
+													.chart-media
+														canvas#chartMedia
+											
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Media Information
+													.post-time
+														.post-time__box
+															+link('#',"").post-time__link.active
+																span.post-time__icon
+																	i.fa-solid.fa-clock-rotate-left
+															span.post-time__number 0
+												.accordion-main__body
+													.post-info
+														ul.post-info__list
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Media ID
+																	.post-info__detail
+																		.post-info__txt 
+																			| 6473aed4-8509-416f-a226-86696bbc7e8e
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| ID
+																	.post-info__detail
+																		.post-info__txt 
+																			| 19099444964124
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| User
+																	.post-info__detail
+																		.post-info__txt 
+																			|TD TRADING | Channel
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| URL
+																	.post-info__detail
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-copy
+																			.post-info__icon-item
+																				+link('https://www.facebook.com/Nhanduyen99/posts/pfbid02Z3VcHxX...',"")(target="_blank").post-info__icon-link.trans
+																					i.fa-solid.fa-arrow-up-right-from-square
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Timestamp
+																	.post-info__detail
+																		.post-info__txt 
+																			| 16.07.2024, 22:21 GMT+7
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Comment Count
+																	.post-info__detail
+																		.post-info__txt 
+																			| 0/? 
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-circle-info
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Reaction Count
+																	.post-info__detail
+																		.post-info__txt 
+																			| 0/? 
+																		.post-info__icon
+																			.post-info__icon-item
+																				+link('#',"").post-info__icon-link.trans
+																					i.fa-solid.fa-circle-info
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Date Crawled
+																	.post-info__detail
+																		.post-info__txt 
+																			| -
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Date Created
+																	.post-info__detail
+																		.post-info__txt 
+																			| 19.07.2024, 23:26 GMT+7
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Comment Count
+																	.post-info__detail
+																		.post-info__txt 
+																			| 20.07.2024, 00:02 GMT+7
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Comment Count
+																	.post-info__detail
+																		.post-info__txt 
+																			| 20.07.2024, 00:02 GMT+7
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Network ID
+																	.post-info__detail
+																		.post-info__txt 
+																			|19099444964124
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Туре
+																	.post-info__detail
+																		.post-info__txt 
+																			| FTTIMELINEFOTO-
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Posted in Group Comments
+																	.post-info__detail
+																		.post-info__txt 
+																			| -
+															li.post-info__item
+																.post-info__cont
+																	.post-info__ttl 
+																		| Posted in Group Comments
+																	.post-info__detail
+																		.post-info__txt 
+																			| -
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Tags
+												.accordion-main__body
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Notes
+												.accordion-main__body
+													.accordion-main__btn-add
+														+link('#',"").btn-add
+															span.btn-add__icon
+																i.fa-solid.fa-plus
+															span.btn-add__txt ADD NOTES
+											li.accordion-main__item
+												.accordion-main__head
+													i.fa-solid.fa-chevron-down
+													span Deriving Posting
+												.accordion-main__body
+													.post-deriving
+														.post-deriving__wrap
+															.post-deriving__user 
+																.author-info
+																	.author-info__icon
+																		+img('images/home/img_flower.jpg','PICTURE')
+																	.author-info__detail 
+																		.author-info__date tdtrdingvn
+																		.author-info__name TD TRADING|Channel
+																	.author-info__social
+																		+img('images/home/icon_telegram.png','PICTURE')
+															.post-deriving__date 
+																.post-date 
+																	.post-date__img 
+																		+img('images/home/img_post_date.jpg','PICTURE')
+																	.post-date__date 16.07.2024-22:21<br>+07
+																	.post-date__icon 
+																		.post-date__icon-item
+																			+link('#',"").post-date__icon-link
+																				i.fa-solid.fa-arrow-up-right-from-square
+																		.post-date__icon-item
+																			+link('#',"").post-date__icon-link
+																				i.fa-solid.fa-circle-info
+														.post-deriving__action 
+															.post-deriving__txt Out btc
+															.post-action 
+																.post-action__list 
+																	.post-action__item
+																		+link('#',"").post-date__icon-link
+																			i.fa-solid.fa-thumbs-up
+																		span.post-action__txt 0/8
+																		+link('#',"").post-date__icon-link
+																			i.fa-solid.fa-circle-info
+																	.post-action__item
+																		+link('#',"").post-date__icon-link
+																			i.fa-solid.fa-comments
+																		span.post-action__txt 0/?
+																		+link('#',"").post-date__icon-link
+																			i.fa-solid.fa-circle-info
+
+
+											
+
+block script 
+	script(type="text/javascript" src="scripts/h214.js")
