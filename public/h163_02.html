@@ -175,23 +175,27 @@
                   <div class="report-data__new">
                     <div class="report-new">
                       <div class="report-new__img">
-                        <div class="report-new__img-figure"> <img src="images/home/img_report.jpg" alt="PICTURE"/>
-                        </div><a class="report-new__img-link trans popup-modal" href="#popup-upload" title=""><i class="fa-solid fa-trash-can"></i></a>
-                        <div class="popup-upload popup-pool mfp-hide" id="popup-upload">
-                          <div class="popup-close js-popup-close trans">
-                            <div class="fa-solid fa-xmark"></div>
-                          </div>
-                          <h2 class="popup-ttl">Select file</h2>
-                          <div class="popup-upload__cont">
-                            <div class="upload">
-                              <label class="upload__area">
-                                <input type="file"><span class="upload__button"><i class="fa-solid fa-cloud-arrow-up"></i></span>
-                              </label>
-                              <p class="upload__txt">
-                                 click to upload<br>or<br>Drag file into this window</p>
+                        <form class="upload-form" action="" method="POST" enctype="multipart/form-data" data-uploadForm>
+                          <div class="upload-picture">
+                            <div class="upload-picture__picture"><a class="popup-modal" href="#popup-upload" title=""><img class="upload-picture__img" src="images/home/img_report.jpg" alt="PICTURE"/></a>
+                            </div>
+                            <div class="upload-picture__remove trans"><i class="fa-solid fa-trash-can"></i></div>
+                            <div class="popup-upload popup-pool mfp-hide" id="popup-upload">
+                              <h2 class="popup-ttl">Select file</h2>
+                              <div class="popup-upload__cont">
+                                <div class="upload-dropzone">
+                                  <div class="upload-dropzone__wrap">
+                                    <label class="upload-dropzone__area">
+                                      <input class="upload-dropzone__file" type="file"><span class="upload-dropzone__button"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                    </label>
+                                    <p class="upload-dropzone__txt">
+                                       click to upload<br>or<br>Drag file into this window</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </form>
                       </div>
                       <div class="report-new__info">
                         <div class="report-new__ttl"> 
@@ -327,7 +331,24 @@
                           <li class="report-state__item"> 
                             <div class="report-state__box"> 
                               <div class="report-state__ttl">
-                                 Analytics Sheet State<a class="report-state__delete" href="#" title=""><i class="fa-solid fa-trash-can"></i></a>
+                                 Analytics Sheet State<a class="report-state__delete popup-modal" href="#popup-confirm" title=""><i class="fa-solid fa-trash-can"></i></a>
+                                <div class="popup-pool mfp-hide" id="popup-confirm">
+                                  <div class="popup-close js-popup-close trans">
+                                    <div class="fa-solid fa-xmark"></div>
+                                  </div>
+                                  <h2 class="popup-ttl">Confirmation</h2>
+                                  <div class="popup-pool__wraning">
+                                    <div class="popup-pool__wraning-icon"> <i class="fa-solid fa-triangle-exclamation"></i></div>Are you sure you want to remove the crawling profile?
+                                  </div>
+                                  <div class="btn-popup">
+                                    <div class="btn-popup__list">
+                                      <div class="btn-popup__item"><a class="btn-popup__link js-popup-close" href="#" title=""><i class="fa-solid fa-xmark"></i>NO</a>
+                                      </div>
+                                      <div class="btn-popup__item"><a class="btn-popup__link" href="#" title=""><i class="fa-solid fa-check"></i>YES</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                               <div class="report-state__info"><a class="report-state__link" href="#" title=""> <i class="fa-solid fa-diagram-project"></i></a>
                                 <div class="report-state__detail">
@@ -340,7 +361,7 @@
                           <li class="report-state__item"> 
                             <div class="report-state__box"> 
                               <div class="report-state__ttl">
-                                 Analytics Sheet State<a class="report-state__delete" href="#" title=""><i class="fa-solid fa-trash-can"></i></a>
+                                 Analytics Sheet State<a class="report-state__delete popup-modal" href="#popup-confirm" title=""><i class="fa-solid fa-trash-can"></i></a>
                               </div>
                               <div class="report-state__info"><a class="report-state__link" href="#" title=""> <i class="fa-solid fa-diagram-project"></i></a>
                                 <div class="report-state__detail">

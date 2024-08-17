@@ -215,22 +215,35 @@ block container
 							.report-data__new
 								.report-new
 									.report-new__img
-										.report-new__img-figure 
-											+img('images/home/img_report.jpg','PICTURE')
-										+link('#popup-upload',"").report-new__img-link.trans.popup-modal
-											i.fa-solid.fa-trash-can
-										#popup-upload.popup-upload.popup-pool.mfp-hide
-											.popup-close.js-popup-close.trans
-												.fa-solid.fa-xmark
-											h2.popup-ttl Select file
-											.popup-upload__cont
-												.upload
-													label.upload__area
-														input(type='file')
-														span.upload__button
-															i.fa-solid.fa-cloud-arrow-up
-													p.upload__txt  
-														| click to upload<br>or<br>Drag file into this window
+										form(action='' method='POST' enctype='multipart/form-data').upload-form(data-uploadForm)
+											.upload-picture
+												.upload-picture__picture
+													+link('#popup-upload',"").popup-modal
+														+img('images/home/img_report.jpg','PICTURE').upload-picture__img
+												.upload-picture__remove.trans
+													i.fa-solid.fa-trash-can
+												#popup-upload.popup-upload.popup-pool.mfp-hide
+													h2.popup-ttl Select file
+													.popup-upload__cont
+														.upload-dropzone
+															.upload-dropzone__wrap
+																label.upload-dropzone__area
+																	input(type='file' class="upload-dropzone__file")
+																	span.upload-dropzone__button
+																		i.fa-solid.fa-cloud-arrow-up
+																p.upload-dropzone__txt  
+																	| click to upload<br>or<br>Drag file into this window
+
+
+											//- h2.popup-ttl Select file
+											//- 	.popup-upload__cont
+											//- 		.upload-dropzone
+											//- 			label.upload-dropzone__area
+											//- 				input(type='file' class="upload-dropzone__file")
+											//- 				span.upload-dropzone__button
+											//- 					i.fa-solid.fa-cloud-arrow-up
+											//- 			p.upload-dropzone__txt  
+											//- 				| click to upload<br>or<br>Drag file into this window
 									.report-new__info
 										.report-new__ttl 
 											h2.ttl-main 
@@ -344,8 +357,27 @@ block container
 												.report-state__box 
 													.report-state__ttl 
 														|Analytics Sheet State
-														+link('#',"").report-state__delete
+														+link('#popup-confirm',"").report-state__delete.popup-modal
 															i.fa-solid.fa-trash-can
+														#popup-confirm.popup-pool.mfp-hide
+															.popup-close.js-popup-close.trans
+																.fa-solid.fa-xmark
+															h2.popup-ttl Confirmation
+															.popup-pool__wraning
+																.popup-pool__wraning-icon 
+																	i.fa-solid.fa-triangle-exclamation
+																| Are you sure you want to remove the crawling profile?
+															.btn-popup
+																.btn-popup__list
+																	.btn-popup__item
+																		+link('#',"").btn-popup__link.js-popup-close
+																			i.fa-solid.fa-xmark
+																			|NO
+																	.btn-popup__item
+																		+link('#',"").btn-popup__link
+																			i.fa-solid.fa-check
+																			|YES
+
 													.report-state__info
 														+link('#',"").report-state__link 
 															i.fa-solid.fa-diagram-project
@@ -356,7 +388,7 @@ block container
 												.report-state__box 
 													.report-state__ttl 
 														|Analytics Sheet State
-														+link('#',"").report-state__delete
+														+link('#popup-confirm',"").report-state__delete.popup-modal
 															i.fa-solid.fa-trash-can
 													.report-state__info
 														+link('#',"").report-state__link 

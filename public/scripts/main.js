@@ -857,14 +857,16 @@ $('.media-list').each(function() { // the containers for all your galleries
   $('.popup-modal').magnificPopup({
 		type: 'inline',
 		preloader: false,
-		modal: true
+		// modal: true,
+    closeOnBgClick: true
 	});
 	$(document).on('click', '.js-popup-close', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
     $(".popup-modal").removeClass("active")
-
+   
 	});
+
 
   // hs 140
   $(".profile__link").not(".has-dropdown").click(function(){
@@ -981,4 +983,66 @@ $('.media-list').each(function() { // the containers for all your galleries
 
   // var currentDate = $( ".datepicker" ).datepicker( "getDate" );
   // console.log("currentDate", currentDate)
+
+  
+  // h163
+  var $imgUpload =  $('.upload-picture__img');
+     
+    function readFile(input) {
+      var path = input.value;
+      var extenstion = path.split('.').pop();
+
+      if(extenstion == "jpg" || extenstion == "svg" || extenstion == "jpeg" || extenstion == "png"|| extenstion == "gif"){
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+      
+          reader.onload = function(e) {
+            var $uploadDropzone = $(".upload-dropzone")
+            $imgUpload.attr('src',e.target.result);
+            $uploadDropzone.removeClass("dragover");
+            $.magnificPopup.close();
+          };
+      
+          reader.readAsDataURL(input.files[0]);
+          
+        }
+      } else {
+        alert("File not supported. Kindly Upload the Image of below given extension ")
+      }      
+    }
+    
+    
+    $(".upload-dropzone__file").change(function() {
+      // $(".upload-dropzone__file").at
+      
+      // tr("value","")
+      readFile(this);
+      // $(".upload-form").reset()
+    });  
+
+ 
+    $('.upload-dropzone').on('dragover', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).addClass('dragover');
+    });
+    
+    function reset(e) {
+      $(".upload-form").get(0).reset();
+    }
+
+    $('.upload-dropzone').on('dragleave', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).removeClass('dragover');
+    });
+    
+    $('.upload-picture__remove').on('click', function(e) {
+      e.stopPropagation();
+      $imgUpload.attr('src', "images/home/img_report.jpg");
+      $(".upload-dropzone__file").attr("value","")
+      reset()
+    });
+  
+
 });
