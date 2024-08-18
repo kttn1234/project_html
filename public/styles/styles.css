@@ -5108,3 +5108,7 @@ button.mfp-arrow:hover {
 .comment-data__icon {
   margin-bottom: 2rem;
 }
+
+.media-single video {
+  width: 100%;
+}
