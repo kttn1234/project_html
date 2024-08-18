@@ -3362,5 +3362,7 @@ button.mfp-arrow {
 .media-single {
     video {
         width: 100%;
+        max-height: rem(300);
+        background-color: $bg_black;
     }
 }
