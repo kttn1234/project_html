@@ -196,28 +196,22 @@ $(document).ready(function () {
     $(this).next().slideToggle(300);
   });
 
+  // heightScroll
+  var heigthScreen = $(window).innerHeight()
+  var heightHeadApp = $(".header-app").innerHeight();
+  var heightMenuApp = $(".menu-app").innerHeight();
+  var heightFuntion = $(".profile__funtion").innerHeight();
+  var heightTblHead = $(".tbl-profile__head").innerHeight();
+  var heightScrollBar = 18;
+
   var setheightScroll = function () {
-    var heigthScreen = $(window).innerHeight()
-    var heightHeadApp = $(".header-app").innerHeight();
-    var heightMenuApp = $(".menu-app").innerHeight();
-    var heightFuntion = $(".profile__funtion").innerHeight();
-    var heightTblHead = $(".tbl-profile__head").innerHeight();
-    var heightPopupHead = $(".popup-detail__head").innerHeight();
-
-   
-    
-
-    var heightScrollBar = 18;
-    
     var heightTblBody = heigthScreen - heightHeadApp - heightMenuApp - heightFuntion - heightTblHead - heightScrollBar;
     var heightProfileNav = heigthScreen - heightHeadApp - heightMenuApp ;
-
-    var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
 
     $(".tbl-profile__body").css("height", heightTblBody+"px");
     $(".profile__nav").not(".--bdr-none").css("height", heightProfileNav+"px");
 
-    $(".popup-detail__body").css("height", heightPopupBody+"px");
+   
     if ($("body").hasClass("no-scroll")) {
        // tagrget page
         var heightTargerHead = $(".targer-main__head").innerHeight();
@@ -241,9 +235,11 @@ $(document).ready(function () {
 
   $( window ).on( "resize", function() {
     setheightScroll()
+    
   });
 
   setheightScroll()
+  
 
   $(".popup-close").click(function() {
       $(this).parents(".profile__popup").removeClass("active")
@@ -258,7 +254,17 @@ $(document).ready(function () {
     $(this).addClass("active");
     $(this).find("input").prop( "checked", true );
     $(".profile__popup").addClass("active")
+    setTimeout(() => {
+      setheighPopupDetail();
+    }, 1000);
+    
   });
+
+  var setheighPopupDetail = function () {
+    var heightPopupHead = $(".profile__popup.active").find(".popup-detail__head").innerHeight();
+    var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
+    $(".profile__popup.active").find(".popup-detail__body").css("height", heightPopupBody+"px");
+  }
 
   $(".profile__more").click(function() {
     $(".popup-menu").not($(this).next()).removeClass("active-menu");
