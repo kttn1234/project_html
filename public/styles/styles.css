@@ -2986,6 +2986,11 @@ body.no-scroll {
   font-size: 1.2rem;
 }
 
+.post-info.--location .post-info__ttl {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
 .post-info__item + .post-info__item {
   margin-top: 0.5rem;
 }
