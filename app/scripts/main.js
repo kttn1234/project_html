@@ -261,9 +261,11 @@ $(document).ready(function () {
   });
 
   var setheighPopupDetail = function () {
-    var heightPopupHead = $(".profile__popup.active").find(".popup-detail__head").innerHeight();
-    var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
-    $(".profile__popup.active").find(".popup-detail__body").css("height", heightPopupBody+"px");
+    if($(".profile__popup").hasClass("active")) {
+      var heightPopupHead =$(".popup-detail__head").innerHeight();
+      var heightPopupBody = heigthScreen - heightHeadApp - heightMenuApp - heightPopupHead ;
+     $(".popup-detail__body").css("height", heightPopupBody+"px");
+    }
   }
 
   $(".profile__more").click(function() {
