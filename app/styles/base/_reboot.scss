@@ -472,3 +472,9 @@ table, div, main, body, canvas {
 a {
   @include hover-icon()
 }
+.inner {
+  @include pd-main();
+}
+.fa-brands, .fab {
+  font-size: 18px;
+}

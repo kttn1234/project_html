@@ -98,21 +98,6 @@ block container
 							+link('#',"").menu-app__link
 								span.menu-app__icon
 									i.fa-solid.fa-file-export
-				.menu-app__center
-					.menu-app__search
-						.form-search
-							i.fa-solid.fa-magnifying-glass
-							input.form-control(name='search' type='text' placeholder='Search...')
-					.menu-app__select 
-						.dropdown
-							.dropdown__tool
-								.dropdown__bar
-									span.dropdown__txt
-										| Select an Alert Instal
-									i.fa-solid.fa-chevron-down
-								ul.dropdown__list
-									li.dropdown__item.--is-select choose01
-									li.dropdown__item choose02
 				.menu-app__right 
 					ul.menu-app__list
 						li.menu-app__item
@@ -420,7 +405,7 @@ block container
 									li.profile__item
 										+link('#',"").profile__link
 											span.profile__icon
-												+img('images/home/icon_earth.png','All Facebook Profiles')
+												i.fa-solid.fa-globe
 											span.profile__txt All Facebook Profiles
 											span.profile__more
 												i.fa-solid.fa-ellipsis-vertical
@@ -664,20 +649,6 @@ block container
 														+link('#',"").tools__link
 															span.tools__icon
 																i.fa-solid.fa-folder-plus
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon.ico-list-plus
-																i.fa-solid.fa-list
-																i.fa-solid.fa-circle-plus
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon.ico-list-minus
-																i.fa-solid.fa-list
-																i.fa-solid.fa-circle-minus
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon
-																+img('images/home/icon_circle.png','file')
 											li.tools__item
 												ul.tools__group
 													li.tools__group-item
@@ -690,19 +661,9 @@ block container
 														+link('#',"").tools__link
 															span.tools__icon
 																i.fa-solid.fa-users-viewfinder
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon.ico-users-viewfinder-plus
-																i.fa-solid.fa-users-viewfinder
-																i.fa-solid.fa-circle-plus
 
 											li.tools__item
 												ul.tools__group
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon.ico-diagram-project-plus
-																i.fa-solid.fa-diagram-project
-																i.fa-solid.fa-circle-plus
 													li.tools__group-item
 														+link('#',"").tools__link
 															span.tools__icon
@@ -716,11 +677,6 @@ block container
 													li.tools__group-item
 														+link('#',"").tools__link
 															span.tools__icon
-																i.fa-sharp.fa-solid.fa-file-excel
-													li.tools__group-item
-														+link('#',"").tools__link
-															span.tools__icon.ico-file-excel-list
-																i.icon.icon-line
 																i.fa-sharp.fa-solid.fa-file-excel
 													li.tools__group-item
 														.dropdown
@@ -752,6 +708,45 @@ block container
 														+link('#',"").tools__link
 															span.tools__icon
 																i.fa-solid.fa-trash-can
+								.profile__perpage
+									.pagination
+										ul.pagination__list 
+											li.pagination__item.--prev.--disabled
+												+link('#',"")
+													i.fa-solid.fa-chevron-left
+											li.pagination__item.active
+												+link('#',"")
+													| 1
+											li.pagination__item
+												+link('#',"")
+													| 2
+											li.pagination__item
+												+link('#',"")
+													| 3
+											li.pagination__item.--dot
+												+link('#',"")
+													| ...
+											li.pagination__item
+												+link('#',"")
+													| 9
+											li.pagination__item
+												+link('#',"")
+													| 8
+											li.pagination__item
+												+link('#',"")
+													| 10
+											li.pagination__item.--next
+												+link('#',"")
+													i.fa-solid.fa-chevron-right
+											
+									.dropdown
+										.dropdown__tool
+											.dropdown__bar
+												span.dropdown__name 50 per page
+												i.fa-sharp.fa-solid.fa-caret-down
+											ul.dropdown__list
+												li.dropdown__item.--is-select 100 per page
+												li.dropdown__item 200 per page
 								.profile__filter 
 									.profile-filter__nav
 										ul.profile-filter__menu
@@ -760,60 +755,7 @@ block container
 													.form-search.--bdr-none
 														i.fa-solid.fa-magnifying-glass
 														input.form-control(name='search' type='text' placeholder='Search...')
-											li.profile-filter__item
-												ul.profile-filter__group
-													li.profile-filter__group-item
-														+link('#',"").profile-filter__link
-															span.profile-filter__icon
-																i.fa-solid.fa-eye-slash
-													li.profile-filter__group-item
-														+link('#',"").profile-filter__link
-															span.profile-filter__icon
-																i.fa-solid.fa-chevron-down
-													li.profile-filter__group-item
-														+link('#',"").profile-filter__link
-															span.profile-filter__icon
-																i.fa-solid.fa-arrow-up-wide-short
-							.profile__total 46 items
-							.profile__perpage
-								.pagination
-									ul.pagination__list 
-										li.pagination__item.--prev.--disabled
-											+link('#',"")
-												i.fa-solid.fa-chevron-left
-										li.pagination__item.active
-											+link('#',"")
-												| 1
-										li.pagination__item
-											+link('#',"")
-												| 2
-										li.pagination__item
-											+link('#',"")
-												| 3
-										li.pagination__item.--dot
-											+link('#',"")
-												| ...
-										li.pagination__item
-											+link('#',"")
-												| 9
-										li.pagination__item
-											+link('#',"")
-												| 8
-										li.pagination__item
-											+link('#',"")
-												| 10
-										li.pagination__item.--next
-											+link('#',"")
-												i.fa-solid.fa-chevron-right
-										
-								.dropdown
-									.dropdown__tool
-										.dropdown__bar
-											span.dropdown__name 50 per page
-											i.fa-sharp.fa-solid.fa-caret-down
-										ul.dropdown__list
-											li.dropdown__item.--is-select 100 per page
-											li.dropdown__item 200 per page
+											
 						.profile__tbl.tbl-profile
 							.tbl-profile__tbl
 								.tbl-profile__head

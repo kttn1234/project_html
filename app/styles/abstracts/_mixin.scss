@@ -55,3 +55,25 @@
     opacity: .7;
   }
 }
+// - Border-radius các card lớn hơn 128px -> 8px
+@mixin bdr-main() {
+  border: rem(1) solid $border;
+  border-radius: rem(8);
+}
+
+//  Border-radius các card < 128px -> 4px
+//  Border-radius các icon -> 4px
+@mixin bdr-sub() {
+  border: rem(1) solid $border;
+  border-radius: rem(4);
+}
+
+// Padding frame lớn
+@mixin pd-main() {
+  padding: rem(16) rem(24);
+}
+
+// Padding frame nhỏ
+@mixin pd-sub() {
+  padding: rem(12) rem(16);
+}

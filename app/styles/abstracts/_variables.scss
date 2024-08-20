@@ -40,7 +40,7 @@ $online: #099077;
 $offline: #505050;
 $card_header: #2c3239;  // card header
 $bg_body: #262626; // Body | BG, Siderbar
-$card_body: #262626; // card body | child element body
+$card_body: rgba(#fff,.15); // card body | child element body
 $bg_input: rgba(#fff,.15); // Input Bg | Button BG | Element that user can interact
 $status_idle: #505050; // idle status | grey Neutral
 $border: rgba(#fff,.15); // border (all)

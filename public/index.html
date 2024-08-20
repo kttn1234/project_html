@@ -78,24 +78,6 @@
                 </li>
               </ul>
             </div>
-            <div class="menu-app__center">
-              <div class="menu-app__search">
-                <div class="form-search"><i class="fa-solid fa-magnifying-glass"></i>
-                  <input class="form-control" name="search" type="text" placeholder="Search...">
-                </div>
-              </div>
-              <div class="menu-app__select"> 
-                <div class="dropdown">
-                  <div class="dropdown__tool">
-                    <div class="dropdown__bar"><span class="dropdown__txt">Select an Alert Instal</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item --is-select">choose01</li>
-                      <li class="dropdown__item">choose02</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="menu-app__right"> 
               <ul class="menu-app__list">
                 <li class="menu-app__item"><a class="menu-app__link" href="#" title=""><span class="menu-app__number">0</span><span class="menu-app__icon"><i class="fa-solid fa-users-viewfinder"></i></span></a>
@@ -288,7 +270,7 @@
                   </li>
                   <li class="profile__item"><a class="profile__link has-dropdown" href="#" title=""><i class="fa-solid fa-chevron-right"></i><span class="profile__icon"><i class="fa-brands fa-facebook-f"></i></span><span class="profile__txt">Facebook</span></a>
                     <ul class="profile__menu --sub01">
-                      <li class="profile__item"><a class="profile__link" href="#" title=""><span class="profile__icon"><img src="images/home/icon_earth.png" alt="All Facebook Profiles"/></span><span class="profile__txt">All Facebook Profiles</span><span class="profile__more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                      <li class="profile__item"><a class="profile__link" href="#" title=""><span class="profile__icon"><i class="fa-solid fa-globe"></i></span><span class="profile__txt">All Facebook Profiles</span><span class="profile__more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                           <div class="popup-menu">
                             <ul class="popup-menu__list">
                               <li class="popup-menu__item"> 
@@ -456,12 +438,6 @@
                             <ul class="tools__group">
                               <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><i class="fa-solid fa-folder-plus"></i></span></a>
                               </li>
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon ico-list-plus"><i class="fa-solid fa-list"></i><i class="fa-solid fa-circle-plus"></i></span></a>
-                              </li>
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon ico-list-minus"><i class="fa-solid fa-list"></i><i class="fa-solid fa-circle-minus"></i></span></a>
-                              </li>
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><img src="images/home/icon_circle.png" alt="file"/></span></a>
-                              </li>
                             </ul>
                           </li>
                           <li class="tools__item">
@@ -474,14 +450,10 @@
                             <ul class="tools__group">
                               <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><i class="fa-solid fa-users-viewfinder"></i></span></a>
                               </li>
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon ico-users-viewfinder-plus"><i class="fa-solid fa-users-viewfinder"></i><i class="fa-solid fa-circle-plus"></i></span></a>
-                              </li>
                             </ul>
                           </li>
                           <li class="tools__item">
                             <ul class="tools__group">
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon ico-diagram-project-plus"><i class="fa-solid fa-diagram-project"></i><i class="fa-solid fa-circle-plus"></i></span></a>
-                              </li>
                               <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><i class="icon icon-grid"></i></span></a>
                               </li>
                             </ul>
@@ -491,8 +463,6 @@
                               <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><i class="fa-solid fa-file-csv"></i></span></a>
                               </li>
                               <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon"><i class="fa-sharp fa-solid fa-file-excel"></i></span></a>
-                              </li>
-                              <li class="tools__group-item"><a class="tools__link" href="#" title=""><span class="tools__icon ico-file-excel-list"><i class="icon icon-line"></i><i class="fa-sharp fa-solid fa-file-excel"></i></span></a>
                               </li>
                               <li class="tools__group-item">
                                 <div class="dropdown">
@@ -529,6 +499,39 @@
                         </ul>
                       </div>
                     </div>
+                    <div class="profile__perpage">
+                      <div class="pagination">
+                        <ul class="pagination__list"> 
+                          <li class="pagination__item --prev --disabled"><a href="#" title=""><i class="fa-solid fa-chevron-left"></i></a>
+                          </li>
+                          <li class="pagination__item active"><a href="#" title="">1</a>
+                          </li>
+                          <li class="pagination__item"><a href="#" title="">2</a>
+                          </li>
+                          <li class="pagination__item"><a href="#" title="">3</a>
+                          </li>
+                          <li class="pagination__item --dot"><a href="#" title="">...</a>
+                          </li>
+                          <li class="pagination__item"><a href="#" title="">9</a>
+                          </li>
+                          <li class="pagination__item"><a href="#" title="">8</a>
+                          </li>
+                          <li class="pagination__item"><a href="#" title="">10</a>
+                          </li>
+                          <li class="pagination__item --next"><a href="#" title=""><i class="fa-solid fa-chevron-right"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <div class="dropdown__tool">
+                          <div class="dropdown__bar"><span class="dropdown__name">50 per page</span><i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                          <ul class="dropdown__list">
+                            <li class="dropdown__item --is-select">100 per page</li>
+                            <li class="dropdown__item">200 per page</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     <div class="profile__filter"> 
                       <div class="profile-filter__nav">
                         <ul class="profile-filter__menu">
@@ -539,50 +542,6 @@
                               </div>
                             </div>
                           </li>
-                          <li class="profile-filter__item">
-                            <ul class="profile-filter__group">
-                              <li class="profile-filter__group-item"><a class="profile-filter__link" href="#" title=""><span class="profile-filter__icon"><i class="fa-solid fa-eye-slash"></i></span></a>
-                              </li>
-                              <li class="profile-filter__group-item"><a class="profile-filter__link" href="#" title=""><span class="profile-filter__icon"><i class="fa-solid fa-chevron-down"></i></span></a>
-                              </li>
-                              <li class="profile-filter__group-item"><a class="profile-filter__link" href="#" title=""><span class="profile-filter__icon"><i class="fa-solid fa-arrow-up-wide-short"></i></span></a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="profile__total">46 items</div>
-                  <div class="profile__perpage">
-                    <div class="pagination">
-                      <ul class="pagination__list"> 
-                        <li class="pagination__item --prev --disabled"><a href="#" title=""><i class="fa-solid fa-chevron-left"></i></a>
-                        </li>
-                        <li class="pagination__item active"><a href="#" title="">1</a>
-                        </li>
-                        <li class="pagination__item"><a href="#" title="">2</a>
-                        </li>
-                        <li class="pagination__item"><a href="#" title="">3</a>
-                        </li>
-                        <li class="pagination__item --dot"><a href="#" title="">...</a>
-                        </li>
-                        <li class="pagination__item"><a href="#" title="">9</a>
-                        </li>
-                        <li class="pagination__item"><a href="#" title="">8</a>
-                        </li>
-                        <li class="pagination__item"><a href="#" title="">10</a>
-                        </li>
-                        <li class="pagination__item --next"><a href="#" title=""><i class="fa-solid fa-chevron-right"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="dropdown">
-                      <div class="dropdown__tool">
-                        <div class="dropdown__bar"><span class="dropdown__name">50 per page</span><i class="fa-sharp fa-solid fa-caret-down"></i></div>
-                        <ul class="dropdown__list">
-                          <li class="dropdown__item --is-select">100 per page</li>
-                          <li class="dropdown__item">200 per page</li>
                         </ul>
                       </div>
                     </div>

@@ -200,11 +200,11 @@ $(document).ready(function () {
   var heigthScreen = $(window).innerHeight()
   var heightHeadApp = $(".header-app").innerHeight();
   var heightMenuApp = $(".menu-app").innerHeight();
-  var heightFuntion = $(".profile__funtion").innerHeight();
-  var heightTblHead = $(".tbl-profile__head").innerHeight();
   var heightScrollBar = 18;
 
   var setheightScroll = function () {
+    var heightFuntion = $(".profile__funtion").innerHeight();
+    var heightTblHead = $(".tbl-profile__head").innerHeight();
     var heightTblBody = heigthScreen - heightHeadApp - heightMenuApp - heightFuntion - heightTblHead - heightScrollBar;
     var heightProfileNav = heigthScreen - heightHeadApp - heightMenuApp ;
 
@@ -217,6 +217,8 @@ $(document).ready(function () {
         var heightTargerHead = $(".targer-main__head").innerHeight();
         var heightTargerNav = $(".targer-nav.js-targer-nav").outerHeight(true);
         // var heightPaddingTargerBody = parseInt( $(".targer-main__body").css("padding").substring(-2,2))
+        var heightFuntion = $(".profile__funtion").innerHeight();
+        var heightTblHead = $(".tbl-profile__head").innerHeight();
 
         var heightTblBody = heigthScreen - heightHeadApp - heightMenuApp - heightTargerHead - heightTargerNav - heightFuntion - heightTblHead - heightScrollBar;
         $(".tbl-profile__body").css("height", heightTblBody+"px");

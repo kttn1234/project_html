@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const pug = require("gulp-pug");
-const sass = require("gulp-sass")(require("sass"));
+// const sass = require("gulp-sass")(require("sass"));
 const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
@@ -9,6 +9,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const cache = require("gulp-cache");
 // const del = require("del");
 const plumber = require("gulp-plumber");
+var sourcemaps = require('gulp-sourcemaps');
+var sass = require("gulp-dart-sass");
 
 /* Options
  * ------ */
@@ -44,6 +46,13 @@ const options = {
   },
 };
 
+const src = {
+  // sassPath: "assets/sass/**/*.scss",
+  // jsPath: "assets/js/**/*.js",
+  // distPath: "assets/dist",
+  mapPath: ".",
+}
+
 /* Browser-sync
  * ------------ */
 function browserSync(done) {
@@ -62,27 +71,46 @@ function browserSync(done) {
 function styles() {
   return gulp
     .src(options.styles.src)
+    .pipe(sourcemaps.init())
     .pipe(
-      plumber(function (err) {
-        console.log("Styles Task Error");
-        console.log(err);
-        this.emit("end");
-      })
+      sass({
+        outputStyle: "compressed"
+      }).on("error", sass.logError)
     )
-    .pipe(sass().on("error", sass.logError))
     .pipe(
       autoprefixer({
-        overrideBrowserslist: ["last 2 versions"],
-        cascade: false,
-        grid: true,
+        cascade: false
       })
     )
+    .pipe(sourcemaps.write(src.mapPath))
     .pipe(gulp.dest(options.styles.dest))
-    .pipe(
-      browsersync.reload({
-        stream: true,
-      })
-    );
+    .pipe(browsersync.reload({ stream: true }));
+    // .src(options.styles.src)
+    // .pipe(
+    //   plumber(function (err) {
+    //     console.log("Styles Task Error");
+    //     console.log(err);
+    //     this.emit("end");
+    //   })
+    // )
+    // .pipe(sass().on("error", sass.logError))
+    // .pipe(sass({ 
+    //   style: 'expanded',
+    //   sourceComments: 'normal'
+    // }))
+    // .pipe(
+    //   autoprefixer({
+    //     overrideBrowserslist: ["last 2 versions"],
+    //     cascade: false,
+    //     grid: true,
+    //   })
+    // )
+    // .pipe(gulp.dest(options.styles.dest))
+    // .pipe(
+    //   browsersync.reload({
+    //     stream: true,
+    //   })
+    // );
 }
 
 /* Scripts

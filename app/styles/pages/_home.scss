@@ -108,7 +108,7 @@ body.no-scroll {
         position: absolute;
         font-size: rem(10);
         bottom: rem(1);
-        right: rem(-1);
+        right: rem(-5);
         z-index: 2;
         // background: $txt_white;
     }
@@ -202,15 +202,20 @@ body.no-scroll {
         .profile__nav {
            width: 22%;
            min-width: rem(300);
+           @include pd-main();
         } 
         .profile__main {
-            padding: rem(35) rem(25) rem(25);
+            @include pd-main();
         }
         .profile__ttl {
             margin-bottom: rem(20);
         }
         .profile__item + .profile__item {
             margin-top: rem(10);
+        }
+        .profile__link.active {
+             box-shadow: inset 0 0 rem(24) $border;
+            opacity: 1;
         }
     }
     
@@ -276,7 +281,7 @@ body.no-scroll {
    
     &__nav {
         border-right: rem(1) solid $border;
-        padding: rem(25) rem(15);
+        @include pd-main();
         width: rem(300);
         min-width: rem(300);
        overflow-y: auto;
@@ -292,7 +297,7 @@ body.no-scroll {
         overflow: hidden;
     }
     &__popup {
-        box-shadow: rem(-1) rem(3) rem(10) rgba($bg_body, $alpha: 0.2);
+        box-shadow: rem(-1) rem(3) rem(10) $card_body;
         // box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: .6);
         // width: 0;
         // max-width: 0;
@@ -302,7 +307,7 @@ body.no-scroll {
         margin-right: -100%;
         position: absolute;
         right: 0;
-        background-color: $card_body;
+        background-color: $bg_body;
         z-index: 3;
         width: 0;
         max-width: 0;
@@ -346,14 +351,14 @@ body.no-scroll {
     &__menu {
         font-size: 1.4rem;
         &.--sub01 {
-            padding-left: rem(50);
+            padding-left: rem(24);
             > .tooltip-menu {
                 // right: 30%
             }
         }
         &.--sub03,
         &.--sub02 {
-            padding-left: 3.5rem;
+            padding-left: 2.45rem;
         }
     }
    
@@ -388,7 +393,7 @@ body.no-scroll {
         align-content: center;
         gap: 8px;
         &.has-dropdown {
-            padding-left: rem(20);
+            // padding-left: rem(20);
             // margin-left: 0;
             // &::before {
             //     content: "\f078";
@@ -414,13 +419,16 @@ body.no-scroll {
         }
        
         &.active {
+            // box-shadow: inset 0 0 rem(24) $border;
+            // opacity: 1;
             .profile__txt,
             .profile__icon {
-                color: $active;
+                // color: $active;
             }
             .fa-chevron-right:before {
                 content: "\f078";
-            }            
+            }
+                        
         }
         &.has-more {
             &:hover {
@@ -461,7 +469,8 @@ body.no-scroll {
     
     &__group {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        // height: 40px;
         margin-bottom: rem(5);
         flex-wrap: wrap;
         @include mq(ll, max) {
@@ -469,7 +478,7 @@ body.no-scroll {
         }
     }
     &__funtion {
-        padding: rem(10);
+        @include pd-sub();
         background-color: $card_header;
     }
     &__filter {
@@ -638,7 +647,7 @@ body.no-scroll {
         // flex: 1;
     }
     &__search {
-       
+        height: 36px;
         @include mq(ll, max) {
             min-width: rem(200);
         }
@@ -1113,10 +1122,10 @@ body.no-scroll {
     &__accordion {
     }
     &__head {
-        padding: rem(10) rem(10);
+        @include pd-main();
     }
     &__body {
-        padding: rem(10) rem(10);
+        @include pd-main();
         overflow: auto
     }
     // .tools-icon {
@@ -1191,7 +1200,7 @@ body.no-scroll {
     
     }
     &__item {
-        border: rem(1) solid $border;
+        @include bdr-sub();
         & + .accordion-main__item {
             margin-top: rem(15);
         }
@@ -1502,19 +1511,23 @@ body.no-scroll {
     @include hover-icon()
 }
 .popup-menu {
-    box-shadow: rem(2) rem(4) rem(10) rgba(0, 0, 0, 0.5);
-    border-radius: rem(5);
-    background-color: $bg_nemu;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 3;
-    max-width: rem(185);
-    min-width: rem(185);
+    max-width: 18.5rem;
+    min-width: 18.5rem;
     right: 0;
-    top: rem(35);
+    top: 3.5rem;
     visibility: hidden;
     opacity: 0;
-    transition: all .2s;
-    transform: translateY(rem(-10));
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: solid 1px rgba(255, 255, 255, 0.15);
     &.active-menu {
         opacity: 1;
         visibility: visible;
@@ -1637,7 +1650,7 @@ body.no-scroll {
     
     &__head {
         display: flex;
-        padding: rem(25) rem(25) rem(50) rem(25);
+        @include pd-main();
         justify-content: space-between;
     }
     &__export {
@@ -1719,12 +1732,13 @@ body.no-scroll {
     }
 }
 .targer-nav {
+    @include pd-sub();
     border: rem(1) solid $border;
-    padding: rem(12);
+    background-color: $card_body;
     &.--download {
         margin-top: rem(15);
         .targer-nav__item {
-            background-color: $status_idle;
+            // background-color: $status_idle;
         }
     }
     &__menu {
@@ -1737,7 +1751,7 @@ body.no-scroll {
         }
         &.--dropdown {
             .dropdown__bar {
-                border: none;
+               border: none;
                 padding: 0 rem(25) 0 0;
                 height: auto;
                 background-color: transparent;
@@ -1749,8 +1763,9 @@ body.no-scroll {
         cursor: pointer;
         &.active:not(.--dropdown),
         &:hover:not(.--dropdown) {
-            background-color: $bg_input;
-            color: $active;
+            background-color: $card_body;
+            // @include bdr-sub();
+            // color: $active;
             
             .dropdown__tool {
 
@@ -1776,9 +1791,10 @@ body.no-scroll {
         padding: rem(10);
         &.--active {
             background-color: $bg_input;
+            // @include bdr-sub();
             .dropdown__bar {
                
-                color: $active;
+                // color: $active;
             }
         }
         .dropdown__bar {
@@ -1786,7 +1802,7 @@ body.no-scroll {
         }
         .dropdown__list {
             min-width: rem(620);
-            top: rem(27);
+            top: rem(39);
             padding: rem(30);
             cursor: default;
             left: rem(-10);
@@ -1920,7 +1936,7 @@ body.no-scroll {
         
     }
     &__count {
-        background-color: $status_idle;
+        background-color: $card_body;
         border-radius: rem(30);
         padding: rem(2);
         color: $txt_white;
@@ -1979,6 +1995,11 @@ body.no-scroll {
         display: flex;
     }
     &__item {
+        height: 36px;
+        display: flex;
+        width: 36px;
+        align-items: center;
+        justify-content: center;
         
         &.--disabled {
             opacity: .7;
@@ -2412,7 +2433,10 @@ button.mfp-arrow {
         
     }
     &__txt {
-        color: $active;
+        // color: $active;
+        height: 32px;
+        display: flex;
+        align-items: center;
     }
     &__icon {
         font-size: rem(15);
@@ -2434,8 +2458,8 @@ button.mfp-arrow {
     }
 
     &__box {
-        border: rem(1) solid $border;
-        padding: rem(10);
+        @include bdr-main();
+        @include pd-sub();
         position: relative;
         height: 100%;
         background-color: $border;
@@ -2639,7 +2663,7 @@ button.mfp-arrow {
 }
 .alert {
     position: relative;
-    padding: rem(15) rem(30);
+    @include pd-sub();
     &::before {
         content: '';
         width: rem(5);
@@ -2671,7 +2695,7 @@ button.mfp-arrow {
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    padding: rem(20);
+    @include pd-main();
     &__icon {
         margin-right: rem(10);
     }
@@ -2719,8 +2743,9 @@ button.mfp-arrow {
         margin-bottom: rem(20);
     }
     &__box {
-        border: rem(1) solid $border;
-        padding: rem(20) rem(15);
+        @include bdr-main();
+        @include pd-sub();
+        background-color: $card_body;
         position: relative;
         & + .license-manage__box {
             margin-top: rem(15);
@@ -2798,8 +2823,9 @@ button.mfp-arrow {
         }
     }
     &__box {
-        border: rem(1) solid $border;
-        padding: rem(15) rem(15);
+        @include bdr-sub();
+        @include pd-sub();
+        background-color: $card_body;
     }
     &__cont {
         display: flex;
@@ -2820,6 +2846,7 @@ button.mfp-arrow {
         }
         &-icon {
             margin-right: rem(5);
+            @include hover-icon();
            
         }
         &-name {
@@ -2873,8 +2900,8 @@ button.mfp-arrow {
 }
 // h160
 .project-profile {
-    padding: rem(45) rem(25) rem(45);
-    max-width: rem(1200);
+    @include pd-main();
+    // max-width: rem(1200);
     margin: auto;
     &__wrap {
     }
@@ -2919,12 +2946,12 @@ button.mfp-arrow {
     &__link {
         display: flex;
         padding: rem(5) rem(10);
-        &.--update {
-            color: $active;
-        }
-        &.--remove {
-            color: $danger;
-        }  
+        // &.--update {
+        //     color: $active;
+        // }
+        // &.--remove {
+        //     color: $danger;
+        // }  
     }
     &__icon {
         margin-right: rem(10);
@@ -2949,6 +2976,7 @@ button.mfp-arrow {
     }
 }
 .editor-area {
+    background-color: $card_body;
     .ql-container.ql-snow,
     .ql-toolbar.ql-snow {
         border: 1px solid $border;
@@ -3015,7 +3043,7 @@ button.mfp-arrow {
         justify-content: space-between;
         align-items: center;
         border-bottom: rem(1) solid $border;
-        padding: rem(10) rem(30);
+        @include pd-main();
 
     }
     &__body {
@@ -3025,16 +3053,16 @@ button.mfp-arrow {
     }
     &__new {
         background-color: $card_header;
-        padding: rem(25) rem(25);
+        @include pd-main();
         width: rem(330);
     }
     &__main {
         flex: 1;
-        padding: rem(25) rem(25);
+        @include pd-main();
     }
     &__widgets {
         padding: 0 rem(25);
-        padding: rem(25) rem(25);
+        @include pd-main();
         background-color: $card_header;
         width: rem(335);
     }
@@ -3101,7 +3129,8 @@ button.mfp-arrow {
         padding: rem(5) rem(10);
     }
     &__box {
-        border: rem(1) solid $border;
+        @include bdr-sub();
+        overflow: hidden;
     }
     &__info {
         display: flex;
@@ -3370,4 +3399,16 @@ button.mfp-arrow {
         max-height: rem(300);
         background-color: $bg_black;
     }
+}
+.report {
+    margin: auto;
+}
+
+.fa-solid,.fas {
+    font-weight: 900;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
