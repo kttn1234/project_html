@@ -74,11 +74,14 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
+        // outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(
       autoprefixer({
-        cascade: false
+        overrideBrowserslist: ["last 2 versions"],
+        cascade: false,
+        grid: true,
       })
     )
     .pipe(sourcemaps.write(src.mapPath))
