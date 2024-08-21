@@ -151,37 +151,39 @@ body.no-scroll {
     right: rem(10);
 }
 .icon-telegram {
-    background: url(./../images/home/icon_telegram.png) no-repeat center center / contain;
+    background: url(./../images/home/iconTelegram.svg) no-repeat center center/contain;
     display: inline-block;
-    width: rem(16);
-    height: rem(16);
+    width: 1.6rem;
+    height: 1.6rem;
 }
-.ico-zalo {
-    &::before {
-        content: "";
-        background: url(./../images/home/icon_zalo.svg) no-repeat center center / contain;
-        display: inline-block;
-        width: rem(18);
-        height: rem(18);
-    }
+
+.icon-zalo::before {
+content: "";
+    background: url(./../images/home/iconZalo.svg) no-repeat center center/contain;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
 }
+
 .icon-tiktok {
-    background: url(./../images/home/icon_tiktok.png) no-repeat center center / contain;
+    background: url(./../images/home/iconTiktok.svg) no-repeat center center/contain;
     display: inline-block;
-    width: rem(16);
-    height: rem(16);
+    width: 1.6rem;
+    height: 1.6rem;
 }
+
 .icon-youtube {
-    background: url(./../images/home/icon_youtube.png) no-repeat center center / contain;
+    background: url(./../images/home/iconYoutube.svg) no-repeat center center/contain;
     display: inline-block;
-    width: rem(16);
-    height: rem(16);
+    width: 1.6rem;
+    height: 1.6rem;
 }
+
 .icon-facebook {
-    background: url(./../images/home/icon_face_blue.png) no-repeat center center / contain;
+    background: url(./../images/home/iconFacebook.svg) no-repeat center center/contain;
     display: inline-block;
-    width: rem(16);
-    height: rem(16);
+    width: 1.6rem;
+    height: 1.6rem;
 }
 .dashboard {
     // overflow: scroll;
