@@ -74,7 +74,6 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(
