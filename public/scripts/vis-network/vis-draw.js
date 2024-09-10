@@ -1,349 +1,136 @@
 $(document).ready(function () {
+  var DIR = './images/home/';
+  function preloadImg(url) {
+    const image = new Image()
+    image.src = DIR + url; 
+    image.style.border  = "50"; 
+    return image;
+  }
+
+  var listImg = [
+    {
+      avt: preloadImg("icon_avt.png"),
+      icon: preloadImg("img_flower.jpg"),
+    },{
+      avt: preloadImg("icon_avt02.png"),
+      icon: preloadImg("icon_telegram.png"),
+    },{
+      avt: preloadImg("icon_avt03.png"),
+      icon: preloadImg("icon_tiktok.png"),
+    },{
+      avt: preloadImg("icon_avt04.png"),
+      icon: preloadImg("icon_zalo.png"),
+    },{
+      avt: preloadImg("icon_avt.png"),
+      icon: preloadImg("icon_facebook.png"),
+    }
+  ]
+
+  function drawNodeCtx(ctx,x, y, img, txt ) {
+    // avt
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x+15, y+15, 15, 0, Math.PI * 2, true);
+    ctx.arc(x, y, 15, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.clip();
+
+    ctx.drawImage(img.avt, x, y, 30, 30);
+    ctx.beginPath();
+    ctx.arc(x, y, 15, 0, Math.PI * 2, true);
+    ctx.clip();
+    ctx.closePath();
+    ctx.restore();
+
+    // icon
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x, y, 10, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.clip();
+
+    ctx.drawImage(img.icon, x - 10, y - 10, 20, 20);
+    ctx.beginPath();
+    ctx.arc( x - 10,  y - 10, 10, 0, Math.PI * 2, true);
+    ctx.clip();
+    ctx.closePath();
+    ctx.restore();
+
+    // text
+    ctx.fillStyle = "white"
+    ctx.fillText(txt,x - 20, y - 20);
+  }
+
   function draw() {
-    var DIR = './images/home/';
-    // create some nodes
+        
     var nodes = [
-      { id: 0, label: "Myriel", group: 1, shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 1, label: "Napoleon", group: 1, shape: 'circularImage', image: DIR + 'icon_avt.png'},
-      { id: 2, label: "Mlle.Baptistine", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt02.png'},
-      { id: 3, label: "Mme.Magloire", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt03.png'},
-      { id: 4, label: "CountessdeLo", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt04.png'},
-      { id: 5, label: "Geborand", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt05.png'},
-      { id: 6, label: "Champtercier", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt06.png'},
-      { id: 7, label: "Cravatte", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt07.png'},
-      { id: 8, label: "Count", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt08.png'},
-      { id: 9, label: "OldMan", group: 1 , shape: 'circularImage', image: DIR + 'icon_avt09.png'},
-      { id: 10, label: "Labarre", group: 2 , shape: 'circularImage', image: DIR + 'icon_avt10.png'},
-      { id: 11, label: "Valjean", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 12, label: "Marguerite", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 13, label: "Mme.deR", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 14, label: "Isabeau", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 15, label: "Gervais", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 16, label: "Tholomyes", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 17, label: "Listolier", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 18, label: "Fameuil", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 19, label: "Blacheville", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 20, label: "Favourite", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 21, label: "Dahlia", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 22, label: "Zephine", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 23, label: "Fantine", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 24, label: "Mme.Thenardier", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 25, label: "Thenardier", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 26, label: "Cosette", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 27, label: "Javert", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 28, label: "Fauchelevent", group: 0 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 29, label: "Bamatabois", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 30, label: "Perpetue", group: 3 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 31, label: "Simplice", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 32, label: "Scaufflaire", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 33, label: "Woman1", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 34, label: "Judge", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 35, label: "Champmathieu", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 36, label: "Brevet", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 37, label: "Chenildieu", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 38, label: "Cochepaille", group: 2 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 39, label: "Pontmercy", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 40, label: "Boulatruelle", group: 6 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 41, label: "Eponine", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 42, label: "Anzelma", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 43, label: "Woman2", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 44, label: "MotherInnocent", group: 0 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 45, label: "Gribier", group: 0 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 46, label: "Jondrette", group: 7 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 47, label: "Mme.Burgon", group: 7 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 48, label: "Gavroche", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 49, label: "Gillenormand", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 50, label: "Magnon", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 51, label: "Mlle.Gillenormand", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 52, label: "Mme.Pontmercy", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 53, label: "Mlle.Vaubois", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 54, label: "Lt.Gillenormand", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 55, label: "Marius", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 56, label: "BaronessT", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 57, label: "Mabeuf", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 58, label: "Enjolras", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 59, label: "Combeferre", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 60, label: "Prouvaire", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 61, label: "Feuilly", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 62, label: "Courfeyrac", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 63, label: "Bahorel", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 64, label: "Bossuet", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 65, label: "Joly", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 66, label: "Grantaire", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 67, label: "MotherPlutarch", group: 9 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 68, label: "Gueulemer", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 69, label: "Babet", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 70, label: "Claquesous", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 71, label: "Montparnasse", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 72, label: "Toussaint", group: 5 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 73, label: "Child1", group: 10 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 74, label: "Child2", group: 10 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 75, label: "Brujon", group: 4 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 76, label: "Mme.Hucheloup", group: 8 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 77, label: "Amber", group: 11 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
-      { id: 78, label: "Alani", group: 11 , shape: 'circularImage', image: DIR + 'img_flower.jpg'},
+      { id: 0, group: 1,
+        shape: "custom",ctxRenderer:
+        function ctxRenderer({ ctx, x, y, state: { selected, hover }, style }) {
+          return {
+            drawNode() {
+              drawNodeCtx(ctx,x,y,listImg[0], "Hello 01");
+            },
+            nodeDimensions: { width: 50, height: 50 }, 
+          }
+        },
+      },
+      { id: 2, group: 1,
+        shape: "custom",ctxRenderer:
+        function ctxRenderer({ ctx, x, y, state: { selected, hover }, style }) {
+          return {
+            drawNode() {
+              drawNodeCtx(ctx,x,y,listImg[1], "Hello 02");
+            },
+            nodeDimensions: { width: 50, height: 50 }, 
+          }
+        },
+      },
+      { id: 3, group: 1,
+        shape: "custom",ctxRenderer:
+        function ctxRenderer({ ctx, x, y, state: { selected, hover }, style }) {
+          return {
+            drawNode() {
+              drawNodeCtx(ctx,x,y,listImg[2], "Hello 03");
+            },
+            nodeDimensions: { width: 50, height: 50 }, 
+          }
+        },
+      },
+      { id: 4, group: 1,
+        shape: "custom",ctxRenderer:
+        function ctxRenderer({ ctx, x, y, state: { selected, hover }, style }) {
+          return {
+            drawNode() {
+              drawNodeCtx(ctx,x,y,listImg[3], "Hello 04");
+            },
+            nodeDimensions: { width: 50, height: 50 }, 
+          }
+        },
+      },
+      { id: 5, group: 1,
+        shape: "custom",ctxRenderer:
+        function ctxRenderer({ ctx, x, y, state: { selected, hover }, style }) {
+          return {
+            drawNode() {
+              drawNodeCtx(ctx,x,y,listImg[4], "Hello 05");
+            },
+            nodeDimensions: { width: 50, height: 50 }, 
+          }
+        },
+      },
+      
     ];
 
     // create some edges
     var edges = [
       { from: 1, to: 0 },
       { from: 2, to: 0 },
-      { from: 3, to: 0 },
+      { from: 3, to: 4 },
       { from: 3, to: 2 },
-      { from: 4, to: 0 },
-      { from: 5, to: 0 },
-      { from: 6, to: 0 },
-      { from: 7, to: 0 },
-      { from: 8, to: 0 },
-      { from: 9, to: 0 },
-      { from: 11, to: 10 },
-      { from: 11, to: 3 },
-      { from: 11, to: 2 },
-      { from: 11, to: 0 },
-      { from: 12, to: 11 },
-      { from: 13, to: 11 },
-      { from: 14, to: 11 },
-      { from: 15, to: 11 },
-      { from: 17, to: 16 },
-      { from: 18, to: 16 },
-      { from: 18, to: 17 },
-      { from: 19, to: 16 },
-      { from: 19, to: 17 },
-      { from: 19, to: 18 },
-      { from: 20, to: 16 },
-      { from: 20, to: 17 },
-      { from: 20, to: 18 },
-      { from: 20, to: 19 },
-      { from: 21, to: 16 },
-      { from: 21, to: 17 },
-      { from: 21, to: 18 },
-      { from: 21, to: 19 },
-      { from: 21, to: 20 },
-      { from: 22, to: 16 },
-      { from: 22, to: 17 },
-      { from: 22, to: 18 },
-      { from: 22, to: 19 },
-      { from: 22, to: 20 },
-      { from: 22, to: 21 },
-      { from: 23, to: 16 },
-      { from: 23, to: 17 },
-      { from: 23, to: 18 },
-      { from: 23, to: 19 },
-      { from: 23, to: 20 },
-      { from: 23, to: 21 },
-      { from: 23, to: 22 },
-      { from: 23, to: 12 },
-      { from: 23, to: 11 },
-      { from: 24, to: 23 },
-      { from: 24, to: 11 },
-      { from: 25, to: 24 },
-      { from: 25, to: 23 },
-      { from: 25, to: 11 },
-      { from: 26, to: 24 },
-      { from: 26, to: 11 },
-      { from: 26, to: 16 },
-      { from: 26, to: 25 },
-      { from: 27, to: 11 },
-      { from: 27, to: 23 },
-      { from: 27, to: 25 },
-      { from: 27, to: 24 },
-      { from: 27, to: 26 },
-      { from: 28, to: 11 },
-      { from: 28, to: 27 },
-      { from: 29, to: 23 },
-      { from: 29, to: 27 },
-      { from: 29, to: 11 },
-      { from: 30, to: 23 },
-      { from: 31, to: 30 },
-      { from: 31, to: 11 },
-      { from: 31, to: 23 },
-      { from: 31, to: 27 },
-      { from: 32, to: 11 },
-      { from: 33, to: 11 },
-      { from: 33, to: 27 },
-      { from: 34, to: 11 },
-      { from: 34, to: 29 },
-      { from: 35, to: 11 },
-      { from: 35, to: 34 },
-      { from: 35, to: 29 },
-      { from: 36, to: 34 },
-      { from: 36, to: 35 },
-      { from: 36, to: 11 },
-      { from: 36, to: 29 },
-      { from: 37, to: 34 },
-      { from: 37, to: 35 },
-      { from: 37, to: 36 },
-      { from: 37, to: 11 },
-      { from: 37, to: 29 },
-      { from: 38, to: 34 },
-      { from: 38, to: 35 },
-      { from: 38, to: 36 },
-      { from: 38, to: 37 },
-      { from: 38, to: 11 },
-      { from: 38, to: 29 },
-      { from: 39, to: 25 },
-      { from: 40, to: 25 },
-      { from: 41, to: 24 },
-      { from: 41, to: 25 },
-      { from: 42, to: 41 },
-      { from: 42, to: 25 },
-      { from: 42, to: 24 },
-      { from: 43, to: 11 },
-      { from: 43, to: 26 },
-      { from: 43, to: 27 },
-      { from: 44, to: 28 },
-      { from: 44, to: 11 },
-      { from: 45, to: 28 },
-      { from: 47, to: 46 },
-      { from: 48, to: 47 },
-      { from: 48, to: 25 },
-      { from: 48, to: 27 },
-      { from: 48, to: 11 },
-      { from: 49, to: 26 },
-      { from: 49, to: 11 },
-      { from: 50, to: 49 },
-      { from: 50, to: 24 },
-      { from: 51, to: 49 },
-      { from: 51, to: 26 },
-      { from: 51, to: 11 },
-      { from: 52, to: 51 },
-      { from: 52, to: 39 },
-      { from: 53, to: 51 },
-      { from: 54, to: 51 },
-      { from: 54, to: 49 },
-      { from: 54, to: 26 },
-      { from: 55, to: 51 },
-      { from: 55, to: 49 },
-      { from: 55, to: 39 },
-      { from: 55, to: 54 },
-      { from: 55, to: 26 },
-      { from: 55, to: 11 },
-      { from: 55, to: 16 },
-      { from: 55, to: 25 },
-      { from: 55, to: 41 },
-      { from: 55, to: 48 },
-      { from: 56, to: 49 },
-      { from: 56, to: 55 },
-      { from: 57, to: 55 },
-      { from: 57, to: 41 },
-      { from: 57, to: 48 },
-      { from: 58, to: 55 },
-      { from: 58, to: 48 },
-      { from: 58, to: 27 },
-      { from: 58, to: 57 },
-      { from: 58, to: 11 },
-      { from: 59, to: 58 },
-      { from: 59, to: 55 },
-      { from: 59, to: 48 },
-      { from: 59, to: 57 },
-      { from: 60, to: 48 },
-      { from: 60, to: 58 },
-      { from: 60, to: 59 },
-      { from: 61, to: 48 },
-      { from: 61, to: 58 },
-      { from: 61, to: 60 },
-      { from: 61, to: 59 },
-      { from: 61, to: 57 },
-      { from: 61, to: 55 },
-      { from: 62, to: 55 },
-      { from: 62, to: 58 },
-      { from: 62, to: 59 },
-      { from: 62, to: 48 },
-      { from: 62, to: 57 },
-      { from: 62, to: 41 },
-      { from: 62, to: 61 },
-      { from: 62, to: 60 },
-      { from: 63, to: 59 },
-      { from: 63, to: 48 },
-      { from: 63, to: 62 },
-      { from: 63, to: 57 },
-      { from: 63, to: 58 },
-      { from: 63, to: 61 },
-      { from: 63, to: 60 },
-      { from: 63, to: 55 },
-      { from: 64, to: 55 },
-      { from: 64, to: 62 },
-      { from: 64, to: 48 },
-      { from: 64, to: 63 },
-      { from: 64, to: 58 },
-      { from: 64, to: 61 },
-      { from: 64, to: 60 },
-      { from: 64, to: 59 },
-      { from: 64, to: 57 },
-      { from: 64, to: 11 },
-      { from: 65, to: 63 },
-      { from: 65, to: 64 },
-      { from: 65, to: 48 },
-      { from: 65, to: 62 },
-      { from: 65, to: 58 },
-      { from: 65, to: 61 },
-      { from: 65, to: 60 },
-      { from: 65, to: 59 },
-      { from: 65, to: 57 },
-      { from: 65, to: 55 },
-      { from: 66, to: 64 },
-      { from: 66, to: 58 },
-      { from: 66, to: 59 },
-      { from: 66, to: 62 },
-      { from: 66, to: 65 },
-      { from: 66, to: 48 },
-      { from: 66, to: 63 },
-      { from: 66, to: 61 },
-      { from: 66, to: 60 },
-      { from: 67, to: 57 },
-      { from: 68, to: 25 },
-      { from: 68, to: 11 },
-      { from: 68, to: 24 },
-      { from: 68, to: 27 },
-      { from: 68, to: 48 },
-      { from: 68, to: 41 },
-      { from: 69, to: 25 },
-      { from: 69, to: 68 },
-      { from: 69, to: 11 },
-      { from: 69, to: 24 },
-      { from: 69, to: 27 },
-      { from: 69, to: 48 },
-      { from: 69, to: 41 },
-      { from: 70, to: 25 },
-      { from: 70, to: 69 },
-      { from: 70, to: 68 },
-      { from: 70, to: 11 },
-      { from: 70, to: 24 },
-      { from: 70, to: 27 },
-      { from: 70, to: 41 },
-      { from: 70, to: 58 },
-      { from: 71, to: 27 },
-      { from: 71, to: 69 },
-      { from: 71, to: 68 },
-      { from: 71, to: 70 },
-      { from: 71, to: 11 },
-      { from: 71, to: 48 },
-      { from: 71, to: 41 },
-      { from: 71, to: 25 },
-      { from: 72, to: 26 },
-      { from: 72, to: 27 },
-      { from: 72, to: 11 },
-      { from: 73, to: 48 },
-      { from: 74, to: 48 },
-      { from: 74, to: 73 },
-      { from: 75, to: 69 },
-      { from: 75, to: 68 },
-      { from: 75, to: 25 },
-      { from: 75, to: 48 },
-      { from: 75, to: 41 },
-      { from: 75, to: 70 },
-      { from: 75, to: 71 },
-      { from: 76, to: 64 },
-      { from: 76, to: 65 },
-      { from: 76, to: 66 },
-      { from: 76, to: 63 },
-      { from: 76, to: 62 },
-      { from: 76, to: 48 },
-      { from: 76, to: 58 },
-      { from: 77, to: 78 },
-      { from: 78, to: 1 },
+      { from: 4, to: 5 },
+      
     ];
-
     // create a network
     var container = document.getElementById("mynetwork");
     var data = {
@@ -351,9 +138,30 @@ $(document).ready(function () {
       edges: edges,
     };
     var options = {
+      // 
       nodes: {
-        shape: "dot",
-        size: 16,
+        // borderWidth: 2,
+        // borderWidthSelected: 8,
+        // size: 24,
+        // color: {
+        //   border: "white",
+        //   background: "black",
+        //   highlight: {
+        //     border: "black",
+        //     background: "white",
+        //   },
+        //   hover: {
+        //     border: "orange",
+        //     background: "grey",
+        //   },
+        // },
+        // font: { color: "#fff" },
+        // shapeProperties: {
+        //   useBorderWithImage: true,
+        // },
+      },
+      edges: {
+        color: "lightgray",
       },
       physics: {
         forceAtlas2Based: {
@@ -370,5 +178,6 @@ $(document).ready(function () {
     };
     var network = new vis.Network(container, data, options);
   }
-  draw(); 
+  
+  draw();
 });
