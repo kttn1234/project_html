@@ -28,37 +28,28 @@ $(document).ready(function () {
 
   function drawNodeCtx(ctx,x, y, img, txt ) {
     // avt
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(x+15, y+15, 15, 0, Math.PI * 2, true);
-    ctx.arc(x, y, 15, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.clip();
-
-    ctx.drawImage(img.avt, x, y, 30, 30);
-    ctx.beginPath();
-    ctx.arc(x, y, 15, 0, Math.PI * 2, true);
-    ctx.clip();
-    ctx.closePath();
-    ctx.restore();
+    ctx.save()
+    ctx.beginPath()
+    ctx.arc(x, y, 15, 0, Math.PI * 2, false)
+    ctx.strokeStyle = '#3d8bff'
+    ctx.stroke()
+    ctx.clip()
+    ctx.drawImage(img.avt, x-15, y-15, 30, 30);
+    ctx.restore()
 
     // icon
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.clip();
-
-    ctx.drawImage(img.icon, x - 10, y - 10, 20, 20);
-    ctx.beginPath();
-    ctx.arc( x - 10,  y - 10, 10, 0, Math.PI * 2, true);
-    ctx.clip();
-    ctx.closePath();
-    ctx.restore();
+    ctx.save()
+    ctx.beginPath()
+    ctx.arc(x - 15, y - 15, 7, 0, Math.PI * 2, true)
+    ctx.strokeStyle = '#fff'
+    ctx.stroke()
+    ctx.clip()
+    ctx.drawImage(img.icon, x - 22 , y - 22 , 14, 14);
+    ctx.restore()
 
     // text
     ctx.fillStyle = "white"
-    ctx.fillText(txt,x - 20, y - 20);
+    ctx.fillText(txt,x - 10 , y - 25);
   }
 
   function draw() {
